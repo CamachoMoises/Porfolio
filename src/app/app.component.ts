@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/filter';
 import { DOCUMENT } from '@angular/common';
 import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
-import { NavbarComponent } from './shared/navbar/navbar.component';
+
 
 @Component({
     selector: 'app-root',
@@ -13,7 +13,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 })
 export class AppComponent implements OnInit {
     private _router: Subscription;
-    @ViewChild(NavbarComponent) navbar: NavbarComponent;
+  
 
     constructor( private renderer : Renderer2, private router: Router, @Inject(DOCUMENT,) private document: any, private element : ElementRef, public location: Location) {}
     ngOnInit() {
@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
             }else{
                 window.document.activeElement.scrollTop = 0;
             }
-            this.navbar.sidebarClose();
+       
 
             this.renderer.listen('window', 'scroll', (event) => {
                 const number = window.scrollY;
