@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "porfolio-1b48d": {
+      "hosting": {
+        "now-ui-kit-angular": [
+          "porfolio-1b48d"
+        ]
+      }
+    }
+  }
+}

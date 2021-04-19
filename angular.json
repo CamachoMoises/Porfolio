@@ -16,7 +16,10 @@
             "main": "src/main.ts",
             "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
-            "allowedCommonJsDependencies": ["nouislider", "rellax"],
+            "allowedCommonJsDependencies": [
+              "nouislider",
+              "rellax"
+            ],
             "assets": [
               "src/assets",
               "src/favicon.ico"
@@ -97,6 +100,10 @@
             ],
             "exclude": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },

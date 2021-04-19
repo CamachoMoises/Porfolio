@@ -16,7 +16,8 @@ const routes: Routes =[
     { path: 'examples/landing',     component: LandingComponent },
     { path: 'examples/login',       component: LoginComponent },
     { path: 'examples/profile',     component: ProfileComponent },
-    { path: 'home', loadChildren: () => import('./components/pages/home/home.module').then(m => m.HomeModule) }
+    { path: 'home', loadChildren: () => import('./components/pages/home/home.module').then(m => m.HomeModule) },
+    { path: '**', loadChildren: () => import('./components/pages/notFound/not-found.module').then(m => m.NotFoundModule) }
 ];
 
 @NgModule({
