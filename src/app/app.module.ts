@@ -9,6 +9,7 @@ import { ExamplesModule } from './examples/examples.module';
 
 import { AppComponent } from './app.component';
 import { HeaderModule } from './shared/components/header/header.module';
+import { FooterModule } from './shared/components/footer/footer.module';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { HeaderModule } from './shared/components/header/header.module';
         AppRoutingModule,
         ComponentsModule,
         ExamplesModule, 
-        HeaderModule
+        HeaderModule,
+        FooterModule
     ],
     providers: [],
     bootstrap: [AppComponent]

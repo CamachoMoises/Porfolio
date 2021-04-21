@@ -14,8 +14,7 @@ import * as Rellax from 'rellax';
 })
 
 export class ComponentsComponent implements OnInit, OnDestroy {
-    data : Date = new Date();
-
+   
     page = 4;
     page1 = 5;
     page2 = 3;
@@ -23,7 +22,6 @@ export class ComponentsComponent implements OnInit, OnDestroy {
     focus1;
     focus2;
 
-    date: {year: number, month: number};
     model: NgbDateStruct;
 
     public isCollapsed = true;
