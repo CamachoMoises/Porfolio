@@ -11,6 +11,11 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './shared/components/header/header.module';
 import { FooterModule } from './shared/components/footer/footer.module';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -22,9 +27,12 @@ import { FooterModule } from './shared/components/footer/footer.module';
         RouterModule,
         AppRoutingModule,
         ComponentsModule,
-        ExamplesModule, 
+        ExamplesModule,
         HeaderModule,
-        FooterModule
+        FooterModule,
+        AngularFireModule.initializeApp(environment.firebaseConfig),
+        AngularFireDatabaseModule,
+        HttpClientModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

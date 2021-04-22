@@ -5,9 +5,10 @@
 
 export const environment = {
   production: false,
-  firebaseConfig : {
+  firebaseConfig: {
     apiKey: "AIzaSyCnQaRbFu8chgp6RTxVAIPSpksnLzisJGQ",
     authDomain: "porfolio-1b48d.firebaseapp.com",
+    databaseURL: "https://porfolio-1b48d-default-rtdb.firebaseio.com",
     projectId: "porfolio-1b48d",
     storageBucket: "porfolio-1b48d.appspot.com",
     messagingSenderId: "116904635071",
