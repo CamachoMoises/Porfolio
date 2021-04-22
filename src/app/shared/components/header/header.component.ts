@@ -7,12 +7,12 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
   private toggleButton: any;
-  private sidebarVisible: boolean;
+  panelOpenState = false;
+  public sidebarVisible: boolean =false;
 
   constructor(public location: Location, private element : ElementRef) {
-      this.sidebarVisible = false;
+      
   }
 
   ngOnInit() {
