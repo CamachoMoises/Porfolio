@@ -13,7 +13,7 @@ import * as moment from 'moment';
 @Component({
   selector: 'app-week-view',
   templateUrl: './week-view.component.html',
-  styleUrls: ['./week-view.component.css'],
+  styleUrls: ['./week-view.component.scss'],
 })
 export class WeekViewComponent implements OnChanges {
   @Input() week: number;

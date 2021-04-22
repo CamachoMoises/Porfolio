@@ -12,7 +12,7 @@ import * as moment from 'moment';
 @Component({
   selector: 'app-day-detail',
   templateUrl: './day-detail.component.html',
-  styleUrls: ['./day-detail.component.css'],
+  styleUrls: ['./day-detail.component.scss'],
 })
 export class DayDetailComponent implements OnInit, OnChanges {
   @Input() date: Date;
