@@ -15,17 +15,17 @@ import * as Rellax from 'rellax';
   styleUrls: ['./calendar.component.scss']
 })
 export class CalendarComponent implements OnInit {
+  data: Date = new Date();
   VIEW_MODE = VIEW_MODE;
   viewMode$ = new BehaviorSubject(VIEW_MODE.MONTH);
-
   navigation$ = new BehaviorSubject<number>(0);
   searchTerm$ = new BehaviorSubject('');
+  selected$ = new BehaviorSubject<Date>(this.data)
+  select$ = new BehaviorSubject<moment.Moment>(moment(this.data))
   filter;
   zoom: number = 14;
   lat: number = 44.445248;
   lng: number = 26.099672;
-  styles: any[] = [{ "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#e9e9e9" }, { "lightness": 17 }] }, { "featureType": "landscape", "elementType": "geometry", "stylers": [{ "color": "#f5f5f5" }, { "lightness": 20 }] }, { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{ "color": "#ffffff" }, { "lightness": 17 }] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{ "color": "#ffffff" }, { "lightness": 29 }, { "weight": 0.2 }] }, { "featureType": "road.arterial", "elementType": "geometry", "stylers": [{ "color": "#ffffff" }, { "lightness": 18 }] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [{ "color": "#ffffff" }, { "lightness": 16 }] }, { "featureType": "poi", "elementType": "geometry", "stylers": [{ "color": "#f5f5f5" }, { "lightness": 21 }] }, { "featureType": "poi.park", "elementType": "geometry", "stylers": [{ "color": "#dedede" }, { "lightness": 21 }] }, { "elementType": "labels.text.stroke", "stylers": [{ "visibility": "on" }, { "color": "#ffffff" }, { "lightness": 16 }] }, { "elementType": "labels.text.fill", "stylers": [{ "saturation": 36 }, { "color": "#333333" }, { "lightness": 40 }] }, { "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit", "elementType": "geometry", "stylers": [{ "color": "#f2f2f2" }, { "lightness": 19 }] }, { "featureType": "administrative", "elementType": "geometry.fill", "stylers": [{ "color": "#fefefe" }, { "lightness": 20 }] }, { "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [{ "color": "#fefefe" }, { "lightness": 17 }, { "weight": 1.2 }] }];
-  data: Date = new Date();
   focus;
   focus1;
   private currentDateM$ = this.viewMode$.pipe(
@@ -55,14 +55,16 @@ export class CalendarComponent implements OnInit {
   appointments$ = this.db
     .list('/appointments')
     .snapshotChanges()
-    .pipe(map((data) => data.map(val=>{
-      const data:any=val.payload.val();
-      data.$key=val.payload.key;
-      return data
-    })));
+    .pipe(
+      map((data) => data.
+        map(val => {
+          const data: any = val.payload.val();
+          data.$key = val.payload.key;
+          return data
+        })));
 
 
-    appointmentChange$ = this.db.list('/appointments');
+  appointmentChange$ = this.db.list('/appointments');
   filteredAppointments$ = combineLatest([
     this.viewMode$,
     this.currentDateM$,
@@ -102,10 +104,7 @@ export class CalendarComponent implements OnInit {
     )
     .subscribe((val) => {
       this.filter = val;
-
-
       this.appointments$.subscribe((val) => {
-
       });
     });
 
@@ -117,7 +116,7 @@ export class CalendarComponent implements OnInit {
 
   ngOnInit() {
     this.filteredAppointments$;
-    console.log('Calendar');
+
     var rellaxHeader = new Rellax('.rellax-header');
 
     var body = document.getElementsByTagName('body')[0];
@@ -135,7 +134,17 @@ export class CalendarComponent implements OnInit {
     );
   }
 
-  onSetViewMode(viewMode: string): void {
+  onSetViewMode(viewMode: string, date?: Date): void {
+    if (date) {
+      const newDate= new Date(date.getFullYear(),date.getMonth(),date.getDate());
+      const oldDate= new Date(this.data.getFullYear(), this.data.getMonth(), this.data.getDate());
+      let steps = moment(newDate).diff(moment(oldDate), 'days');
+      console.log('mayor', steps);
+      this.navigation$.next(steps);
+    }
+    else {
+      this.navigation$.next(0);
+    }
     this.viewMode$.next(viewMode);
   }
 
@@ -151,7 +160,7 @@ export class CalendarComponent implements OnInit {
     this.searchTerm$.next(e);
   }
 
-  onRemoveAppointment(id: string): void {
+  onRemoveAppointment(id: any): void {
     this.appointmentChange$.remove(id);
   }
 

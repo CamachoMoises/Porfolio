@@ -28,13 +28,14 @@
       <div class="button-container">
         <a href="#button" class="btn btn-default btn-round btn-lg btn-icon" href="https://github.com/CamachoMoises/calendario" target="_blank" rel="tooltip" title="Mira el repositorio en GitHub">
           <i class="fab fa-github"></i>
-          <p class="d-lg-none d-xl-none">github</p>
+
         </a>
       </div>
       <h3 class="title">Acerca del proyecto</h3>
       <h4 class="description">Se usó Angular, Angular Material, TypeScript, RxJS, Firebase y AngularFire como tecnología principal para crear un calendario completamente reactivo que funciona en tiempo real.</h4>
       <div class="row">
         <div class="col-md-12">
+         <mat-card>
           <app-topbar 
           (next)="onNext()" 
           (previous)="onPrevious()" 
@@ -53,19 +54,18 @@
             *ngSwitchCase="VIEW_MODE.WEEK" 
             [year]="currentYear$ | async" 
             [week]="currentWeek$ | async" 
-            [appointments]="filter" (
-              removeAppointment)="onRemoveAppointment($event)" 
-              (addAppointment)="onAddAppointment($event)" 
-              (updateAppointment)="onUpdateAppointment($event)"></app-week-view>
+            [appointments]="filter" 
+            (selectedDay)="onSetViewMode('DAY', $event)" 
+            ></app-week-view>
             <app-month-view 
             *ngSwitchCase="VIEW_MODE.MONTH" 
             [month]="currentMonth$ | async" 
             [year]="currentYear$ | async" 
             [appointments]="filter" 
-            (removeAppointment)="onRemoveAppointment($event)" 
-            (addAppointment)="onAddAppointment($event)" 
-            (updateAppointment)="onUpdateAppointment($event)"></app-month-view>
+            (selectedDay)="onSetViewMode('DAY', $event)" 
+            ></app-month-view>
           </div>
+         </mat-card>
         </div>
       </div>
     </div>

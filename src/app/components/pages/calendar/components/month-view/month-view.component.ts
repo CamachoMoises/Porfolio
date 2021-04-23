@@ -22,9 +22,7 @@ export class MonthViewComponent implements OnChanges {
   @Input() year: number;
   @Input() appointments: Array<Appointment>;
 
-  @Output() public addAppointment = new EventEmitter<Appointment>();
-  @Output() public updateAppointment = new EventEmitter<Appointment>();
-  @Output() public removeAppointment = new EventEmitter<Appointment>();
+  @Output() public selectedDay = new EventEmitter<Date>();
 
   weeks: Array<Array<DayWithAppointments>>;
 
@@ -35,9 +33,6 @@ export class MonthViewComponent implements OnChanges {
         this.year,
         this.appointments || []
       );
-      console.log('weeks',this.appointments);
-
-
     }
   }
   private calculateMonthWithAppointments(month: number, year: number, appointments: Array<Appointment>): Array<Array<DayWithAppointments>> {

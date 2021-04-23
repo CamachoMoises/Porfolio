@@ -1,16 +1,14 @@
-<h2>Month: {{ month + 1 }}/{{ year }}</h2>
-<table>
-  <tr *ngFor="let week of weeks">
-    <td *ngFor="let day of week">
-      <app-day-detail
-        (addAppointment)="addAppointment.emit($event)"
-        (removeAppointment)="removeAppointment.emit($event)"
-        (updateAppointment)="updateAppointment.emit($event)"
-        [date]="day?.date"
-        [appointments]="day?.appointments"
-      >
-      </app-day-detail>
+<h2>Mes: {{ month + 1 }}/{{ year }}</h2>
+<div fxLayout="row wrap" fxLayoutGap="10px grid">
 
-    </td>
-  </tr>
-</table>
+<ng-container *ngFor="let week of weeks; let i = index">
+  <ng-container *ngFor="let day of week; let i = index">
+
+      <app-day-resume 
+      (selectedDay)="selectedDay.emit($event)" 
+      [date]="day?.date" 
+      [appointments]="day?.appointments"></app-day-resume>
+      
+    </ng-container>
+  </ng-container>
+</div>

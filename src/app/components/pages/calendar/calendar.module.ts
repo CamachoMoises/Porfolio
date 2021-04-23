@@ -14,6 +14,7 @@ import { DayViewComponent } from './components/day-view/day-view.component';
 import { WeekViewComponent } from './components/week-view/week-view.component';
 import { MonthViewComponent } from './components/month-view/month-view.component';
 import { DayDetailComponent } from './components/day-detail/day-detail.component';
+import { DayResumeComponent } from "./components/day-resume/day-resume.component";
 import { TopbarComponent } from './components/topbar/topbar.component';
 
 
@@ -24,13 +25,22 @@ import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table'; 
 import {MatInputModule} from '@angular/material/input'; 
 import {MatButtonModule} from '@angular/material/button'; 
+import {MatListModule} from '@angular/material/list'; 
 
 
 
 
 
 @NgModule({
-  declarations: [CalendarComponent, DayViewComponent,WeekViewComponent, MonthViewComponent,DayDetailComponent, TopbarComponent],
+  declarations: [
+    CalendarComponent, 
+    DayViewComponent,
+    WeekViewComponent, 
+    MonthViewComponent,
+    DayDetailComponent, 
+    DayResumeComponent, 
+    TopbarComponent
+  ],
   imports: [
     CommonModule,
     CalendarRoutingModule,
@@ -43,14 +53,14 @@ import {MatButtonModule} from '@angular/material/button';
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
-
     MatFormFieldModule,
     MatIconModule,
     MatToolbarModule,
     MatCardModule,
     MatTableModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatListModule
  
   ]
 })
