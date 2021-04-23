@@ -7,16 +7,16 @@
 
         <div class="content">
           <div cng slass="social-description">
-            <h2>26</h2>
-            <p>Comments</p>
+            <p>Fecha</p>
+            <h2> {{data.toDateString()}} </h2>
+          </div>
+          <div class="social-description" *ngIf="filter" >
+            <h2> {{this.filter.length}} </h2>
+            <p>Entradas</p>
           </div>
           <div class="social-description">
-            <h2>26</h2>
-            <p>Comments</p>
-          </div>
-          <div class="social-description">
-            <h2>48</h2>
-            <p>Bookmarks</p>
+            <h2> {{viewMode}} </h2>
+            <p>Tipo de Vista</p>
           </div>
         </div>
       </div>

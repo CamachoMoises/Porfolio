@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, combineLatest, Observable, timer } from 'rxjs';
+import { BehaviorSubject, combineLatest } from 'rxjs';
 import { HttpClientModule } from '@angular/common/http';
 import { VIEW_MODE } from './types/constants';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { mergeMap, map, shareReplay, flatMap } from 'rxjs/operators';
+import { mergeMap, map, shareReplay } from 'rxjs/operators';
 import * as moment from 'moment';
 import Moment = moment.Moment;
 import { Appointment } from './types/appointment.type';
@@ -17,6 +17,7 @@ import * as Rellax from 'rellax';
 export class CalendarComponent implements OnInit {
   data: Date = new Date();
   VIEW_MODE = VIEW_MODE;
+  viewMode='MONTH'
   viewMode$ = new BehaviorSubject(VIEW_MODE.MONTH);
   navigation$ = new BehaviorSubject<number>(0);
   searchTerm$ = new BehaviorSubject('');
@@ -104,6 +105,8 @@ export class CalendarComponent implements OnInit {
     )
     .subscribe((val) => {
       this.filter = val;
+      console.log(this.filter.length);
+      
       this.appointments$.subscribe((val) => {
       });
     });
@@ -135,6 +138,7 @@ export class CalendarComponent implements OnInit {
   }
 
   onSetViewMode(viewMode: string, date?: Date): void {
+    this.viewMode=viewMode;
     if (date) {
       const newDate= new Date(date.getFullYear(),date.getMonth(),date.getDate());
       const oldDate= new Date(this.data.getFullYear(), this.data.getMonth(), this.data.getDate());
