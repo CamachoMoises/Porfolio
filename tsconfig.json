@@ -1,6 +1,13 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@characters/*": ["src/app/components/pages/characters0/*"],
+      "@pages/*": ["src/app/components/pages/*"],
+      "@environments/*": ["src/environments/*"],
+    },
     "importHelpers": true,
     "outDir": "./dist/out-tsc",
     "baseUrl": "src",

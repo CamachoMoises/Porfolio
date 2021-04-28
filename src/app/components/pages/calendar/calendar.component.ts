@@ -21,8 +21,6 @@ export class CalendarComponent implements OnInit {
   viewMode$ = new BehaviorSubject(VIEW_MODE.MONTH);
   navigation$ = new BehaviorSubject<number>(0);
   searchTerm$ = new BehaviorSubject('');
-  selected$ = new BehaviorSubject<Date>(this.data)
-  select$ = new BehaviorSubject<moment.Moment>(moment(this.data))
   filter;
   zoom: number = 14;
   lat: number = 44.445248;
@@ -117,7 +115,7 @@ export class CalendarComponent implements OnInit {
     private http: HttpClientModule
   ) { }
 
-  ngOnInit() {
+  ngOnInit():void{
     this.filteredAppointments$;
 
     var rellaxHeader = new Rellax('.rellax-header');
@@ -127,10 +125,7 @@ export class CalendarComponent implements OnInit {
     var navbar = document.getElementsByTagName('nav')[0];
     navbar.classList.add('navbar-transparent');
   }
-  ngOnDestroy() {
-
-  }
-
+  
   private filterByTerm(appointment, term: string): boolean {
     return (
       appointment.description.toLowerCase().indexOf(term.toLowerCase()) > -1

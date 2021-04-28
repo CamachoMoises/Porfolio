@@ -19,6 +19,7 @@ const routes: Routes =[
     { path: 'home', loadChildren: () => import('./components/pages/home/home.module').then(m => m.HomeModule) },
     { path: 'calendar', loadChildren: () => import('./components/pages/calendar/calendar.module').then(m => m.CalendarModule) },
     { path: 'profile', loadChildren: () => import('./components/pages/profile/profile.module').then(m => m.ProfileModule) },
+    { path: 'rickAndMorty', loadChildren: () => import('./components/pages/rickAndMorty/rick-and-morty.module').then(m => m.RickAndMortyModule) },
     { path: '**', loadChildren: () => import('./components/pages/notFound/not-found.module').then(m => m.NotFoundModule) }
 ];
 
