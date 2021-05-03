@@ -14,6 +14,7 @@ import { FavoriteComponent } from './favorite/favorite.component';
 import { CharacterListComponent } from './character-list/character-list.component';
 import { CharacterCardComponent } from './character-list/character-card/character-card.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { SearchModule } from '../../../shared/components/search/search.module';
 
 
 
@@ -40,6 +41,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     FormsModule,
     ReactiveFormsModule,
     InfiniteScrollModule,
+    SearchModule
 
   ]
 })

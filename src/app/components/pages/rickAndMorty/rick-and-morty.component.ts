@@ -13,7 +13,7 @@ import { DataService } from 'app/shared/services/data.service';
 })
 export class RickAndMortyComponent implements OnInit {
   character$ = this.dataScv.character$;
-  charcater;
+  character;
   characterFav$=this.localStoServ.charactersFav$ ;
   fav:number
   constructor(
@@ -31,7 +31,7 @@ export class RickAndMortyComponent implements OnInit {
       this.fav=val.length;
     })
     this.character$.subscribe( val=>{
-      this.charcater=val
+      this.character=val
       console.log('Character', val);
     })
   }

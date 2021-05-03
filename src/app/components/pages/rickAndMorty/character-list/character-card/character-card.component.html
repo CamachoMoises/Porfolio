@@ -11,13 +11,13 @@
     <h3> {{character.name}} </h3>
     <ul  *ngIf="character.isFavorite" class="card__list">
       <li>
-        <label class="table__label"> Status: </label>{{character.status}}
+        <label class="table__label"> Status: </label>{{character?.status}}
       </li>
       <li>
-        <label class="table__label"> Species: </label>{{character.species}}
+        <label class="table__label"> Species: </label>{{character?.species}}
       </li>
       <li>
-        <label class="table__label"> Gender: </label>{{character.gender}}
+        <label class="table__label"> Gender: </label>{{character?.gender}}
       </li>
     </ul>
   </div>

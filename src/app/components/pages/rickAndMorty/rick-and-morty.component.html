@@ -10,8 +10,8 @@
             <h2> {{fav}} </h2>
             <p>Favoritos</p>
           </div>
-          <div class="social-description">
-            <h2> {{charcater.length}} </h2>
+          <div class="social-description" *ngIf="character" >
+            <h2> {{character?.length}} </h2>
             <p>Personajes cargados </p>
           </div>
         </div>

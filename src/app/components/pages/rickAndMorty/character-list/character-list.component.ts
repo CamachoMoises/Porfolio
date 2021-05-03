@@ -5,11 +5,23 @@ import { DataService } from 'app/shared/services/data.service';
 @Component({
   selector: 'app-character-list',
   template: `
+  <app-search></app-search>
   <section class="character__list"
   infiniteScroll
   (scrolled)="onScrollDown()"
   >
-    <app-character-card *ngFor="let character of character$|async" [character]="character"></app-character-card>
+  <ng-container *ngIf="character$ |async as characters; else showEmpty">
+
+    <app-character-card
+    *ngFor="let character of characters, let i=index"
+    [character]="character"></app-character-card>
+  </ng-container>
+  <ng-template #showEmpty>
+    <div class="no__results">
+      <h1 class="tittle" >Not Results</h1>
+      <img src="assets/img/404.jpeg" alt="404">
+    </div>
+  </ng-template>
     <button class="button" *ngIf="showButton" (click)="onscrollTop()" type="button">⬆️</button>
   </section>
   `,
@@ -19,8 +31,8 @@ export class CharacterListComponent {
 
   showButton;
   character$ = this.dataScv.character$;
-  private scrollHeight=500;
-  private pageNum=1;
+  private scrollHeight = 500;
+  private pageNum = 1;
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private dataScv: DataService,
@@ -32,11 +44,11 @@ export class CharacterListComponent {
     this.showButton = (yOfset || scrollTop) > this.scrollHeight;
   }
   onscrollTop(): void {
-    this.document.documentElement.scrollTop=0;
+    this.document.documentElement.scrollTop = 0;
   }
-  onScrollDown(): void{
+  onScrollDown(): void {
     this.pageNum++;
     this.dataScv.getCharactersByPage(this.pageNum);
   }
- 
+
 }
