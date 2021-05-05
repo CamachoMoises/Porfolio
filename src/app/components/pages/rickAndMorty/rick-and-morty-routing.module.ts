@@ -7,9 +7,9 @@ import { CharacterListComponent } from './character-list/character-list.componen
 
 const routes: Routes = [
   { path: '', component: RickAndMortyComponent ,children:[
-    {path:'', component:FavoriteComponent},
+    {path:'', component:CharacterListComponent},
+    {path:'favorite', component:FavoriteComponent},
     {path:'episodes', component:EpisodesComponent},
-    {path:'characterList', component:CharacterListComponent},
   ]},
  
 ];

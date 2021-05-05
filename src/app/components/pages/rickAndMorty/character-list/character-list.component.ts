@@ -18,7 +18,7 @@ import { DataService } from 'app/shared/services/data.service';
   </ng-container>
   <ng-template #showEmpty>
     <div class="no__results">
-      <h1 class="tittle" >Not Results</h1>
+      <h1 class="tittle" >Sin resultados</h1>
       <img src="assets/img/404.jpeg" alt="404">
     </div>
   </ng-template>

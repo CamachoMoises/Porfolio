@@ -10,8 +10,8 @@ import { Subject } from 'rxjs';
   template: `
   <section class="search__container">
   <div class="search__name">
-      <label for="searchName"> Search by name ... </label>
-      <input type="text" class="search__input" placeholder="Search by name..." [formControl]="search">
+      <label for="searchName">Buscar por nombre ... </label>
+      <input type="text" class="search__input" placeholder="De personajes" [formControl]="search">
       <button (click)="onClear()">Clear</button>
   </div>
 </section>
