@@ -1,0 +1,40 @@
+<div class="section section-contact-us text-center">
+  <div class="container">
+    <h2 class="title">Quieres Contactarme?</h2>
+    <p class="description">Tu proyecto es muy importante para mi </p>
+    <div class="row">
+      <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
+        
+        <form [formGroup]="commentForm" id="commentForm" >
+          <div fxLayout="row wrap">
+            <mat-form-field appearance="outline" color="warn" fxFlex.gt-sm="0 1 600px" fxFill> 
+              <mat-label>&zwnj;
+                <i class="now-ui-icons ui-1_email-85"></i>
+                &zwnj;
+              </mat-label>
+              <input matInput formControlName="email" placeholder="Correo electronico" />
+              
+            </mat-form-field>
+            
+            <mat-form-field appearance="outline" color="warn" fxFlex.gt-sm="0 1 600px" fxFill> 
+              <mat-label>&zwnj;
+                <i class="now-ui-icons tech_mobile"></i>
+                &zwnj;
+              </mat-label>
+              <input matInput formControlName="phone" placeholder="telefono" />
+              
+            </mat-form-field>
+            
+            <mat-form-field class="example-full-width" color="warn" fxFlex.gt-sm="0 1 600px" fxFill >
+              <mat-label>Deja un comentario</mat-label>
+              <textarea matInput formControlName="comment" placeholder="Escribeme un mensaje"></textarea>
+            </mat-form-field>
+        </div>
+        </form>
+        <div class="send-button">
+          <button class="btn btn-primary btn-round btn-block btn-lg" (click)="addComment()"  [disabled]="!commentForm.valid"  form="personForm"> Enviar el mensaje</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

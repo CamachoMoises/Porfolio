@@ -7,7 +7,6 @@ import { mergeMap, map, shareReplay } from 'rxjs/operators';
 import * as moment from 'moment';
 import Moment = moment.Moment;
 import { Appointment } from './types/appointment.type';
-import * as Rellax from 'rellax';
 
 @Component({
   selector: 'app-calendar',
@@ -112,14 +111,10 @@ export class CalendarComponent implements OnInit {
 
   constructor(
     private db: AngularFireDatabase,
-    private http: HttpClientModule
   ) { }
 
   ngOnInit():void{
     this.filteredAppointments$;
-
-    var rellaxHeader = new Rellax('.rellax-header');
-
     var body = document.getElementsByTagName('body')[0];
     body.classList.add('profile-page');
     var navbar = document.getElementsByTagName('nav')[0];

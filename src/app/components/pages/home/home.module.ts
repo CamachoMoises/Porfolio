@@ -9,7 +9,7 @@ import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { NouisliderModule } from 'ng2-nouislider';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { ContactModule } from 'app/shared/components/contact/contact.module'
 
 @NgModule({
   declarations: [HomeComponent],
@@ -20,7 +20,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NgbModule,
     JwBootstrapSwitchNg2Module,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ContactModule
   ]
 })
 export class HomeModule { }
