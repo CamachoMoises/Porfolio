@@ -14,9 +14,9 @@ import { Appointment } from './types/appointment.type';
   styleUrls: ['./calendar.component.scss']
 })
 export class CalendarComponent implements OnInit {
-  data: Date = new Date();
+  date: Date = new Date();
   VIEW_MODE = VIEW_MODE;
-  viewMode='MONTH'
+  viewMode = 'MONTH'
   viewMode$ = new BehaviorSubject(VIEW_MODE.MONTH);
   navigation$ = new BehaviorSubject<number>(0);
   searchTerm$ = new BehaviorSubject('');
@@ -103,7 +103,7 @@ export class CalendarComponent implements OnInit {
     .subscribe((val) => {
       this.filter = val;
       console.log(this.filter.length);
-      
+
       this.appointments$.subscribe((val) => {
       });
     });
@@ -113,14 +113,14 @@ export class CalendarComponent implements OnInit {
     private db: AngularFireDatabase,
   ) { }
 
-  ngOnInit():void{
+  ngOnInit(): void {
     this.filteredAppointments$;
     var body = document.getElementsByTagName('body')[0];
     body.classList.add('profile-page');
     var navbar = document.getElementsByTagName('nav')[0];
     navbar.classList.add('navbar-transparent');
   }
-  
+
   private filterByTerm(appointment, term: string): boolean {
     return (
       appointment.description.toLowerCase().indexOf(term.toLowerCase()) > -1
@@ -128,10 +128,10 @@ export class CalendarComponent implements OnInit {
   }
 
   onSetViewMode(viewMode: string, date?: Date): void {
-    this.viewMode=viewMode;
+    this.viewMode = viewMode;
     if (date) {
-      const newDate= new Date(date.getFullYear(),date.getMonth(),date.getDate());
-      const oldDate= new Date(this.data.getFullYear(), this.data.getMonth(), this.data.getDate());
+      const newDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+      const oldDate = new Date(this.date.getFullYear(), this.date.getMonth(), this.date.getDate());
       let steps = moment(newDate).diff(moment(oldDate), 'days');
       console.log('mayor', steps);
       this.navigation$.next(steps);

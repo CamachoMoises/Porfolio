@@ -1,0 +1,84 @@
+<div class="wrapper">
+  <div class="page-header page-header-small">
+    <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/checkList.jpg')"></div>
+    <div class="container">
+      <div class="content-center">
+        <h1 class="title">Check List</h1>
+
+        <div class="content">
+          <div cng slass="social-description">
+            <h2>{{  this.list.toDo  }}</h2>
+            <p>Por hacer</p>
+          </div>
+          <div class="social-description">
+            <h2>{{ this.list.inProgress }}</h2>
+            <p>En progreso</p>
+          </div>
+          <div class="social-description">
+            <h2>{{ this.list.done }}</h2>
+            <p>Finalizados</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="button-container">
+        <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" rel="tooltip" title="Aun no disponible">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <h3 class="title">Acerca del proyecto</h3>
+      <h4 class="description">...</h4>
+      <nav class="navbar navbar-expand-lg bg-success">
+        <div class="container">
+          <div class="navbar-translate">
+            <a class="navbar-brand">Lista de Tareas</a>
+          </div>
+          <div class="collapse navbar-collapse" id="example-navbar-success">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <button (click)="newTask()" mat-button><mat-icon>add</mat-icon> Añadir Tarea</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <p class="title" >Arrastra las tareas entre listas</p>
+      <div class="row">
+        <div class="content-wrapper">
+          <div class="container-wrapper">
+            <div class="container">
+              <h2>Actividades</h2>
+
+              <mat-card cdkDropList id="todo" #todoList="cdkDropList" [cdkDropListData]="toDo$ | async" [cdkDropListConnectedTo]="[doneList, inProgressList]" (cdkDropListDropped)="drop($event)" class="list">
+                <p class="empty-label" *ngIf="(toDo$ | async)?.length === 0">Lista vacia</p>
+                <app-task (edit)="editTask('todo', $event)" *ngFor="let task of toDo$ | async" cdkDrag [task]="task"></app-task>
+              </mat-card>
+            </div>
+
+            <div class="container">
+              <h2>En progreso</h2>
+
+              <mat-card cdkDropList id="inProgress" #inProgressList="cdkDropList" [cdkDropListData]="inProgress$ | async" [cdkDropListConnectedTo]="[todoList, doneList]" (cdkDropListDropped)="drop($event)" class="list">
+                <p class="empty-label" *ngIf="(inProgress$ | async)?.length === 0">Lista vacia</p>
+                <app-task (edit)="editTask('inProgress', $event)" *ngFor="let task of inProgress$ | async" cdkDrag [task]="task"></app-task>
+              </mat-card>
+            </div>
+
+            <div class="container">
+              <h2>Finalizadas</h2>
+
+              <mat-card cdkDropList id="done" #doneList="cdkDropList" [cdkDropListData]="done$ | async" [cdkDropListConnectedTo]="[todoList, inProgressList]" (cdkDropListDropped)="drop($event)" class="list">
+                <p class="empty-label" *ngIf="(done$ | async)?.length === 0">Lista vacia</p>
+                <app-task (edit)="editTask('done', $event)" *ngFor="let task of done$ | async" cdkDrag [task]="task"></app-task>
+              </mat-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, } from '@angular/common';
-import { BrowserModule  } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ComponentsComponent } from './components/components.component';
@@ -9,17 +9,18 @@ import { LoginComponent } from './examples/login/login.component';
 import { ProfileComponent } from './examples/profile/profile.component';
 import { NucleoiconsComponent } from './components/nucleoicons/nucleoicons.component';
 
-const routes: Routes =[
+const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'index',                component: ComponentsComponent },
-    { path: 'nucleoicons',          component: NucleoiconsComponent },
-    { path: 'examples/landing',     component: LandingComponent },
-    { path: 'examples/login',       component: LoginComponent },
-    { path: 'examples/profile',     component: ProfileComponent },
+    { path: 'index', component: ComponentsComponent },
+    { path: 'nucleoicons', component: NucleoiconsComponent },
+    { path: 'examples/landing', component: LandingComponent },
+    { path: 'examples/login', component: LoginComponent },
+    { path: 'examples/profile', component: ProfileComponent },
     { path: 'home', loadChildren: () => import('./components/pages/home/home.module').then(m => m.HomeModule) },
     { path: 'calendar', loadChildren: () => import('./components/pages/calendar/calendar.module').then(m => m.CalendarModule) },
     { path: 'profile', loadChildren: () => import('./components/pages/profile/profile.module').then(m => m.ProfileModule) },
     { path: 'rickAndMorty', loadChildren: () => import('./components/pages/rickAndMorty/rick-and-morty.module').then(m => m.RickAndMortyModule) },
+    { path: 'checkList', loadChildren: () => import('./components/pages/checkList/checkList.module').then(m => m.CheckListModule)},
     { path: '**', loadChildren: () => import('./components/pages/notFound/not-found.module').then(m => m.NotFoundModule) }
 ];
 
