@@ -15,12 +15,13 @@ import { FooterModule } from './shared/components/footer/footer.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 
 import { GraphQLModule } from './graphql.module';
 import { ToastrModule } from 'ngx-toastr';
 import { SpinnerInterceptor } from './shared/interceptors/spinner.interceptor';
 import { SpinnerModule } from 'app/shared/components/spinner/spinner.module';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -30,6 +31,8 @@ import { SpinnerModule } from 'app/shared/components/spinner/spinner.module';
     ],
     imports: [
         BrowserAnimationsModule,
+        HttpClientModule,
+    
         NgbModule,
         FormsModule,
         RouterModule,

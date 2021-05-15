@@ -20,7 +20,8 @@ const routes: Routes = [
     { path: 'calendar', loadChildren: () => import('./components/pages/calendar/calendar.module').then(m => m.CalendarModule) },
     { path: 'profile', loadChildren: () => import('./components/pages/profile/profile.module').then(m => m.ProfileModule) },
     { path: 'rickAndMorty', loadChildren: () => import('./components/pages/rickAndMorty/rick-and-morty.module').then(m => m.RickAndMortyModule) },
-    { path: 'checkList', loadChildren: () => import('./components/pages/checkList/checkList.module').then(m => m.CheckListModule)},
+    { path: 'checkList', loadChildren: () => import('./components/pages/checkList/checkList.module').then(m => m.CheckListModule) },
+    { path: 'nbaPlayers', loadChildren: () => import('./components/pages/nbaPlayers/nbaPlayers.module').then(m => m.NbaPlayersModule) },
     { path: '**', loadChildren: () => import('./components/pages/notFound/not-found.module').then(m => m.NotFoundModule) }
 ];
 
