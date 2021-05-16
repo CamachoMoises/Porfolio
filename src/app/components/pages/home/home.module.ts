@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
+import { NgbdModalBasic } from '../../modal/modal.component';
 
 
 import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
@@ -12,7 +13,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactModule } from 'app/shared/components/contact/contact.module'
 
 @NgModule({
-  declarations: [HomeComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
@@ -22,6 +22,10 @@ import { ContactModule } from 'app/shared/components/contact/contact.module'
     FormsModule,
     ReactiveFormsModule,
     ContactModule
-  ]
+  ],
+  declarations: [
+    HomeComponent,
+    NgbdModalBasic
+  ],
 })
 export class HomeModule { }

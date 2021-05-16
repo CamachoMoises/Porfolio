@@ -12,7 +12,7 @@ export class CharacterCardComponent {
     private localStoServ: LocalStorageService
     ) {}
   getIcon(): string {
-    console.log();
+
     return this.character.isFavorite ? 'heart-solid.svg' : 'heart.svg';
   }
   toggleFavorite(): void{
