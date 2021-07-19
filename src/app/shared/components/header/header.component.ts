@@ -1,5 +1,5 @@
 import { Component, OnInit , ElementRef } from '@angular/core';
-import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
   private toggleButton: any;
   panelOpenState = false;
   public sidebarVisible: boolean =false;
+  private lang;
 
   constructor(public location: Location, private element : ElementRef) {
       
@@ -18,6 +19,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
       const navbar: HTMLElement = this.element.nativeElement;
       this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
+      this.lang=localStorage.getItem('lang')|| 'es';
   }
   sidebarOpen() {
       const toggleButton = this.toggleButton;
@@ -44,4 +46,10 @@ export class HeaderComponent implements OnInit {
           this.sidebarClose();
       }
   };
+  changeLang(lang){
+    console.log(`change lang ${lang}`);
+    localStorage.setItem('lang',lang);
+    window.location.reload();
+    
+  }
 }

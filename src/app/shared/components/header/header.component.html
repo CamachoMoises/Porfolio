@@ -17,7 +17,6 @@
           <a class="dropdown-item">unfinished </a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item">unfinished </a>
-     
         </div>
       </div>
     </div>
@@ -47,6 +46,17 @@
           <a class="nav-link" rel="tooltip" title="Mira el repositorio con los proyectos " data-placement="bottom" href="https://github.com/CamachoMoises" target="_blank">
             <i class="fab fa-github"></i>
             <p class="d-lg-none d-xl-none">github</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" rel="tooltip" title="Cambiua el lenguaje de la pagina " data-placement="bottom">
+            <a [matMenuTriggerFor]="menu">
+              <mat-icon>language</mat-icon>
+            </a>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item (click)="changeLang('es')" >Español</button>
+              <button mat-menu-item (click)="changeLang('en')" >English</button>
+            </mat-menu>
           </a>
         </li>
         <li class="nav-item" *ngIf="sidebarVisible">

@@ -1,0 +1,55 @@
+{
+	"navbar": {
+		"title":{
+			"principal":"Protafolio",
+			"popUp":""
+		}, 
+		"links":{
+			
+		},
+		"twitter":"",
+		"facebook":"",
+		"linkedIn":"",
+		"lang":""
+	},
+	"profile": {
+		"title": "Perfil Profesional",
+		"whoIam": "¿Quien soy?",
+		"description": "Nacido en Venezuela específicamente en el estado Falcón él en año 1994, Soy un apasionado por la tecnología que desde muy pequeño gracias al trabajo de mis padres y a un PC de escritorio con un Pentium de primera generación empezó su camino hacía convertirse en un profesional y entusiasta por las innovaciones tecnológicas que surgen cada día.",
+		"education": {
+			"title": "Estudios superiores",
+			"education_line": {
+				"1": "Formado en la Universidad de Oriente (2010-2017) como ingeniero de sistemas",
+				"2": "con tesis aprobada en mención publicación",
+				"3": "diseñador de proyectos según comprobada factibilidad técnica, operacional y económica",
+				"4": "control de sistemas de información y formulación de planes y estrategias en proyectos de diversas magnitudes"
+			}
+		},
+		"professional": {
+			"title": "Experiencia profecional",
+			"type": "Remoto",
+			"role": "Experiencia profecional",
+			"job1": {
+				"position": "Analista de redes",
+				"description": "Encargado del mantenimiento y operación del sistema informático, así como la conexión de las redes e internet de la empresa."
+			},
+			"job2": {
+				"position": "Diseñador Web",
+				"description": "Responsable del diseño e implementación de una aplicación web para el control de inventario con PHP y framework Laravel en obras de mantenimiento de crudo mediante pruebas de lazo."
+			},
+			"job3": {
+				"position": "Analista de Soporte técnico",
+				"description": "Administrador de los equipos electrónicos y Software involucrado en la empresa, mantenimiento de los servidores, soporte de los sistemas de nómina y contable de la empresa."
+			},
+			"job4": {
+				"position": "Ing. de Automatización",
+				"description": "Encargado del mantenimiento de los elementos asociados al control de equipos de procesamiento de gas combustible, Administrador de los sistemas de Visualización en tiempo real SCADA"
+			},
+			"job5": {
+				"position": "Desarrollador Web (FrontEnd)",
+				"description": "Encargado del diseño e implementación de la estructura, interfaz de partes de la aplicación desarrollada, registro de los datos de los formularios, envió al servidor, peticiones y filtrado."
+			}
+		},
+		"": ""
+	}
+}

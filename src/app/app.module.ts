@@ -21,7 +21,9 @@ import { GraphQLModule } from './graphql.module';
 import { ToastrModule } from 'ngx-toastr';
 import { SpinnerInterceptor } from './shared/interceptors/spinner.interceptor';
 import { SpinnerModule } from 'app/shared/components/spinner/spinner.module';
-import { BrowserModule } from '@angular/platform-browser';
+//Translation
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 
@@ -47,9 +49,21 @@ import { BrowserModule } from '@angular/platform-browser';
         GraphQLModule,
         BrowserAnimationsModule,
         ToastrModule.forRoot(),
-        SpinnerModule
+        SpinnerModule,
+        TranslateModule.forRoot({
+            loader: {
+              provide: TranslateLoader,
+              useFactory: (http: HttpClient) => {
+                return new TranslateHttpLoader(http);
+              },
+              deps: [ HttpClient ]
+            }
+          })
 
 
+    ],
+    exports:[
+      TranslateModule
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true }

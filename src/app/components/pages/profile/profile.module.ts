@@ -8,6 +8,7 @@ import { NouisliderModule } from 'ng2-nouislider';
 import { JwBootstrapSwitchNg2Module } from 'jw-bootstrap-switch-ng2';
 import { AgmCoreModule } from '@agm/core';
 import { ContactModule } from '../../../shared/components/contact/contact.module';
+import { TranslateModule } from '@ngx-translate/core';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { ContactModule } from '../../../shared/components/contact/contact.module
     NouisliderModule,
     JwBootstrapSwitchNg2Module,
     ContactModule,
+    TranslateModule,
     AgmCoreModule.forRoot({
         apiKey: 'YOUR_KEY_HERE'
     })

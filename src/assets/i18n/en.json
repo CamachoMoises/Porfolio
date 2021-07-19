@@ -1,0 +1,44 @@
+{
+	"principal": {
+		"text": "Portfolio"
+	},
+	"profile": {
+		"title": "Professional Profile",
+		"whoIam": "Who I am?",
+		"description": "Born in Venezuela specifically in the Falcón state in 1994, I am passionate about technology that from a very young age, thanks to the work of my parents and a desktop PC with a first-generation Pentium, began his path towards becoming a professional and enthusiastic for the technological innovations that arise every day. ",
+		"education": {
+			"title": "Higher education",
+			"education_line": {
+				"1": "Formed at the Universidad de Oriente (2010-2017) as a systems engineer ",
+				"2": "with approved thesis in publication mention",
+				"3": "project designer according to proven technical, operational and economic feasibility",
+				"4": "control information systems and formulating plans and strategies in projects of various magnitudes"
+			}
+		},
+		"professional": {
+      "title":"Professional experience",
+      "type":"Remote",
+      "role":"Role of the position",
+      "job1":{
+        "position": "Network analyst",
+        "description":"In charge of the maintenance and operation of the computer system, as well as the connection of the company's networks and internet."
+      },
+      "job2":{
+        "position": "Web designer",
+        "description":"Responsible for the design and implementation of a web application for inventory control with PHP and Laravel framework in oil maintenance works through loop tests."
+      },
+      "job3":{
+        "position": "Technical Support Analyst",
+        "description":"Administrator of the electronic equipment and Software involved in the company, maintenance of the servers, support of the payroll and accounting systems of the company."
+      },
+      "job4":{
+        "position": "Automation Engineer",
+        "description":"Responsible for the maintenance of the elements associated with the control of fuel gas processing equipment, Administrator of the SCADA real-time visualization systems."
+      },
+      "job5":{
+        "position": "Web Developer (FrontEnd)",
+        "description":"In charge of the design and implementation of the structure, interface of parts of the developed application, registration of the data of the forms, sent to the server, requests and filtering."
+      }
+    }
+	}
+}
