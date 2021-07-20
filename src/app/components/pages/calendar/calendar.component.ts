@@ -7,6 +7,7 @@ import { mergeMap, map, shareReplay } from 'rxjs/operators';
 import * as moment from 'moment';
 import Moment = moment.Moment;
 import { Appointment } from './types/appointment.type';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-calendar',
@@ -17,6 +18,7 @@ export class CalendarComponent implements OnInit {
   date: Date = new Date();
   VIEW_MODE = VIEW_MODE;
   viewMode = 'MONTH'
+  viewSelected=`calendar.banner.view.${this.viewMode}`
   viewMode$ = new BehaviorSubject(VIEW_MODE.MONTH);
   navigation$ = new BehaviorSubject<number>(0);
   searchTerm$ = new BehaviorSubject('');
@@ -108,10 +110,13 @@ export class CalendarComponent implements OnInit {
       });
     });
 
-
   constructor(
     private db: AngularFireDatabase,
-  ) { }
+    private translate: TranslateService
+  ) {
+    const lang = localStorage.getItem('lang')
+    this.translate.setDefaultLang(lang);
+  }
 
   ngOnInit(): void {
     this.filteredAppointments$;
@@ -129,6 +134,7 @@ export class CalendarComponent implements OnInit {
 
   onSetViewMode(viewMode: string, date?: Date): void {
     this.viewMode = viewMode;
+    this.viewSelected=`calendar.banner.view.${this.viewMode}`
     if (date) {
       const newDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
       const oldDate = new Date(this.date.getFullYear(), this.date.getMonth(), this.date.getDate());

@@ -1,16 +1,27 @@
 {
 	"navbar": {
-		"title":{
-			"principal":"Protafolio",
-			"popUp":""
-		}, 
-		"links":{
-			
+		"page":"Paginas",
+		"title": {
+			"principal": "Portafolio",
+			"popUp": "Diseñado por Invision. Codificado por Moisés !!!!! "
 		},
-		"twitter":"",
-		"facebook":"",
-		"linkedIn":"",
-		"lang":""
+		"links": {
+			"about": "Acerca de",
+			"calendar": "Calendario",
+			"rickAndMorty": "Rick y morty App",
+			"checkList": "Lista de actividades",
+			"NBAPlayers": "Jugadores de la NBA ",
+			"unfinished": "En proceso"
+		},
+		"twitter": "Contactame en Twitter",
+		"facebook": "Visita mi Facebook",
+		"github": "Mira el repositorio con los proyectos",
+		"linkedIn": "Únete  a mi red en LinkedIn",
+		"lang":{
+			"title":"Idioma",
+			"popUp":"Cambia el lenguaje de la página"
+		}
+		
 	},
 	"profile": {
 		"title": "Perfil Profesional",
@@ -51,5 +62,30 @@
 			}
 		},
 		"": ""
+	},
+	"home":{
+		"welcome":"Bienvenidos",
+		"desc":"Un breve paseo por los proyectos en los que he participado",
+		"modal":{
+			"desc":"Un gusto que hayas entrado a mi pagina personal, este es un proyecto aun en desarrollo y presenta secciones incompletas y con bugs, aun asi espero sea de tu agrado y si lo deseas puedes contactarme en el formulario de abajo, por mis redes sociales o mi correo.",
+			"close":"Cerrar"
+		}
+	},
+	"calendar":{
+		"title":"Calendario Reactivo",
+		"banner":{
+			"date":"Fecha",
+			"inputs":"Entradas",
+			"about":"Acerca del proyecto",
+			"desc":"Se usó Angular, Angular Material, TypeScript, RxJS, Firebase y AngularFire como tecnología principal para crear un calendario completamente reactivo que funciona en tiempo real.",
+			"search":"Busqueda",
+			"add":"Añadir",
+			"view":{
+				"title":"Tipo de Vista",
+				"MONTH":"Mes",
+				"WEEK":"Semana",
+				"DAY":"Dia"
+			}
+		}
 	}
 }

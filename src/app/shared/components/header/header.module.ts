@@ -8,6 +8,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import {MatMenuModule} from '@angular/material/menu'; 
 import {MatButtonModule} from '@angular/material/button'; 
 import {MatIconModule} from '@angular/material/icon'; 
+import { TranslateModule } from '@ngx-translate/core';
+
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatExpansionModule,
     MatMenuModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    TranslateModule
   ],
   exports: [HeaderComponent]
 })

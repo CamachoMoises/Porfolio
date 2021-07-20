@@ -9,6 +9,7 @@ import {
 import { Appointment } from '../../types/appointment.type';
 import { DayWithAppointments } from '../../types/day-with-appointments.type';
 import * as moment from 'moment';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-week-view',
@@ -23,7 +24,10 @@ export class WeekViewComponent implements OnChanges {
   @Output() public selectedDay = new EventEmitter<Date>();
 
   days: Array<DayWithAppointments> = [];
-
+  constructor(private translate: TranslateService) {
+    const lang = localStorage.getItem('lang')
+    this.translate.setDefaultLang(lang);
+  }
   ngOnChanges(simpleChanges: any): void {
     if (this.week && this.year) {
       this.days = this.calculateDaysWithAppointments(

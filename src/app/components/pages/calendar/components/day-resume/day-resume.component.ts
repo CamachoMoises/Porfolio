@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 import { Appointment } from '../../types/appointment.type';
 import * as moment from 'moment';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-day-resume',
@@ -20,13 +21,14 @@ export class DayResumeComponent implements OnInit {
   editMode = false;
 
   @Output() public selectedDay = new EventEmitter<Date>();
-  
 
-  constructor() { }
-
+  constructor(private translate: TranslateService) {
+    const lang = localStorage.getItem('lang')
+    this.translate.setDefaultLang(lang);
+  }
   ngOnInit() {
   }
-  selectDay(){
+  selectDay() {
     this.selectedDay.emit(this.date)
   }
 

@@ -11,6 +11,7 @@ import { DayWithAppointments } from '../../types/day-with-appointments.type';
 import * as moment from 'moment';
 import * as _ from 'lodash';
 import { take } from 'rxjs/operators';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-month-view',
@@ -26,6 +27,10 @@ export class MonthViewComponent implements OnChanges {
 
   weeks: Array<Array<DayWithAppointments>>;
 
+  constructor(private translate: TranslateService) {
+    const lang = localStorage.getItem('lang')
+    this.translate.setDefaultLang(lang);
+  }
   ngOnChanges(simpleChanges: any): void {
     if (this.month && this.year) {
       this.weeks = this.calculateMonthWithAppointments(

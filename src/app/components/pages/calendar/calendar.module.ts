@@ -26,6 +26,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input'; 
 import {MatButtonModule} from '@angular/material/button'; 
 import {MatListModule} from '@angular/material/list'; 
+import { TranslateModule } from '@ngx-translate/core';
+
 
 
 
@@ -60,8 +62,8 @@ import {MatListModule} from '@angular/material/list';
     MatTableModule,
     MatInputModule,
     MatButtonModule,
-    MatListModule
- 
+    MatListModule,
+    TranslateModule
   ]
 })
 export class CalendarModule { }

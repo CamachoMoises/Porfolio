@@ -1,6 +1,26 @@
 {
-	"principal": {
-		"text": "Portfolio"
+	"navbar": {
+		"page":"Pages",
+		"title": {
+			"principal": "Portfolio",
+			"popUp": "Designed by Invision. Coded by Moses!!!!!"
+		},
+		"links": {
+			"about": "About",
+			"calendar": "Calendar",
+			"rickAndMorty": "Rick and morty App",
+			"checkList": "Check List",
+			"NBAPlayers": "NBA Players",
+			"unfinished": "unfinished"
+		},
+		"twitter": "Contact me on Twitter ",
+		"facebook": "Visit my Facebook ",
+		"github": "Look at the repository with the projects ",
+		"linkedIn": "Join my network on LinkedIn ",
+		"lang":{
+			"title":"Language",
+			"popUp":"Change the language of the page"
+		}
 	},
 	"profile": {
 		"title": "Professional Profile",
@@ -16,29 +36,54 @@
 			}
 		},
 		"professional": {
-      "title":"Professional experience",
-      "type":"Remote",
-      "role":"Role of the position",
-      "job1":{
-        "position": "Network analyst",
-        "description":"In charge of the maintenance and operation of the computer system, as well as the connection of the company's networks and internet."
-      },
-      "job2":{
-        "position": "Web designer",
-        "description":"Responsible for the design and implementation of a web application for inventory control with PHP and Laravel framework in oil maintenance works through loop tests."
-      },
-      "job3":{
-        "position": "Technical Support Analyst",
-        "description":"Administrator of the electronic equipment and Software involved in the company, maintenance of the servers, support of the payroll and accounting systems of the company."
-      },
-      "job4":{
-        "position": "Automation Engineer",
-        "description":"Responsible for the maintenance of the elements associated with the control of fuel gas processing equipment, Administrator of the SCADA real-time visualization systems."
-      },
-      "job5":{
-        "position": "Web Developer (FrontEnd)",
-        "description":"In charge of the design and implementation of the structure, interface of parts of the developed application, registration of the data of the forms, sent to the server, requests and filtering."
-      }
-    }
+			"title": "Professional experience",
+			"type": "Remote",
+			"role": "Role of the position",
+			"job1": {
+				"position": "Network analyst",
+				"description": "In charge of the maintenance and operation of the computer system, as well as the connection of the company's networks and internet."
+			},
+			"job2": {
+				"position": "Web designer",
+				"description": "Responsible for the design and implementation of a web application for inventory control with PHP and Laravel framework in oil maintenance works through loop tests."
+			},
+			"job3": {
+				"position": "Technical Support Analyst",
+				"description": "Administrator of the electronic equipment and Software involved in the company, maintenance of the servers, support of the payroll and accounting systems of the company."
+			},
+			"job4": {
+				"position": "Automation Engineer",
+				"description": "Responsible for the maintenance of the elements associated with the control of fuel gas processing equipment, Administrator of the SCADA real-time visualization systems."
+			},
+			"job5": {
+				"position": "Web Developer (FrontEnd)",
+				"description": "In charge of the design and implementation of the structure, interface of parts of the developed application, registration of the data of the forms, sent to the server, requests and filtering."
+			}
+		}
+	},
+	"home":{
+		"welcome":"Welcome",
+		"desc":"A brief walk through the projects in which I have participated",
+		"modal":{
+			"desc":"A pleasure that you have entered my personal page, this is a project still in development and presents incomplete sections and with bugs, Even so, I hope it is to your liking and if you wish you can contact me in the form below, through my social networks or my email.",
+			"close":"close"
+		}
+	},
+	"calendar":{
+		"title":"Reactive Calendar",
+		"banner":{
+			"date":"Date",
+			"inputs":"Inputs",
+			"about":"About the project ",
+			"desc":"Angular, Angular Material, TypeScript, RxJS, Firebase, and AngularFire were used as the core technology to create a fully reactive calendar that works in real time.",
+			"search":"Search",
+			"add":"Add",
+			"view":{
+				"title":"View Type",
+				"MONTH":"Month",
+				"WEEK":"Week",
+				"DAY":"Day"
+			}
+		}
 	}
 }

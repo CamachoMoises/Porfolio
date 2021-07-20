@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 import { Appointment } from '../../types/appointment.type';
 import * as moment from 'moment';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-day-detail',
@@ -25,7 +26,10 @@ export class DayDetailComponent implements OnInit, OnChanges {
 
   displayedColumns: string[] = ['description', 'date'];
   dataSource: Appointment[];
-  constructor() {}
+  constructor(private translate: TranslateService) {
+    const lang = localStorage.getItem('lang')
+    this.translate.setDefaultLang(lang);
+  }
   ngOnInit(): void {}
   ngOnChanges() {
     this.dataSource = this.appointments;

@@ -11,6 +11,7 @@ import { NouisliderModule } from 'ng2-nouislider';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactModule } from 'app/shared/components/contact/contact.module'
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { ContactModule } from 'app/shared/components/contact/contact.module'
     JwBootstrapSwitchNg2Module,
     FormsModule,
     ReactiveFormsModule,
-    ContactModule
+    ContactModule,
+    TranslateModule
   ],
   declarations: [
     HomeComponent,

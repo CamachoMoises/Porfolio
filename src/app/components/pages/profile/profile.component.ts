@@ -13,7 +13,6 @@ export class ProfileComponent implements OnInit {
 
   constructor( private translate:TranslateService ) {
     const lang=localStorage.getItem('lang')
-    console.log(lang);
     this.translate.setDefaultLang(lang);
    }
 

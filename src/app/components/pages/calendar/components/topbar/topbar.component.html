@@ -6,20 +6,15 @@
     <button mat-mini-fab color="primary" (click)="next.emit()" aria-label="Example icon button with a delete icon">
       <mat-icon>chevron_right</mat-icon>
     </button>
-    <button mat-button (click)="setViewMode.emit(VIEW_MODE.DAY)">Dia</button>
-    <button mat-button (click)="setViewMode.emit(VIEW_MODE.WEEK)">Semana</button>
-    <button mat-button (click)="setViewMode.emit(VIEW_MODE.MONTH)">Mes</button>
+    <button mat-button (click)="setViewMode.emit(VIEW_MODE.DAY)"> {{ 'calendar.banner.view.DAY' | translate }} </button>
+    <button mat-button (click)="setViewMode.emit(VIEW_MODE.WEEK)"> {{ 'calendar.banner.view.WEEK' | translate }} </button>
+    <button mat-button (click)="setViewMode.emit(VIEW_MODE.MONTH)">{{ 'calendar.banner.view.MONTH' | translate }}</button>
     <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
+
   </mat-toolbar-row>
   <mat-toolbar-row>
     <mat-form-field class="form-field">
-      <mat-label>Busqueda</mat-label>
+      <mat-label>{{ 'calendar.banner.search' | translate }}</mat-label>
       <input matInput type="text" [(ngModel)]="value" (keyup)="searchChanged.emit($event.target.value)" />
       <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
         <mat-icon>close</mat-icon>

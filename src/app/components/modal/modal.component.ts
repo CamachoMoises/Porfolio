@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'ngbd-modal-component',
@@ -8,9 +9,14 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 export class NgbdModalBasic implements AfterViewInit {
     closeResult: string;
     @ViewChild("classic") classic: ElementRef
-    constructor(private modalService: NgbModal) { }
-    ngAfterViewInit():void{
-        this.open(this.classic,'','');
+    constructor(
+        private modalService: NgbModal,
+        private translate: TranslateService) {
+        const lang = localStorage.getItem('lang');
+        this.translate.setDefaultLang(lang);
+    }
+    ngAfterViewInit(): void {
+        this.open(this.classic, '', '');
     }
     open(content, type, modalDimension) {
         if (modalDimension === 'sm' && type === 'modal_mini') {

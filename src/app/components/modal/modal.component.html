@@ -5,13 +5,12 @@
     </div>
     <div class="modal-body">
         <p>
-            Un gusto que hayas entrado a mi pagina personal, este es un proyecto aun en desarrollo y presenta secciones incompletas y con bugs,
-            aun asi espero sea de tu agrado y si lo deseas puedes contactarme en el formulario de abajo, por mis redes sociales o mi correo 
+            {{ 'home.modal.desc' | translate }}
             <strong> moisescamacho26@gmail.com  </strong>
         </p>
     </div>
     <div class="modal-footer">
-        <button type="button" class="btn btn-danger" (click)="c('Close click')">Cerrar</button>
+        <button type="button" class="btn btn-danger" (click)="c('Close click')"> {{ 'home.modal.close' | translate }} </button>
     </div>
 </ng-template>
 
