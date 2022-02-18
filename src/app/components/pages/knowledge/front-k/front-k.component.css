@@ -1,0 +1,50 @@
+.mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  }
+
+#thumbnail1{
+  max-height: 80px;
+  width: auto;
+}
+
+.header-image1{
+  background: url("/assets/img/html.png");
+  background-repeat: no-repeat;
+  background-size: 20px auto;
+  background-position: center; 
+}
+
+.header-image2{
+  background: url("/assets/img/css.png");
+  background-repeat: no-repeat;
+  background-size: 25px auto;
+  background-position: center; 
+}
+
+.header-image3{
+  background: url("/assets/img/js.png");
+  background-repeat: no-repeat;
+  background-size: 20px auto;
+  background-position: center; 
+}
+
+.header-image4{
+  background: url("/assets/img/Angular.png");
+  background-repeat: no-repeat;
+  background-size: 30px auto;
+  background-position: center; 
+}
+
+.header-image5{
+  background: url("/assets/img/npm.png");
+  background-repeat: no-repeat;
+  background-size: 30px auto;
+  background-position: center; 
+}
+
+
+
+.content{
+  margin-top:20px;
+
+}

@@ -1,25 +1,27 @@
 {
 	"navbar": {
-		"page":"Pages",
+		"page": "Pages",
 		"title": {
 			"principal": "Portfolio",
 			"popUp": "Designed by Invision. Coded by Moses!!!!!"
 		},
 		"links": {
 			"about": "About",
+			"knowledge": "Skills and Knowledge",
 			"calendar": "Calendar",
 			"rickAndMorty": "Rick and morty App",
 			"checkList": "Check List",
 			"NBAPlayers": "NBA Players",
+			"Org-chart": "Organizational chart",
 			"unfinished": "unfinished"
 		},
 		"twitter": "Contact me on Twitter ",
 		"facebook": "Visit my Facebook ",
 		"github": "Look at the repository with the projects ",
 		"linkedIn": "Join my network on LinkedIn ",
-		"lang":{
-			"title":"Language",
-			"popUp":"Change the language of the page"
+		"lang": {
+			"title": "Language",
+			"popUp": "Change the language of the page"
 		}
 	},
 	"profile": {
@@ -61,28 +63,90 @@
 			}
 		}
 	},
-	"home":{
-		"welcome":"Welcome",
-		"desc":"A brief walk through the projects in which I have participated",
-		"modal":{
-			"desc":"A pleasure that you have entered my personal page, this is a project still in development and presents incomplete sections and with bugs, Even so, I hope it is to your liking and if you wish you can contact me in the form below, through my social networks or my email.",
-			"close":"close"
+	"knowledge": {
+		"title": "Skills and Knowledge",
+		"abilities": {
+			"tittle": "Skills",
+			"button": {
+				"More": "More"
+			},
+			"frontend": {
+				"title": "Frontend development",
+				"HTML": {
+					"title": "HTML",
+					"subtitle": "Version 5",
+					"list": {
+						"first": "Usage of Tags",
+						"second": "Attribute handling",
+						"third": "Using and modifying DOM elements with id and class",
+						"fourth": "Links or hyperlinks that tell the browser where to go using an href attribute, which stores a URL. ",
+						"fifth": "Using the Div container for content divisions",
+						"sixth": "Line breaks",
+						"seventh": "building ordered and unordered lists to present multiple elements or characteristics",
+						"eighth": "Table building to organize more complex information"
+					}
+				},
+				"CSS": {
+					"title": "CSS",
+					"subtitle": "Versión 3",
+					"list": {
+						"first": "Using Element Selectors to Modify HTML Tags",
+						"second": "Handling id selectors and attribute selectors",
+						"third": "Selection of nested 'Child' elements",
+						"fourth": "Using the Universal Selector '*' ",
+						"fifth": "Use of pseudo selectors"
+					}
+				},
+				"javascript": {
+					"title": "Javascript",
+					"subtitle": "ECMAScript 9",
+					"list": {}
+				},
+				"angular": {
+					"title": "Angular",
+					"subtitle": "Version 3",
+					"preview": {
+						"first": "Management of components, modules, services and interfaces",
+						"second": "Use of directives",
+						"third": "Building modular applications",
+						"fourth": "Design PWA and single page applications",
+						"fifth": "Use of lazy loading for decrease time loading"
+					},
+					"list": {
+						"first": "Component creation, nested components: the use of tags, component creation with the CLI, string interpolation, property binding, event binding, two-way data-binding, use of Input and output with their aliases, style encapsulation, local references, viewChild, ng-content use the component's lifecycle and ContendChid methods",
+						"second": "The use and creation of directives: I use the ngIf with ng-template, apply styles dynamically with inStyle, apply CSS dynamically with ngClass, Show Lists in ngFor, hostListener and hostBinding for DOM events, Use of ngSwicth",
+						"third": "Consumption of Services: inject services into components for data use, use of services for communication between components, creation of methods that call instances injected into components",
+						"fourth": "Use of route modules: creation of route modules by CLI definition of the path, redirect, route parameters, creation of nested routes children , the router-outlet, routerLink the use of relative and absolute routes, use of the directives routerLinkActive and routerlinkActiveOptions to apply the correct style to labels, use of the router to navigate from the methods of injected services, use of query parameters and fragments, control access to routes and nested routes with authGuard, verify if the changes in a component are save before leaving the route, dynamic data binding between routes and components, asynchronous routes",
+						"fifth": "Observable consumption and subscriptions: creation of custom observables with operators, use of Subjects, use of lazy loading to load only the necessary modules ",
+						"sixth": "Creation of forms and reactive forms: recognize the data loaded to the form, use of validators with patterns, modified validators, ng-invalid, ng-touched to disable the loading of erroneous data, add messages to validate the form data, apply values defaults to form inputs, use of two-way data-binding for dynamic data loading, use of validator error codes, use of asynchronous data.",
+						"seventh": "Use of pipes and data transformation: creation of pipes by CLI by parameterizing the pipes, custom pipes, asynchronous pipes, search filters, pipes to reduce data load executions"
+					}
+				}
+			}
 		}
 	},
-	"calendar":{
-		"title":"Reactive Calendar",
-		"banner":{
-			"date":"Date",
-			"inputs":"Inputs",
-			"about":"About the project ",
-			"desc":"Angular, Angular Material, TypeScript, RxJS, Firebase, and AngularFire were used as the core technology to create a fully reactive calendar that works in real time.",
-			"search":"Search",
-			"add":"Add",
-			"view":{
-				"title":"View Type",
-				"MONTH":"Month",
-				"WEEK":"Week",
-				"DAY":"Day"
+	"home": {
+		"welcome": "Welcome",
+		"desc": "A brief walk through the projects in which I have participated",
+		"modal": {
+			"desc": "A pleasure that you have entered my personal page, this is a project still in development and presents incomplete sections and with bugs, Even so, I hope it is to your liking and if you wish you can contact me in the form below, through my social networks or my email.",
+			"close": "close"
+		}
+	},
+	"calendar": {
+		"title": "Reactive Calendar",
+		"banner": {
+			"date": "Date",
+			"inputs": "Inputs",
+			"about": "About the project ",
+			"desc": "Angular, Angular Material, TypeScript, RxJS, Firebase, and AngularFire were used as the core technology to create a fully reactive calendar that works in real time.",
+			"search": "Search",
+			"add": "Add",
+			"view": {
+				"title": "View Type",
+				"MONTH": "Month",
+				"WEEK": "Week",
+				"DAY": "Day"
 			}
 		}
 	}

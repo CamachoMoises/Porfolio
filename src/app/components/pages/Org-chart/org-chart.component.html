@@ -1,0 +1,54 @@
+<div class="wrapper">
+    <div class="page-header page-header-small">
+      <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/Org-Chart.webp')"></div>
+      <div class="container">
+        <div class="content-center">
+          <h1 class="title">Nba players</h1>
+  
+          <div class="content">
+            <div class="social-description">
+              <h2>  </h2>
+              <p>Favoritos</p>
+            </div>
+            <div class="social-description"  >
+              <h2>  </h2>
+              <p>Personajes cargados </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="section">
+      <div class="container">
+        <div class="button-container">
+          <a href="#button" class="btn btn-default btn-round btn-lg btn-icon" href="https://github.com/CamachoMoises/DB2021" target="_blank" rel="tooltip" title="Mira el repositorio en GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <h3 class="title">Acerca del proyecto</h3>
+        <h4 class="description"> Una aplicacion sencilla que lista todos los jugadores de la National Basketball Association, 
+          utlizando una API Rest gractuita, angular material para los estilos de los componentes </h4>
+        <div class="row">
+          <div class="col-md-12">
+            <nav class="navbar navbar-expand-lg bg-primary">
+              <div class="container">
+                <div ngbDropdown class="dropdown">
+                  <a class="nav-link dropdown-toggle" role="button" ngbDropdownToggle>
+                    <p>Paginas</p>
+                  </a>
+                  <div ngbDropdownMenu class="dropdown-menu">
+                
+                    <a class="dropdown-item" [routerLink]="['register']">Registros</a>
+                    <a class="dropdown-item" [routerLink]="['/nbaPlayers']">Lista de personajes</a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,127 @@
+<mat-accordion>
+	<mat-expansion-panel hideToggle="false">
+		<mat-expansion-panel-header [collapsedHeight]="'150px'">
+			<mat-panel-title>
+				<img src="assets/img/html5-logo.png" alt="Thumbnail Image" id="thumbnail1" />
+			</mat-panel-title>
+			<mat-panel-description fxLayoutAlign="start center"> {{ 'knowledge.abilities.frontend.title' | translate }} </mat-panel-description>
+		</mat-expansion-panel-header>
+
+		<div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutGap="5px">
+			<br />
+			<br />
+			<div fxFlex="50" fxFlex.xs="70">
+				<mat-card>
+					<mat-card-header>
+						<div mat-card-avatar class="header-image1"></div>
+						<mat-card-title> {{ 'knowledge.abilities.frontend.HTML.title' | translate }} </mat-card-title>
+						<mat-card-subtitle> {{ 'knowledge.abilities.frontend.HTML.subtitle' | translate }} </mat-card-subtitle>
+					</mat-card-header>
+					<mat-card-content>
+						<ul>
+							<li>{{ 'knowledge.abilities.frontend.HTML.list.first' | translate }}</li>
+							<li>{{ 'knowledge.abilities.frontend.HTML.list.second' | translate }}</li>
+							<li>{{ 'knowledge.abilities.frontend.HTML.list.third' | translate }}</li>
+							<li>{{ 'knowledge.abilities.frontend.HTML.list.fourth' | translate }}</li>
+							<li>{{ 'knowledge.abilities.frontend.HTML.list.fifth' | translate }}</li>
+							<li>{{ 'knowledge.abilities.frontend.HTML.list.sixth' | translate }}</li>
+							<li>{{ 'knowledge.abilities.frontend.HTML.list.seventh' | translate }}</li>
+							<li>{{ 'knowledge.abilities.frontend.HTML.list.eighth' | translate }}</li>
+						</ul>
+					</mat-card-content>
+					<!-- <mat-card-actions>
+						<button mat-button>LIKE</button>
+						<button mat-button>SHARE</button>
+					</mat-card-actions> -->
+				</mat-card>
+			</div>
+
+			<div fxFlex="50" fxFlex.xs="70" fxLayoutAlign=" stretch">
+				<mat-card>
+					<mat-card-header>
+						<div mat-card-avatar class="header-image2"></div>
+						<mat-card-title> {{ 'knowledge.abilities.frontend.CSS.title' | translate }} </mat-card-title>
+						<mat-card-subtitle> {{ 'knowledge.abilities.frontend.CSS.subtitle' | translate }} </mat-card-subtitle>
+					</mat-card-header>
+					<mat-card-content>
+						<ul>
+							<li>{{ 'knowledge.abilities.frontend.CSS.list.first' | translate }}</li>
+							<li>{{ 'knowledge.abilities.frontend.CSS.list.second' | translate }}</li>
+							<li>{{ 'knowledge.abilities.frontend.CSS.list.third' | translate }}</li>
+							<li>{{ 'knowledge.abilities.frontend.CSS.list.fourth' | translate }}</li>
+							<li>{{ 'knowledge.abilities.frontend.CSS.list.fifth' | translate }}</li>
+						</ul>
+					</mat-card-content>
+				</mat-card>
+			</div>
+		</div>
+		<br />
+		<div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutGap="5px">
+			<div fxFill>
+				<mat-card>
+					<mat-card-header>
+						<div mat-card-avatar class="header-image3"></div>
+						<mat-card-title>Javascript</mat-card-title>
+						<mat-card-subtitle>ECMAScript 9</mat-card-subtitle>
+					</mat-card-header>
+					<mat-card-content>
+						<ul>
+							<li></li>
+						</ul>
+					</mat-card-content>
+					<mat-card-actions align="end">
+						<button mat-button (click)="moreJavaScript($event)">{{ 'knowledge.abilities.button.More' | translate }}</button>
+					</mat-card-actions>
+				</mat-card>
+			</div>
+		</div>
+		<div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutGap="5px">
+			<div fxFill>
+				<mat-card>
+					<mat-card-header>
+						<div mat-card-avatar class="header-image4"></div>
+						<mat-card-title>Angular</mat-card-title>
+						<mat-card-subtitle>Version 11+</mat-card-subtitle>
+					</mat-card-header>
+					<mat-card-content>
+						<ul>
+							<li>{{    'knowledge.abilities.frontend.angular.preview.first' | translate }}</li>
+							<li>{{ 'knowledge.abilities.frontend.angular.preview.second' | translate }}</li>
+							<li>{{ 'knowledge.abilities.frontend.angular.preview.third' | translate }}</li>
+							<li>{{ 'knowledge.abilities.frontend.angular.preview.fourth' | translate }}</li>
+							<li>{{ 'knowledge.abilities.frontend.angular.preview.fifth' | translate }}</li>
+						</ul>
+					</mat-card-content>
+					<mat-card-actions align="end">
+						<button mat-button (click)="moreAngular($event)">{{ 'knowledge.abilities.button.More' | translate }}</button>
+					</mat-card-actions>
+				</mat-card>
+			</div>
+		</div>
+		<div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutGap="5px">
+			<div fxFill>
+				<mat-card>
+					<mat-card-header>
+						<div mat-card-avatar class="header-image5"></div>
+						<mat-card-title>NPM</mat-card-title>
+						<mat-card-subtitle>>>>></mat-card-subtitle>
+					</mat-card-header>
+					<mat-card-content>
+						<ul>
+							<li>
+								Fruit
+								<ul>
+									<li>Bananas</li>
+									<li>Apples</li>
+									<li>Pears</li>
+								</ul>
+							</li>
+							<li>Vegetables</li>
+							<li>Meat</li>
+						</ul>
+					</mat-card-content>
+				</mat-card>
+			</div>
+		</div>
+	</mat-expansion-panel>
+</mat-accordion>

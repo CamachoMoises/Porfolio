@@ -22,6 +22,8 @@ const routes: Routes = [
     { path: 'rickAndMorty', loadChildren: () => import('./components/pages/rickAndMorty/rick-and-morty.module').then(m => m.RickAndMortyModule) },
     { path: 'checkList', loadChildren: () => import('./components/pages/checkList/checkList.module').then(m => m.CheckListModule) },
     { path: 'nbaPlayers', loadChildren: () => import('./components/pages/nbaPlayers/nbaPlayers.module').then(m => m.NbaPlayersModule) },
+    { path: 'OrgChart', loadChildren: () => import('./components/pages/Org-chart/org-chart.module').then(m => m.OrgChartModule) },
+    { path: 'knowledge', loadChildren: () => import('./components/pages/knowledge/knowledge.module').then(m => m.KnowledgeModule) },
     { path: '**', loadChildren: () => import('./components/pages/notFound/not-found.module').then(m => m.NotFoundModule) }
 ];
 

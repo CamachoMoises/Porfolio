@@ -38,6 +38,7 @@
     "bootstrap": "^4.5.3",
     "copy-webpack-plugin": "7.0.0",
     "core-js": "3.8.1",
+    "d3-org-chart": "^2.6.0",
     "firebase": "^7.0 || ^8.0",
     "font-awesome": "4.7.0",
     "graphql": "^15.0.0",

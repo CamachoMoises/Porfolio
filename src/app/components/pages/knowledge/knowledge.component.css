@@ -1,0 +1,33 @@
+.sec1 {
+	background: rgb(243, 169, 100);
+}
+
+.sec2 {
+	margin-bottom: 3px;
+}
+
+.sec4 {
+	background: rgb(253, 235, 129);
+}
+
+.sec5 {
+	background: rgb(253, 129, 236);
+}
+
+.sec6 {
+	background: rgb(129, 245, 253);
+}
+.sec1,
+
+.sec3,
+.sec4,
+.sec5,
+.sec6 {
+	padding-top: 10px;
+	
+}
+
+mat-card{
+	margin-bottom: 5px;
+	color: rgb(94, 6, 6);
+}

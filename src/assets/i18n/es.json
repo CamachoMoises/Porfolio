@@ -1,27 +1,28 @@
 {
 	"navbar": {
-		"page":"Paginas",
+		"page": "Paginas",
 		"title": {
 			"principal": "Portafolio",
 			"popUp": "Diseñado por Invision. Codificado por Moisés !!!!! "
 		},
 		"links": {
 			"about": "Acerca de",
+			"knowledge": "Habilidades y conocimientos",
 			"calendar": "Calendario",
 			"rickAndMorty": "Rick y morty App",
 			"checkList": "Lista de actividades",
 			"NBAPlayers": "Jugadores de la NBA ",
+			"Org-chart": "Grafica Organizacional",
 			"unfinished": "En proceso"
 		},
 		"twitter": "Contactame en Twitter",
 		"facebook": "Visita mi Facebook",
 		"github": "Mira el repositorio con los proyectos",
 		"linkedIn": "Únete  a mi red en LinkedIn",
-		"lang":{
-			"title":"Idioma",
-			"popUp":"Cambia el lenguaje de la página"
+		"lang": {
+			"title": "Idioma",
+			"popUp": "Cambia el lenguaje de la página"
 		}
-		
 	},
 	"profile": {
 		"title": "Perfil Profesional",
@@ -63,28 +64,90 @@
 		},
 		"": ""
 	},
-	"home":{
-		"welcome":"Bienvenidos",
-		"desc":"Un breve paseo por los proyectos en los que he participado",
-		"modal":{
-			"desc":"Un gusto que hayas entrado a mi pagina personal, este es un proyecto aun en desarrollo y presenta secciones incompletas y con bugs, aun asi espero sea de tu agrado y si lo deseas puedes contactarme en el formulario de abajo, por mis redes sociales o mi correo.",
-			"close":"Cerrar"
+	"knowledge": {
+		"title": "Habilidades y conocimientos",
+		"abilities": {
+			"tittle": "Habilidades",
+			"button": {
+				"More": "Mas"
+			},
+			"frontend": {
+				"title": "Desarrollo Frontend",
+				"HTML": {
+					"title": "HTML",
+					"subtitle": "Versión 5",
+					"list": {
+						"first": "Uso de Etiquetas",
+						"second": "Manejos de atributos",
+						"third": "Uso y modificación de elementos del DOM con identificaciones y clases",
+						"fourth": "Los enlaces o hipervínculos que  le dicen al navegador a dónde ir usando un atributo href, que almacena una URL.",
+						"fifth": "Uso del contenedor Div para las divisiones del contenido",
+						"sixth": "Saltos de linea",
+						"seventh": "Armado de listas ordenadas y desordenadas para presentar múltiples elementos o características",
+						"eighth": "Armado de tablas para organizar información mas compleja"
+					}
+				},
+				"CSS": {
+					"title": "CSS",
+					"subtitle": "Versión 3",
+					"list": {
+						"first": "Uso de los selectores de elementos para modificar las Etiquetas HTML ",
+						"second": "Manejo de selectores de id y selectores de atributos ",
+						"third": "Selección de elementos anidados 'Child'",
+						"fourth": "Empleo de el Selector universal '*'",
+						"fifth": "Uso de los pseudo selectores"
+					}
+				},
+				"javascript": {
+					"title": "Javascript",
+					"subtitle": "ECMAScript 9",
+					"list": {}
+				},
+				"angular": {
+					"title": "Angular",
+					"subtitle": "Version 3",
+					"preview": {
+						"first": "Manejo de componentes, módulos, servicios e interfaces",
+						"second": "Uso de directives",
+						"third": "Creación de aplicaciones modulares",
+						"fourth": "Diseño de aplicaciones PWA y de una sola página ",
+						"fifth": "Uso de Lazy loading para disminuir el tiempo de carga "
+					},
+					"list": {
+						"first": "Creación de componentes, componentes anidados: el uso de las etiquetas ,creacion componentes con el CLI, string interpolation, property binding, event binding, two-way data-binding, uso de Input y output con sus alias, encapsulación de styles, local references, viewChild, ng-content el uso  los métodos de ciclo de vida del componente y ContendChid.",
+						"second": "El uso y creación de directivas: uso el ngIf con ng-template, aplicar styles dinámicamente con inStyle, aplicar CSS dinámicamente con ngClass,  Mostrar Listas en ngFor, el hostListener y hostBinding para los eventos del DOM, Uso de ngSwicth",
+						"third": "Consumo de Servicios: inyectar los servicios en los componentes para el uso de la data, uso de los servicios  para la comunicación entre los componentes, creación métodos  que llama a instancias inyectadas a los componentes.",
+						"fourth": "Uso de los módulos de rutas: creación de módulos de rutas por CLI definición del path, redirect, parámetros de las rutas, creación de rutas anidadas children , el router-outlet, routerLink el uso de rutas relativas y absolutas, uso las directivas routerLinkActive y routerlinkActiveOptions para aplicar el estilo correcto a las etiquetas, uso del router para navegar desde los métodos de los servicios inyectados, uso de parámetros query y fragments, controles de acceso a las rutas y rutas anidadas con authGuard, verificar si los cambios en un componente se guardan antes de dejar la ruta, enlace de la data dinámica entre las rutas y los componentes, rutas de asíncronas",
+						"fifth": "Consumo de observables y suscripciones: creación de observables personalizados con operadores, Uso Subjects, uso del lazy loading para cargar solo los módulos necesarios",
+						"sixth": "Creación de formularios y formularios reactivos: reconocer los datos cargados al formulario, uso de validadores con patterns, validadores modificados, ng-invalid, ng-touched para desactivar la carga de datos erróneos, agregar mensajes de para validar los datos del formulario, aplicar valores por defectos a los input del formulario, uso de two-way data-binding para carga dinámica de los datos, uso de los códigos de error de los validadores, uso de datos asíncronos.",
+						"seventh": "Uso de Pipes y transformación de datos:creación de pipes por CLI parametrizando los pipes, pipes personalizados, pipes asíncronos, filtrados de búsqueda, pipes para disminuir las ejecuciones de carga de datos "
+					}
+				}
+			}
 		}
 	},
-	"calendar":{
-		"title":"Calendario Reactivo",
-		"banner":{
-			"date":"Fecha",
-			"inputs":"Entradas",
-			"about":"Acerca del proyecto",
-			"desc":"Se usó Angular, Angular Material, TypeScript, RxJS, Firebase y AngularFire como tecnología principal para crear un calendario completamente reactivo que funciona en tiempo real.",
-			"search":"Busqueda",
-			"add":"Añadir",
-			"view":{
-				"title":"Tipo de Vista",
-				"MONTH":"Mes",
-				"WEEK":"Semana",
-				"DAY":"Dia"
+	"home": {
+		"welcome": "Bienvenidos",
+		"desc": "Un breve paseo por los proyectos en los que he participado",
+		"modal": {
+			"desc": "Un gusto que hayas entrado a mi pagina personal, este es un proyecto aun en desarrollo y presenta secciones incompletas y con bugs, aun asi espero sea de tu agrado y si lo deseas puedes contactarme en el formulario de abajo, por mis redes sociales o mi correo.",
+			"close": "Cerrar"
+		}
+	},
+	"calendar": {
+		"title": "Calendario Reactivo",
+		"banner": {
+			"date": "Fecha",
+			"inputs": "Entradas",
+			"about": "Acerca del proyecto",
+			"desc": "Se usó Angular, Angular Material, TypeScript, RxJS, Firebase y AngularFire como tecnología principal para crear un calendario completamente reactivo que funciona en tiempo real.",
+			"search": "Busqueda",
+			"add": "Añadir",
+			"view": {
+				"title": "Tipo de Vista",
+				"MONTH": "Mes",
+				"WEEK": "Semana",
+				"DAY": "Dia"
 			}
 		}
 	}

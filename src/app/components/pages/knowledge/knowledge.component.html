@@ -1,0 +1,58 @@
+<div class="wrapper">
+	<div class="page-header page-header-small">
+		<div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/arpad-czapp-H424WdcQN4Y-unsplash.jpg')"></div>
+		<div class="container">
+			<div class="content-center">
+				<h1 class="title">{{ 'knowledge.title' | translate }}</h1>
+				<div class="text-center">
+					<a href="https://www.facebook.com/moises.camacho2/" class="btn btn-info btn-icon btn-round">
+						<i class="fab fa-facebook-square"></i>
+					</a>
+					<a href="https://twitter.com/moises_2702" class="btn btn-info btn-icon btn-round">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a href="https://www.linkedin.com/in/moises-camacho-5a900194/" class="btn btn-info btn-icon btn-round">
+						<i class="fab fa-linkedin"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="section section-about-us">
+		<div class="container">
+			<div class="bounds">
+				<div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutGap="5px">
+					<div fxFlex="70" class="sec1" fxFlex.xs="55">
+						<p>  {{ 'knowledge.abilities.tittle' | translate }}  </p>
+						<div class="content" fxLayout="column" fxLayoutGap="5px" >
+							<div fxFill> <app-front-k></app-front-k></div>
+							<div fxFill class="sec4"> 
+								<mat-expansion-panel hideToggle>
+									<mat-expansion-panel-header>
+									  <mat-panel-title>
+										This is the expansion title
+									  </mat-panel-title>
+									  <mat-panel-description>
+										This is a summary of the content
+									  </mat-panel-description>
+									</mat-expansion-panel-header>
+									<p>This is the primary content of the panel.</p>
+								  </mat-expansion-panel>	
+							
+							</div>
+							<div fxFill class="sec5"> fifth section </div>
+							<div fxFill class="sec6"> sixth section </div>
+						</div>
+					</div>
+					<div fxFlex="30" class="sec2">
+						<mat-card fxFill >
+							Software 
+
+						</mat-card>
+					</div>
+				</div>
+			</div>
+			<app-contact></app-contact>
+		</div>
+	</div>
+</div>
