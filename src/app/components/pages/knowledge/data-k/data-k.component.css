@@ -1,0 +1,13 @@
+#thumbnail1{
+    max-height: 115px;
+    width: auto;
+  }
+
+  .header-image1{
+    background: url("/assets/img/nodejs.png");
+    background-repeat: no-repeat;
+    background-size: 50px auto;
+    background-position: center; 
+  }
+
+  

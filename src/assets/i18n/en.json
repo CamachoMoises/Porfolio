@@ -8,8 +8,9 @@
 		"links": {
 			"about": "About",
 			"knowledge": "Skills and Knowledge",
+			"gallery":"Project Gallery",
 			"calendar": "Calendar",
-			"rickAndMorty": "Rick and morty App",
+			"rickAndMorty": "Rick and Morty App",
 			"checkList": "Check List",
 			"NBAPlayers": "NBA Players",
 			"Org-chart": "Organizational chart",
@@ -100,11 +101,149 @@
 				"javascript": {
 					"title": "Javascript",
 					"subtitle": "ECMAScript 9",
-					"list": {}
+					"description": "Management of concepts ",
+					"preview": {
+						"first": "DOM",
+						"second": "Functions",
+						"third": "Modules",
+						"fourth": "Objects",
+						"fifth": "String",
+						"sixth": "Promises",
+						"seventh": "Syntax",
+						"eighth": "Variables",
+						"ninth": "Fetch API",
+						"tenth": "Arrays",
+						"eleventh": "Class"
+					},
+
+					"SubList": {
+						"first": {
+							"first": "Events",
+							"second": "DOMContendLoaded",
+							"third": "DOM Changes",
+							"fourth": "Focus, blur",
+							"fifth": "KeyUp/ KeyDown",
+							"sixth": "EventListener",
+							"seventh": "CurrentTarget"
+						},
+						"second": {
+							"first": "=>(arrow functions)",
+							"second": "Asynchronous callbacks",
+							"third": "Closures",
+							"fourth": "Lexical scopes",
+							"fifth": "Hoisting",
+							"sixth": "Passing functions",
+							"seventh": "Default parameters",
+							"eighth": "Implicit return"
+						},
+						"third": {
+							"first": "ES Modules",
+							"second": "Importing from libraries",
+							"third": "Package managers",
+							"fourth": "Default Exports",
+							"fifth": "Imports",
+							"sixth": "Dynamic imports"
+						},
+						"fourth": {
+							"first": "property access",
+							"second": "Object Shorthand",
+							"third": "Dynamic properties",
+							"fourth": "Destructuring",
+							"fifth": ".Values()",
+							"sixth": "?? (nullish coalescing)",
+							"seventh": "...(spread)",
+							"eighth": "?.(Optional chaining)"
+						},
+						"fifth": {
+							"first": "[] (Characters access)",
+							"second": "Template strings",
+							"third": "Concatenations",
+							"fourth": ".trim()",
+							"fifth": ".toUpperCase()",
+							"sixth": ".toLowerCase()",
+							"seventh": ".substring()",
+							"eighth": ".startWith()",
+							"ninth": ".split()",
+							"tenth": ".replaceAll()",
+							"eleventh": ".replace()",
+							"twelfth": ".length",
+							"thirteenth": ".includes()",
+							"fourteenth": ".endsWith()"
+						},
+						"sixth": {
+							"first": "state",
+							"second": "new Promise()",
+							"third": "await Keyword",
+							"fourth": "async / await",
+							"fifth": "async functions",
+							"sixth": "Promise.resolve()",
+							"seventh": "Promise.reject()",
+							"eighth": ".then()",
+							"ninth": ".finally()",
+							"tenth": ".catch()"
+						},
+						"seventh": {
+							"first": "try ... catch",
+							"second": "Operator if",
+							"third": "for ... of",
+							"fourth": "for ... in",
+							"fifth": "for(loops)",
+							"sixth": "Semi-colons",
+							"seventh": "Exceptions"
+						},
+						"eighth": {
+							"first": "var(legacy)",
+							"second": "declarations let",
+							"third": "declarations const",
+							"fourth": "Temporal dead zone"
+						},
+						"ninth": {
+							"first": "fetch()",
+							"second": "Response.json()",
+							"third": "Response status code",
+							"fourth": "Method PUT",
+							"fifth": "Method POST",
+							"sixth": "JSON.stringify()",
+							"seventh": "JSON.parse()",
+							"eighth": "Method GET",
+							"ninth": "Fetch Wrapper",
+							"tenth": "Error handling",
+							"eleventh": "Method DELETE"
+						},
+						"tenth": {
+							"first": ".every()",
+							"second": ".filter()",
+							"third": ".find()",
+							"fourth": ".forEach()",
+							"fifth": ".includes()",
+							"sixth": ".join()",
+							"seventh": ".length",
+							"eighth": ".map()",
+							"ninth": ".push()",
+							"tenth": ".reduce()",
+							"eleventh": ".some()",
+							"twelfth": ".splice()",
+							"thirteenth": "Arrays of objects",
+							"fourteenth": "[] get items",
+							"fifteenth": "Destructuring"
+						},
+						"eleventh": {
+							"first": "Getters",
+							"second": "Class vs functions",
+							"third": "Private class fields",
+							"fourth": "Public class fields",
+							"fifth": "inheritance",
+							"sixth": "Super()",
+							"seventh": "Instances method",
+							"eighth": "Instances variables",
+							"ninth": "Setters",
+							"tenth": "Static methods"
+						}
+					}
 				},
 				"angular": {
 					"title": "Angular",
-					"subtitle": "Version 3",
+					"subtitle": "Version 11+",
 					"preview": {
 						"first": "Management of components, modules, services and interfaces",
 						"second": "Use of directives",
@@ -121,7 +260,52 @@
 						"sixth": "Creation of forms and reactive forms: recognize the data loaded to the form, use of validators with patterns, modified validators, ng-invalid, ng-touched to disable the loading of erroneous data, add messages to validate the form data, apply values defaults to form inputs, use of two-way data-binding for dynamic data loading, use of validator error codes, use of asynchronous data.",
 						"seventh": "Use of pipes and data transformation: creation of pipes by CLI by parameterizing the pipes, custom pipes, asynchronous pipes, search filters, pipes to reduce data load executions"
 					}
+				},
+				"NPM": {
+					"title": "NPM",
+					"subtitle": "Frontend Packages",
+					"list": {
+						
+					}
 				}
+			},
+			"backend": {
+				"title": "Backend development",
+				"nodejs": {
+					"title": "Node Js",
+					"subtitle":"Version 12+",
+					"description":"Project creation with Node.js for Rest API solutions, request handling: data, files and connection with different types of database architectures "
+
+				},
+				"express": {
+					"title": "Express",
+					"subtitle":"version 4+"
+				}
+			},
+			"database":{
+				"title": "Database manager",
+				"mysql":{
+					"title":"",
+					"subtitle":""
+				}
+			}
+		}
+	},
+	"gallery":{
+		"title": "Project Gallery",
+		"B-L-Project":{
+			"title":"Tittle 000",
+			"description":"Inventory management project...",
+			"carousel":{
+				"first": "Login",
+				"second": "Register",
+				"third": "Home",
+				"fourth": "Products list",
+				"fifth": "Product info",
+				"sixth": "Form input",
+				"seventh": "Form output",
+				"eighth": "Products details",
+				"ninth":"Supplier Form"
 			}
 		}
 	},

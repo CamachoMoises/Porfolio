@@ -1,80 +1,77 @@
 <nav class="navbar navbar-expand-lg bg-info fixed-top navbar-transparent" color-on-scroll="500">
-  <div class="container">
-    <div class="dropdown button-dropdown">
-      <div ngbDropdown>
-        <a class="dropdown-toggle" ngbDropdownToggle>
-          <span class="button-bar"></span>
-          <span class="button-bar"></span>
-          <span class="button-bar"></span>
-        </a>
-        <div ngbDropdownMenu>
-          <a class="dropdown-item" [routerLink]="['/profile']"> {{ 'navbar.links.about' | translate }}</a>
-          <a class="dropdown-item" [routerLink]="['/knowledge']"> {{ 'navbar.links.knowledge' | translate }}</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" [routerLink]="['/calendar']">{{ 'navbar.links.calendar' | translate }}</a>
-          <a class="dropdown-item" [routerLink]="['/rickAndMorty']">{{ 'navbar.links.rickAndMorty' | translate }}</a>
-          <a class="dropdown-item" [routerLink]="['/checkList']">{{ 'navbar.links.checkList' | translate }}</a>
-          <a class="dropdown-item" [routerLink]="['/nbaPlayers']">{{ 'navbar.links.NBAPlayers' | translate }}</a>
-          <a class="dropdown-item" [routerLink]="['/OrgChart']">{{ 'navbar.links.Org-chart' | translate }}</a> 
+	<div class="container">
+		<div class="dropdown button-dropdown">
+			<div ngbDropdown>
+				<a class="dropdown-toggle" ngbDropdownToggle>
+					<span class="button-bar"></span>
+					<span class="button-bar"></span>
+					<span class="button-bar"></span>
+				</a>
+				<div ngbDropdownMenu>
+					<a class="dropdown-item" [routerLink]="['/profile']"> {{ 'navbar.links.about' | translate }}</a>
+					<a class="dropdown-item" [routerLink]="['/knowledge']"> {{ 'navbar.links.knowledge' | translate }}</a>
+					<a class="dropdown-item" [routerLink]="['/gallery']"> {{ 'navbar.links.gallery' | translate }}</a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item" [routerLink]="['/calendar']">{{ 'navbar.links.calendar' | translate }}</a>
+					<a class="dropdown-item" [routerLink]="['/rickAndMorty']">{{ 'navbar.links.rickAndMorty' | translate }}</a>
+					<a class="dropdown-item" [routerLink]="['/checkList']">{{ 'navbar.links.checkList' | translate }}</a>
+					<a class="dropdown-item" [routerLink]="['/nbaPlayers']">{{ 'navbar.links.NBAPlayers' | translate }}</a>
+					<a class="dropdown-item" [routerLink]="['/OrgChart']">{{ 'navbar.links.Org-chart' | translate }}</a>
 
+					<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
+					<div class="dropdown-divider"></div>
+					<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
+				</div>
+			</div>
+		</div>
+		<div class="navbar-translate">
+			<a class="navbar-brand" placement="bottom" ngbTooltip="{{ 'navbar.title.popUp' | translate }}" [routerLink]="['/home']"> Moises Porfolio </a>
+			<button class="navbar-toggler" type="button" (click)="sidebarToggle()">
+				<span class="navbar-toggler-bar bar1"></span>
+				<span class="navbar-toggler-bar bar2"></span>
+				<span class="navbar-toggler-bar bar3"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" data-nav-image="assets/img/blurred-image-1.jpg" data-color="red">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" rel="tooltip" title="{{ 'navbar.twitter' | translate }}" data-placement="bottom" href="https://twitter.com/moises_2702" target="_blank">
+						<i class="fab fa-twitter"></i>
+						<p class="d-lg-none d-xl-none">Twitter</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" rel="tooltip" title="{{ 'navbar.facebook' | translate }}" data-placement="bottom" href="https://www.facebook.com/moises.camacho2/" target="_blank">
+						<i class="fab fa-facebook-square"></i>
+						<p class="d-lg-none d-xl-none">Facebook</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" rel="tooltip" title="{{ 'navbar.linkedIn' | translate }}" data-placement="bottom" href="https://www.linkedin.com/in/moises-camacho-5a900194/" target="_blank">
+						<i class="fab fa-linkedin"></i>
+						<p class="d-lg-none d-xl-none">LinkedIn</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" rel="tooltip" title="{{ 'navbar.github' | translate }}" data-placement="bottom" href="https://github.com/CamachoMoises" target="_blank">
+						<i class="fab fa-github"></i>
+						<p class="d-lg-none d-xl-none">github</p>
+					</a>
+				</li>
+				<li class="nav-item">
+					<div ngbDropdown>
+						<a class="nav-link" ngbDropdownToggle title="{{ 'navbar.lang.popUp' | translate }}" data-placement="bottom">
+							<mat-icon>language</mat-icon>
+							<p class="d-lg-none d-xl-none">{{ 'navbar.lang.title' | translate }}</p>
+						</a>
+						<div ngbDropdownMenu>
+							<a class="dropdown-item" (click)="changeLang('es')"> Español </a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" (click)="changeLang('en')"> English </a>
+						</div>
+					</div>
 
-          <a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
-         
-        </div>
-      </div>
-    </div>
-    <div class="navbar-translate">
-      <a class="navbar-brand" placement="bottom" ngbTooltip="{{ 'navbar.title.popUp' | translate }}" [routerLink]="['/home']"> Moises Porfolio </a>
-      <button class="navbar-toggler" type="button" (click)="sidebarToggle()" >
-        <span class="navbar-toggler-bar bar1"></span>
-        <span class="navbar-toggler-bar bar2"></span>
-        <span class="navbar-toggler-bar bar3"></span>
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" data-nav-image="assets/img/blurred-image-1.jpg" data-color="red">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" rel="tooltip" title="{{ 'navbar.twitter' | translate }}" data-placement="bottom" href="https://twitter.com/moises_2702" target="_blank">
-            <i class="fab fa-twitter"></i>
-            <p class="d-lg-none d-xl-none">Twitter</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" rel="tooltip" title="{{ 'navbar.facebook' | translate }}" data-placement="bottom" href="https://www.facebook.com/moises.camacho2/" target="_blank">
-            <i class="fab fa-facebook-square"></i>
-            <p class="d-lg-none d-xl-none">Facebook</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" rel="tooltip" title="{{ 'navbar.linkedIn' | translate }}" data-placement="bottom" href="https://www.linkedin.com/in/moises-camacho-5a900194/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-            <p class="d-lg-none d-xl-none">LinkedIn</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" rel="tooltip" title="{{ 'navbar.github' | translate }}" data-placement="bottom" href="https://github.com/CamachoMoises" target="_blank">
-            <i class="fab fa-github"></i>
-            <p class="d-lg-none d-xl-none">github</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <div ngbDropdown>
-            <a class="nav-link" ngbDropdownToggle title="{{ 'navbar.lang.popUp' | translate }}" data-placement="bottom">
-              <mat-icon>language</mat-icon>
-              <p class="d-lg-none d-xl-none">{{ 'navbar.lang.title' | translate }}</p>
-            </a>
-            <div ngbDropdownMenu>
-              <a class="dropdown-item" (click)="changeLang('es')" > Español </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" (click)="changeLang('en')" > English </a>
-        
-             
-            </div>
-          </div>
-
-          <!-- <a class="nav-link" rel="tooltip" title="{{ 'navbar.lang.popUp' | translate }}" data-placement="bottom">
+					<!-- <a class="nav-link" rel="tooltip" title="{{ 'navbar.lang.popUp' | translate }}" data-placement="bottom">
             <a [matMenuTriggerFor]="menu">
               <mat-icon>language</mat-icon>
               <p class="d-lg-none d-xl-none">{{ 'navbar.lang.title' | translate }}</p>
@@ -84,29 +81,30 @@
               <button mat-menu-item (click)="changeLang('en')" >English</button>
             </mat-menu>
           </a> -->
-        </li>
-        <li class="nav-item" *ngIf="sidebarVisible">
-          <div ngbDropdown class="dropdown">
-            <a class="nav-link dropdown-toggle" ngbDropdownToggle>
-              <p>{{ 'navbar.page' | translate }}</p>
-            </a>
-            <div ngbDropdownMenu class="dropdown-menu">
-              <a class="dropdown-item" [routerLink]="['/profile']" (click)="sidebarToggle()" > {{ 'navbar.links.about' | translate }}</a>
-              <a class="dropdown-item" [routerLink]="['/knowledge']" (click)="sidebarToggle()" > {{ 'navbar.links.knowledge' | translate }}</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" [routerLink]="['/calendar']" (click)="sidebarToggle()" >{{ 'navbar.links.calendar' | translate }}</a>
-              <a class="dropdown-item" [routerLink]="['/rickAndMorty']" (click)="sidebarToggle()" >{{ 'navbar.links.rickAndMorty' | translate }}</a>
-              <a class="dropdown-item" [routerLink]="['/checkList']" (click)="sidebarToggle()" >{{ 'navbar.links.checkList' | translate }}</a>
-              <a class="dropdown-item" [routerLink]="['/nbaPlayers']" (click)="sidebarToggle()" >{{ 'navbar.links.NBAPlayers' | translate }}</a>
-              <a class="dropdown-item" [routerLink]="['/OrgChart']" (click)="sidebarToggle()" >{{ 'navbar.links.Org-chart' | translate }}</a> 
-              <a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
-              <a class="dropdown-item" [routerLink]="['/index']">Zona de pruebas</a>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
+				</li>
+				<li class="nav-item" *ngIf="sidebarVisible">
+					<div ngbDropdown class="dropdown">
+						<a class="nav-link dropdown-toggle" ngbDropdownToggle>
+							<p>{{ 'navbar.page' | translate }}</p>
+						</a>
+						<div ngbDropdownMenu class="dropdown-menu">
+							<a class="dropdown-item" [routerLink]="['/profile']" (click)="sidebarToggle()"> {{ 'navbar.links.about' | translate }}</a>
+							<a class="dropdown-item" [routerLink]="['/knowledge']" (click)="sidebarToggle()"> {{ 'navbar.links.knowledge' | translate }}</a>
+							<a class="dropdown-item" [routerLink]="['/gallery']" (click)="sidebarToggle()"> {{ 'navbar.links.gallery' | translate }}</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" [routerLink]="['/calendar']" (click)="sidebarToggle()">{{ 'navbar.links.calendar' | translate }}</a>
+							<a class="dropdown-item" [routerLink]="['/rickAndMorty']" (click)="sidebarToggle()">{{ 'navbar.links.rickAndMorty' | translate }}</a>
+							<a class="dropdown-item" [routerLink]="['/checkList']" (click)="sidebarToggle()">{{ 'navbar.links.checkList' | translate }}</a>
+							<a class="dropdown-item" [routerLink]="['/nbaPlayers']" (click)="sidebarToggle()">{{ 'navbar.links.NBAPlayers' | translate }}</a>
+							<a class="dropdown-item" [routerLink]="['/OrgChart']" (click)="sidebarToggle()">{{ 'navbar.links.Org-chart' | translate }}</a>
+							<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
+							<a class="dropdown-item" [routerLink]="['/index']">Zona de pruebas</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
 </nav>

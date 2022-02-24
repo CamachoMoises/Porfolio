@@ -21,33 +21,28 @@
 	<div class="section section-about-us">
 		<div class="container">
 			<div class="bounds">
-				<div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutGap="5px">
+				<div fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutGap="5px">
 					<div fxFlex="70" class="sec1" fxFlex.xs="55">
-						<p>  {{ 'knowledge.abilities.tittle' | translate }}  </p>
-						<div class="content" fxLayout="column" fxLayoutGap="5px" >
-							<div fxFill> <app-front-k></app-front-k></div>
-							<div fxFill class="sec4"> 
-								<mat-expansion-panel hideToggle>
-									<mat-expansion-panel-header>
-									  <mat-panel-title>
-										This is the expansion title
-									  </mat-panel-title>
-									  <mat-panel-description>
-										This is a summary of the content
-									  </mat-panel-description>
-									</mat-expansion-panel-header>
-									<p>This is the primary content of the panel.</p>
-								  </mat-expansion-panel>	
-							
+						<div class="text-center">
+							<h2 class="title">{{ 'knowledge.abilities.tittle' | translate }}</h2>
+						</div>
+						<div fxLayout="column" fxLayoutGap="5px">
+							<div fxFill>
+								<app-front-k></app-front-k>
 							</div>
-							<div fxFill class="sec5"> fifth section </div>
-							<div fxFill class="sec6"> sixth section </div>
+							<div fxFill class="sec3">
+								<app-back-k></app-back-k>
+							</div>
+							<div fxFill class="sec4">
+								<app-data-k></app-data-k>
+							</div>
 						</div>
 					</div>
 					<div fxFlex="30" class="sec2">
-						<mat-card fxFill >
-							Software 
-
+						<div class="text-center">
+							<h2 class="title">Software</h2>
+						</div>
+						<mat-card fxFill>
 						</mat-card>
 					</div>
 				</div>
@@ -56,3 +51,4 @@
 		</div>
 	</div>
 </div>
+<button class="button" *ngIf="showButton" (click)="onscrollTop()" type="button">⬆️</button>

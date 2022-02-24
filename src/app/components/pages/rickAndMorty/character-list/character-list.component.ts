@@ -39,9 +39,9 @@ export class CharacterListComponent {
   ) { }
 
   @HostListener('window:scroll') onWindowScroll(): void {
-    const yOfset = window.pageYOffset;
+    const yOffset = window.pageYOffset;
     const scrollTop = this.document.documentElement.scrollTop;
-    this.showButton = (yOfset || scrollTop) > this.scrollHeight;
+    this.showButton = (yOffset || scrollTop) > this.scrollHeight;
   }
   onscrollTop(): void {
     this.document.documentElement.scrollTop = 0;

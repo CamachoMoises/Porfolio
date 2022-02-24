@@ -8,8 +8,9 @@
 		"links": {
 			"about": "Acerca de",
 			"knowledge": "Habilidades y conocimientos",
+			"gallery":"Galeria de Proyectos",
 			"calendar": "Calendario",
-			"rickAndMorty": "Rick y morty App",
+			"rickAndMorty": "Rick y Morty App",
 			"checkList": "Lista de actividades",
 			"NBAPlayers": "Jugadores de la NBA ",
 			"Org-chart": "Grafica Organizacional",
@@ -100,12 +101,149 @@
 				},
 				"javascript": {
 					"title": "Javascript",
-					"subtitle": "ECMAScript 9",
-					"list": {}
+					"subtitle": "ECMAScript 9+",
+					"description":"Manejo de los conceptos",
+					"preview": {
+						"first": "DOM",
+						"second": "Funciones",
+						"third": "Modulos",
+						"fourth": "Objetos",
+						"fifth": "String",
+						"sixth": "Promesas",
+						"seventh": "Sintaxis",
+						"eighth": "Variables",
+						"ninth": "Obtencion de API",
+						"tenth": "Arerglos",
+						"eleventh": "Clases"
+					},
+					"SubList": {
+						"first": {
+							"first": "Eventos",
+							"second": "Contenido cargado en el DOM",
+							"third": "Cambios en el DOM",
+							"fourth": "Focus, blur",
+							"fifth": "KeyUp/ KeyDown",
+							"sixth": "EventListener",
+							"seventh": "CurrentTarget"
+						},
+						"second": {
+							"first": "=>(Funcionnes de flecha)",
+							"second": "Llamadas asíncronas ",
+							"third": "Closures",
+							"fourth": "Scopes",
+							"fifth": "Hoisting",
+							"sixth": "Paso de funciones",
+							"seventh": "Parámetros por defecto",
+							"eighth": "Retorno implícito"
+						},
+						"third": {
+							"first": "Modulos ES",
+							"second": "Importar desde librerias",
+							"third": "Manejo de paquetes",
+							"fourth": "Exportaciones por defecto",
+							"fifth": "Importación",
+							"sixth": "Importación dinamica"
+						},
+						"fourth": {
+							"first": "Acceso a propiedades ",
+							"second": "Abreviación de objetos",
+							"third": "Propiedades dinámicas",
+							"fourth": "Destructuring",
+							"fifth": ".Values()",
+							"sixth": "?? (nullish coalescing)",
+							"seventh": "...(Sintaxis extendida)",
+							"eighth": "?.(Encadenamiento opcional)"
+						},
+						"fifth": {
+							"first": "[] (Acceso a caracteres)",
+							"second": "Template strings",
+							"third": "Concatenaciones",
+							"fourth": ".trim()",
+							"fifth": ".toUpperCase()",
+							"sixth": ".toLowerCase()",
+							"seventh": ".substring()",
+							"eighth": ".startWith()",
+							"ninth": ".split()",
+							"tenth": ".replaceAll()",
+							"eleventh": ".replace()",
+							"twelfth": ".length",
+							"thirteenth": ".includes()",
+							"fourteenth": ".endsWith()"
+						},
+						"sixth": {
+							"first": "Estatus",
+							"second": "new Promise()",
+							"third": "await Keyword",
+							"fourth": "async / await",
+							"fifth": "Funciones asincronas",
+							"sixth": "Promise.resolve()",
+							"seventh": "Promise.reject()",
+							"eighth": ".then()",
+							"ninth": ".finally()",
+							"tenth": ".catch()"
+						},
+						"seventh": {
+							"first": "try ... catch",
+							"second": "Operador if",
+							"third": "for ... of",
+							"fourth": "for ... in",
+							"fifth": "for(bucles)",
+							"sixth": "Puntos y coma",
+							"seventh": "Excepciones"
+						},
+						"eighth": {
+							"first": "var(verciones anteriores)",
+							"second": "Declarciones let",
+							"third": "Declaraciones const",
+							"fourth": "Zona muerta"
+						},
+						"ninth": {
+							"first": "fetch()",
+							"second": "Response.json()",
+							"third": "Codigos del estatus de la respuesta",
+							"fourth": "Metodo PUT",
+							"fifth": "Metodo POST",
+							"sixth": "JSON.stringify()",
+							"seventh": "JSON.parse()",
+							"eighth": "Metodo GET",
+							"ninth": "Fetch Wrapper",
+							"tenth": "Manejo de errores",
+							"eleventh": "Metodo DELETE"
+						},
+						"tenth": {
+							"first": ".every()",
+							"second": ".filter()",
+							"third": ".find()",
+							"fourth": ".forEach()",
+							"fifth": ".includes()",
+							"sixth": ".join()",
+							"seventh": ".length",
+							"eighth": ".map()",
+							"ninth": ".push()",
+							"tenth": ".reduce()",
+							"eleventh": ".some()",
+							"twelfth": ".splice()",
+							"thirteenth": "Areglos de objetos",
+							"fourteenth": "[] traer items",
+							"fifteenth": "Destructuring"
+						},
+						"eleventh": {
+							"first": "Getters",
+							"second": "Clases contra funciones",
+							"third": "Campos Private de una clase",
+							"fourth": "Campos Public de una clase",
+							"fifth": "Herencia",
+							"sixth": "Super()",
+							"seventh": "Metodos instanciados",
+							"eighth": "variables instanciadas",
+							"ninth": "Setters",
+							"tenth": "Metodos estaticos"
+						}
+					}
 				},
 				"angular": {
 					"title": "Angular",
-					"subtitle": "Version 3",
+					"subtitle": "Versión 11+",
 					"preview": {
 						"first": "Manejo de componentes, módulos, servicios e interfaces",
 						"second": "Uso de directives",
@@ -122,8 +260,55 @@
 						"sixth": "Creación de formularios y formularios reactivos: reconocer los datos cargados al formulario, uso de validadores con patterns, validadores modificados, ng-invalid, ng-touched para desactivar la carga de datos erróneos, agregar mensajes de para validar los datos del formulario, aplicar valores por defectos a los input del formulario, uso de two-way data-binding para carga dinámica de los datos, uso de los códigos de error de los validadores, uso de datos asíncronos.",
 						"seventh": "Uso de Pipes y transformación de datos:creación de pipes por CLI parametrizando los pipes, pipes personalizados, pipes asíncronos, filtrados de búsqueda, pipes para disminuir las ejecuciones de carga de datos "
 					}
+				},
+				"NPM":{
+					"title":"NPM",
+					"subtitle":"Paquetes para el frontend",
+					"list":{
+
+					}
+				}
+			},
+			"backend": {
+				"title": "Desarrollo Backend",
+				"nodejs": {
+					"title": "Node Js",
+					"subtitle":"Versión 12+",
+					"description":"Creación de proyectos con Node.js para soluciones de Rest API, manejo de las solicitudes: datos, archivos y conexión con distintos tipos de arquitecturas de bases de datos"
+					
+				},
+				"express": {
+					"title": "Express",
+					"subtitle":"versión 4+"
+				}
+				
+			},
+			"database":{
+				"title": "Gestor de base de datos",
+				"mysql":{
+					"title":"",
+					"subtitle":""
 				}
 			}
+		}
+	},
+	"gallery":{
+		"title": "Galeria de Proyectos",
+		"B-L-Project":{
+			"title":"Titulo 000",
+			"description":"Proyecto de manejo de inventario...",
+			"carousel":{
+				"first": "Autenticación",
+				"second": "Registro",
+				"third": "Pagina principal",
+				"fourth": "Lista de productos",
+				"fifth": "Información del producto",
+				"sixth": "Formulario de entradas",
+				"seventh": "Formulario de salidas",
+				"eighth": "Detalles del producto",
+				"ninth": "Formulario de proveedores"
+			}
+			
 		}
 	},
 	"home": {
