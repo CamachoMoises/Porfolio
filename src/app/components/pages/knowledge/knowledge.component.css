@@ -2,10 +2,19 @@
 	/* background: rgb(243, 229, 100); */
 }
 
-.sec2 {
+div.sec2 {
 	/* background: rgb(243, 100, 100); */
-	margin-bottom: 3px;
+
+	display: flex;
+	flex-direction: column;
+
 }
+mat-card.test {
+	color: blue;
+	align-self: stretch;
+	flex: 1 1 auto;
+}
+
 
 .sec3 {
 	/* background: rgb(129, 253, 146); */
@@ -17,16 +26,9 @@
 }
 
 
-.sec1,
-.sec2,
-.sec3,
-.sec4{
-	padding-top: 5px;
-	
-}
 
-mat-card{
-	margin-bottom: 5px;
+mat-card {
+	margin-bottom: 2px;
 	/* color: rgb(94, 6, 6); */
 }
 

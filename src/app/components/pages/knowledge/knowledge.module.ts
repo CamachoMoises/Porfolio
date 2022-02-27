@@ -11,6 +11,7 @@ import { ContactModule } from '../../../shared/components/contact/contact.module
 
 import { KnowledgeComponent } from './knowledge.component';
 import { FrontKComponent, AngularSheetOverviewSheet, JavascriptSheetOverviewSheet } from './front-k/front-k.component';
+import { SoftwareFacilityComponent, GitSheetOverviewSheet } from './software-facility/software-facility.component';
 import { BackKComponent } from './back-k/back-k.component';
 import { DataKComponent } from './data-k/data-k.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -19,7 +20,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet'; 
 import {MatListModule} from '@angular/material/list'; 
 import {MatExpansionModule} from '@angular/material/expansion';
-
+import {MatIconModule} from '@angular/material/icon'; 
 
 
 @NgModule({
@@ -29,7 +30,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
     BackKComponent,
     DataKComponent,
     AngularSheetOverviewSheet,
-    JavascriptSheetOverviewSheet
+    JavascriptSheetOverviewSheet,
+    SoftwareFacilityComponent,
+    GitSheetOverviewSheet
   ],
   imports: [
     CommonModule,
@@ -44,7 +47,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatCardModule,
     MatButtonModule,
     MatBottomSheetModule,
-    MatListModule
+    MatListModule,
+    MatIconModule
   ]
 })
 export class KnowledgeModule { }

@@ -8,7 +8,7 @@
 		"links": {
 			"about": "Acerca de",
 			"knowledge": "Habilidades y conocimientos",
-			"gallery":"Galeria de Proyectos",
+			"gallery": "Galeria de Proyectos",
 			"calendar": "Calendario",
 			"rickAndMorty": "Rick y Morty App",
 			"checkList": "Lista de actividades",
@@ -102,7 +102,7 @@
 				"javascript": {
 					"title": "Javascript",
 					"subtitle": "ECMAScript 9+",
-					"description":"Manejo de los conceptos",
+					"description": "Manejo de los conceptos",
 					"preview": {
 						"first": "DOM",
 						"second": "Funciones",
@@ -261,43 +261,66 @@
 						"seventh": "Uso de Pipes y transformación de datos:creación de pipes por CLI parametrizando los pipes, pipes personalizados, pipes asíncronos, filtrados de búsqueda, pipes para disminuir las ejecuciones de carga de datos "
 					}
 				},
-				"NPM":{
-					"title":"NPM",
-					"subtitle":"Paquetes para el frontend",
-					"list":{
-
-					}
+				"NPM": {
+					"title": "NPM",
+					"subtitle": "Paquetes para el frontend",
+					"list": {}
 				}
 			},
 			"backend": {
 				"title": "Desarrollo Backend",
 				"nodejs": {
 					"title": "Node Js",
-					"subtitle":"Versión 12+",
-					"description":"Creación de proyectos con Node.js para soluciones de Rest API, manejo de las solicitudes: datos, archivos y conexión con distintos tipos de arquitecturas de bases de datos"
-					
+					"subtitle": "Versión 12+",
+					"description": "Creación de proyectos con Node.js para soluciones de Rest API, manejo de las solicitudes: datos, archivos y conexión con distintos tipos de arquitecturas de bases de datos"
 				},
 				"express": {
 					"title": "Express",
-					"subtitle":"versión 4+"
+					"subtitle": "versión 4+"
 				}
-				
 			},
-			"database":{
+			"database": {
 				"title": "Gestor de base de datos",
-				"mysql":{
-					"title":"",
-					"subtitle":""
+				"mysql": {
+					"title": "",
+					"subtitle": ""
+				}
+			},
+			"software": {
+				"title": "Software and other facilities",
+				"list": {
+					"git": {
+						"description": "Como parte fundamental del desarrollo de software en la actualidad está el manejo de versiones y el uso de ramas de desarrollo."
+					},
+					"firebase": {
+						"description": ""
+					},
+					"clever-cloud": {
+						"description": ""
+					},
+					"cloudinary": {
+						"description": ""
+					},
+					"heroku": {
+						"description": ""
+					},
+					"postman": {
+						"description": ""
+					},
+					"visual-studio": {
+						"description": ""
+					}
 				}
 			}
 		}
 	},
-	"gallery":{
+	"gallery": {
 		"title": "Galeria de Proyectos",
-		"B-L-Project":{
-			"title":"Titulo 000",
-			"description":"Proyecto de manejo de inventario...",
-			"carousel":{
+		"subtitle": "Diseñador web",
+		"B-L-Project": {
+			"title": "Titulo B&L",
+			"description": "Proyecto de manejo de inventario...",
+			"carousel": {
 				"first": "Autenticación",
 				"second": "Registro",
 				"third": "Pagina principal",
@@ -308,7 +331,53 @@
 				"eighth": "Detalles del producto",
 				"ninth": "Formulario de proveedores"
 			}
-			
+		},
+		"Hogwarts": {
+			"title": "Titulo Hogwarts",
+			"description": "Proyecto de manejo de inventario...",
+			"carousel": {
+				"first": "000000",
+				"second": "00000",
+				"third": "00000",
+				"fourth": "0000000",
+				"fifth": "00000",
+				"sixth": "000000"
+			}
+		},
+		"prolix": {
+			"title": "Titulo Prolix",
+			"description": "...",
+			"carousel": {
+				"first": ".",
+				"second": ".",
+				"third": ".",
+				"fourth": ".",
+				"fifth": ".",
+				"sixth": ".",
+				"seventh": ".",
+				"eighth": ".",
+				"ninth": ".",
+				"tenth": ".",
+				"eleventh": ".",
+				"twelfth": ".",
+				"thirteenth": ".",
+				"fourteenth": ".",
+				"fifteenth": ".",
+				"sixteenth": "...",
+				"seventeenth": "..."
+			}
+		},
+		"technoidentia": {
+			"title": "Titulo TechnoIDentia",
+			"description": "...",
+			"carousel": {
+				"first": ".",
+				"second": ".",
+				"third": ".",
+				"fourth": ".",
+				"fifth": ".",
+				"sixth": "."
+			}
 		}
 	},
 	"home": {
@@ -335,5 +404,14 @@
 				"DAY": "Dia"
 			}
 		}
+	},
+	"contact":{
+		"title": "¿Quieres contactarme?",
+		"subtitle": "Tu proyecto es importante para mí",
+		"email": "Correo electrónico",
+		"phone": "Telefono",
+		"comments": "Déjame un mensaje",
+		"comments2":"Escríbeme un mensaje ",
+		"button":"Enviar mensaje"
 	}
 }

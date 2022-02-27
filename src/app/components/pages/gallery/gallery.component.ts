@@ -17,7 +17,44 @@ export class GalleryComponent implements OnInit {
     { name: 'gallery.B-L-Project.carousel.seventh',  src: `assets/img/B-L-Projects/Capture${7}.JPG` },
     { name: 'gallery.B-L-Project.carousel.eighth',  src: `assets/img/B-L-Projects/Capture${8}.JPG` },
     { name: 'gallery.B-L-Project.carousel.ninth',  src: `assets/img/B-L-Projects/Capture${9}.JPG` }
-  ]
+  ];
+  Hogwarts= [
+    { name: 'gallery.Hogwarts.carousel.first',  src: `assets/img/HogwartsSchoolWeb/Capture${1}.JPG` },
+    { name: 'gallery.Hogwarts.carousel.second',  src: `assets/img/HogwartsSchoolWeb/Capture${2}.JPG` },
+    { name: 'gallery.Hogwarts.carousel.third',  src: `assets/img/HogwartsSchoolWeb/Capture${3}.JPG` },
+    { name: 'gallery.Hogwarts.carousel.fourth',  src: `assets/img/HogwartsSchoolWeb/Capture${4}.JPG` },
+    { name: 'gallery.Hogwarts.carousel.fifth',  src: `assets/img/HogwartsSchoolWeb/Capture${5}.JPG` },
+    { name: 'gallery.Hogwarts.carousel.sixth',  src: `assets/img/HogwartsSchoolWeb/Capture${6}.JPG` },
+  ];
+  Prolix=[
+    { name: 'gallery.prolix.carousel.first',  src: `assets/img/Prolix/Capture${1}.JPG` },
+    { name: 'gallery.prolix.carousel.second',  src: `assets/img/Prolix/Capture${2}.JPG` },
+    { name: 'gallery.prolix.carousel.third',  src: `assets/img/Prolix/Capture${3}.JPG` },
+    { name: 'gallery.prolix.carousel.fourth',  src: `assets/img/Prolix/Capture${4}.JPG` },
+    { name: 'gallery.prolix.carousel.fifth',  src: `assets/img/Prolix/Capture${5}.JPG` },
+    { name: 'gallery.prolix.carousel.sixth',  src: `assets/img/Prolix/Capture${6}.JPG` },
+    { name: 'gallery.prolix.carousel.seventh',  src: `assets/img/Prolix/Capture${7}.JPG` },
+    { name: 'gallery.prolix.carousel.eighth',  src: `assets/img/Prolix/Capture${8}.JPG` },
+    { name: 'gallery.prolix.carousel.ninth',  src: `assets/img/Prolix/Capture${9}.JPG` },
+    { name: 'gallery.prolix.carousel.tenth',  src: `assets/img/Prolix/Capture${10}.JPG` },
+    { name: 'gallery.prolix.carousel.eleventh',  src: `assets/img/Prolix/Capture${11}.JPG` },
+    { name: 'gallery.prolix.carousel.twelfth',  src: `assets/img/Prolix/Capture${12}.JPG` },
+    { name: 'gallery.prolix.carousel.thirteenth',  src: `assets/img/Prolix/Capture${13}.JPG` },
+    { name: 'gallery.prolix.carousel.fourteenth',  src: `assets/img/Prolix/Capture${14}.JPG` },
+    { name: 'gallery.prolix.carousel.fifteenth',  src: `assets/img/Prolix/Capture${15}.JPG` },
+    { name: 'gallery.prolix.carousel.sixteenth',  src: `assets/img/Prolix/Capture${16}.JPG` },
+    { name: 'gallery.prolix.carousel.seventeenth',  src: `assets/img/Prolix/Capture${17}.JPG` },
+  ];
+
+  TechnoIDentia=[
+    { name: 'gallery.technoidentia.carousel.first',  src: `assets/img/Techno/Capture${1}.PNG` },
+    { name: 'gallery.technoidentia.carousel.second',  src: `assets/img/Techno/Capture${2}.PNG` },
+    { name: 'gallery.technoidentia.carousel.third',  src: `assets/img/Techno/Capture${3}.PNG` },
+    { name: 'gallery.technoidentia.carousel.fourth',  src: `assets/img/Techno/Capture${4}.PNG` },
+    { name: 'gallery.technoidentia.carousel.fifth',  src: `assets/img/Techno/Capture${5}.PNG` },
+    { name: 'gallery.technoidentia.carousel.sixth',  src: `assets/img/Techno/Capture${6}.PNG` },
+  ];
+
   zoom: number = 14;
   lat: number = 44.445248;
   lng: number = 26.099672;

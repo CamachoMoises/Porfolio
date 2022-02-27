@@ -1,7 +1,7 @@
 <div class="section section-contact-us text-center">
   <div class="container">
-    <h2 class="title">Quieres Contactarme?</h2>
-    <p class="description">Tu proyecto es muy importante para mi </p>
+    <h2 class="title"> {{ 'contact.title' | translate }} </h2>
+    <p class="description"> {{ 'contact.subtitle' | translate }} </p>
     <div class="row">
       <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
         
@@ -12,7 +12,7 @@
                 <i class="now-ui-icons ui-1_email-85"></i>
                 &zwnj;
               </mat-label>
-              <input matInput formControlName="email" placeholder="Correo electronico" />
+              <input matInput formControlName="email" [placeholder]="'contact.email' | translate" />
               
             </mat-form-field>
             
@@ -21,18 +21,18 @@
                 <i class="now-ui-icons tech_mobile"></i>
                 &zwnj;
               </mat-label>
-              <input matInput formControlName="phone" placeholder="telefono" />
+              <input matInput formControlName="phone" [placeholder]="'contact.phone' | translate" />
               
             </mat-form-field>
             
             <mat-form-field class="example-full-width" color="warn" fxFlex.gt-sm="0 1 600px" fxFill >
-              <mat-label>Deja un comentario</mat-label>
-              <textarea matInput formControlName="comment" placeholder="Escribeme un mensaje"></textarea>
+              <mat-label>{{ 'contact.comments' | translate }}</mat-label>
+              <textarea matInput formControlName="comment" [placeholder]="'contact.comments2' | translate"></textarea>
             </mat-form-field>
         </div>
         </form>
         <div class="send-button">
-          <button class="btn btn-info btn-round btn-block btn-lg" (click)="addComment()"  [disabled]="!commentForm.valid"  form="personForm"> Enviar el mensaje</button>
+          <button class="btn btn-info btn-round btn-block btn-lg" (click)="addComment()"  [disabled]="!commentForm.valid"  form="personForm"> {{ 'contact.button' | translate }}</button>
         </div>
       </div>
     </div>

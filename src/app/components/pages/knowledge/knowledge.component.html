@@ -22,7 +22,7 @@
 		<div class="container">
 			<div class="bounds">
 				<div fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutGap="5px">
-					<div fxFlex="70" class="sec1" fxFlex.xs="55">
+					<div fxFlex="70" class="sec1" >
 						<div class="text-center">
 							<h2 class="title">{{ 'knowledge.abilities.tittle' | translate }}</h2>
 						</div>
@@ -38,12 +38,17 @@
 							</div>
 						</div>
 					</div>
-					<div fxFlex="30" class="sec2">
-						<div class="text-center">
-							<h2 class="title">Software</h2>
-						</div>
-						<mat-card fxFill>
-						</mat-card>
+					<div fxFlex="30" class="sec2" >
+						
+							<div class="text-center">
+								<h2 class="title"> Software and other facilities  </h2>
+							</div>
+							<mat-card class="test">	
+								<app-software-facility></app-software-facility>
+							</mat-card>
+							
+					
+
 					</div>
 				</div>
 			</div>

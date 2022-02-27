@@ -8,7 +8,7 @@
 		"links": {
 			"about": "About",
 			"knowledge": "Skills and Knowledge",
-			"gallery":"Project Gallery",
+			"gallery": "Project Gallery",
 			"calendar": "Calendar",
 			"rickAndMorty": "Rick and Morty App",
 			"checkList": "Check List",
@@ -264,39 +264,63 @@
 				"NPM": {
 					"title": "NPM",
 					"subtitle": "Frontend Packages",
-					"list": {
-						
-					}
+					"list": {}
 				}
 			},
 			"backend": {
 				"title": "Backend development",
 				"nodejs": {
 					"title": "Node Js",
-					"subtitle":"Version 12+",
-					"description":"Project creation with Node.js for Rest API solutions, request handling: data, files and connection with different types of database architectures "
-
+					"subtitle": "Version 12+",
+					"description": "Project creation with Node.js for Rest API solutions, request handling: data, files and connection with different types of database architectures "
 				},
 				"express": {
 					"title": "Express",
-					"subtitle":"version 4+"
+					"subtitle": "version 4+"
 				}
 			},
-			"database":{
+			"database": {
 				"title": "Database manager",
-				"mysql":{
-					"title":"",
-					"subtitle":""
+				"mysql": {
+					"title": "",
+					"subtitle": ""
+				}
+			},
+			"software": {
+				"title": "Software and other facilities",
+				"list": {
+					"git": {
+						"description": "As a fundamental part of software development today is the management of versions and the use of development branches"
+					},
+					"firebase": {
+						"description": ""
+					},
+					"clever-cloud": {
+						"description": ""
+					},
+					"cloudinary": {
+						"description": ""
+					},
+					"heroku": {
+						"description": ""
+					},
+					"postman": {
+						"description": ""
+					},
+					"visual-studio": {
+						"description": ""
+					}
 				}
 			}
 		}
 	},
-	"gallery":{
+	"gallery": {
 		"title": "Project Gallery",
-		"B-L-Project":{
-			"title":"Tittle 000",
-			"description":"Inventory management project...",
-			"carousel":{
+		"subtitle": "Web designer",
+		"B-L-Project": {
+			"title": "Tittle B&L",
+			"description": "Inventory management project...",
+			"carousel": {
 				"first": "Login",
 				"second": "Register",
 				"third": "Home",
@@ -305,7 +329,54 @@
 				"sixth": "Form input",
 				"seventh": "Form output",
 				"eighth": "Products details",
-				"ninth":"Supplier Form"
+				"ninth": "Supplier Form"
+			}
+		},
+		"Hogwarts": {
+			"title": "Tittle Hogwarts",
+			"description": "...",
+			"carousel": {
+				"first": "0000",
+				"second": "00000",
+				"third": "0000",
+				"fourth": "000000",
+				"fifth": "0000000",
+				"sixth": "00000"
+			}
+		},
+		"prolix": {
+			"title": "Tittle Prolix",
+			"description": "...",
+			"carousel": {
+				"first": ".",
+				"second": ".",
+				"third": ".",
+				"fourth": ".",
+				"fifth": ".",
+				"sixth": ".",
+				"seventh": ".",
+				"eighth": ".",
+				"ninth": ".",
+				"tenth": ".",
+				"eleventh": ".",
+				"twelfth": ".",
+				"thirteenth": ".",
+				"fourteenth": ".",
+				"fifteenth": ".",
+				"sixteenth": "...",
+				"seventeenth": "..."
+			}
+		},
+		"technoidentia": {
+			"title": "Tittle TechnoIDentia",
+			"description": "...",
+			"carousel": {
+				"first": ".",
+				"second": ".",
+				"third": ".",
+				"fourth": ".",
+				"fifth": ".",
+				"sixth": "."
 			}
 		}
 	},
@@ -333,5 +404,14 @@
 				"DAY": "Day"
 			}
 		}
+	},
+	"contact":{
+		"title": "Do you want to contact me?",
+		"subtitle": "Your project are important to me",
+		"email": "Email",
+		"phone": "Phone",
+		"comments": "Left me a comment",
+		"comments2":"Write me a message",
+		"button":"Send message"
 	}
 }

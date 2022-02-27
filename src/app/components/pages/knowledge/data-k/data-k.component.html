@@ -1,14 +1,11 @@
 <mat-expansion-panel hideToggle="false">
   <mat-expansion-panel-header [collapsedHeight]="'150px'">
     <mat-panel-title>
-      <img src="assets/img/backend.png" alt="Thumbnail Image" id="thumbnail1" />
+      <img src="assets/img/mysql.png" alt="Thumbnail Image" id="thumbnail1" />
     </mat-panel-title>
     <mat-panel-description fxLayoutAlign="start center"> {{ 'knowledge.abilities.database.title' | translate }} </mat-panel-description>
   </mat-expansion-panel-header>
-  <div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutGap="5px">
-    <br />
-    <br />
-    <div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutGap="5px">
+  <div class="content" fxLayout="column" fxLayout.xs="column" fxFlexFill fxLayoutGap="5px">
 			<div fxFill>
 				<mat-card>
 					<mat-card-header>
@@ -28,10 +25,6 @@
 					</mat-card-actions>
 				</mat-card>
 			</div>
-		</div>
-
-
-		<div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutGap="5px">
 			<div fxFill>
 				<mat-card>
 					<mat-card-header>
@@ -50,8 +43,5 @@
 					</mat-card-actions>
 				</mat-card>
 			</div>
-		</div>
-
-    
     </div>  
   </mat-expansion-panel>
