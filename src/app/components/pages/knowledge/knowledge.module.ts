@@ -32,7 +32,8 @@ import {MatIconModule} from '@angular/material/icon';
     AngularSheetOverviewSheet,
     JavascriptSheetOverviewSheet,
     SoftwareFacilityComponent,
-    GitSheetOverviewSheet
+    GitSheetOverviewSheet,
+
   ],
   imports: [
     CommonModule,

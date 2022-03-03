@@ -18,16 +18,16 @@ export class SoftwareFacilityComponent implements OnInit {
 
   moreGit(event: Event): void {
     event.stopPropagation();
-    console.log('More JavaScript');
+    console.log('More Git');
     this._bottomSheet.open(GitSheetOverviewSheet)
   }
 
 }
 
-
 @Component({
   selector: 'git-sheet-overview-sheet',
   templateUrl: 'git-sheet-overview-sheet.html',
+  styleUrls: ['git-sheet-overview-sheet.css']
 })
 export class GitSheetOverviewSheet {
   constructor(private _bottomSheetRef: MatBottomSheetRef<GitSheetOverviewSheet>) { }

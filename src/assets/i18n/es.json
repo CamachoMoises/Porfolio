@@ -290,13 +290,59 @@
 				"title": "Software and other facilities",
 				"list": {
 					"git": {
-						"description": "Como parte fundamental del desarrollo de software en la actualidad está el manejo de versiones y el uso de ramas de desarrollo."
+						"title":"Diagrama",
+						"description": "Como parte fundamental del desarrollo de software en la actualidad está el manejo de versiones y el uso de ramas de desarrollo.",
+						"sheet":{
+							"remote": {
+								"title":"Origen remoto",
+								"command":"git remote"
+							},
+							"clone": {
+								"title":"Clonar repositorios",
+								"command":"git clone"
+							},
+							"fetch":{
+								"title":"Verificar cambios con fetch",
+								"command":"git fetch"
+							},
+							"pull":{
+								"title":"Incorporar cambios desde un repositorio remoto ",
+								"command":"git pull"
+							},
+							"push":{
+								"title":"Cargar contenido a un repositorio remoto",
+								"command":"git push"
+							},
+							"merge":{
+								"title": "unir dos ramas de trabajo",
+								"command":"git merge"
+							}
+						}
 					},
 					"firebase": {
-						"description": ""
+						"description": "Una solucion completa de backend",
+						"sheet":{
+							"hosting": {
+								"title": "Firebase Hosting",
+								"description": "Un servicio de almacenamiento del contenido para las aplicaciones web  ya sea de contenido dinamico o estatico ademas de los mircro servicios que pueda tener la pagina"
+							},
+							"cloud-storage":{
+								"title": "Cloud Storage",
+								"description": "Para las necesidades de almacenar y entregar contenido generado por usuarios, como fotos o videos."
+							},
+							"realtime-database":{
+								"title": "Base de datos en tiempo real",
+								"description": "Almacena y sincroniza datos con nuestra base de datos NoSQL alojada en la nube. Los datos se sincronizan con todos los clientes en tiempo real y se mantienen disponibles cuando la app no tiene conexión"
+							}
+						}
 					},
 					"clever-cloud": {
-						"description": ""
+						"description": "Un proveedor de soluciones de PaaS",
+						"database":{
+							"mysql":"Addons para Mysql",
+							"description": "Un sistema de gestión de base de datos relacional de código abierto "
+						}
+						
 					},
 					"cloudinary": {
 						"description": ""
