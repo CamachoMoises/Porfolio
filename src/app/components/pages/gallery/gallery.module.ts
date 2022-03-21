@@ -15,7 +15,7 @@ import { NouisliderModule } from 'ng2-nouislider';
 import { ContactModule } from '../../../shared/components/contact/contact.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AgmCoreModule } from '@agm/core';
-
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 
@@ -37,6 +37,7 @@ import { AgmCoreModule } from '@agm/core';
     MatBottomSheetModule,
     MatListModule,
     NgbModule,
+    MatTabsModule,
     AgmCoreModule.forRoot({
       apiKey: 'YOUR_KEY_HERE'
   })

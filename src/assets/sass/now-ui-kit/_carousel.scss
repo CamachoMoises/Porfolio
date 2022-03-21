@@ -17,9 +17,15 @@ ngb-carousel{
   &:focus{
     outline: none;
   }
+  .carousel-control-prev-icon {
+    background-image: url('https://apufpel.com.br/assets/img/seta_prim.png');
+  }
+  .carousel-control-next-icon {
+    background-image: url('https://apufpel.com.br/assets/img/seta_ult.png');
+  }
   .carousel-control-prev-icon,
   .carousel-control-next-icon{
-    width: 12px;
-    height: 12px;
+    width: 30px;
+    height: 30px;
   }
 }

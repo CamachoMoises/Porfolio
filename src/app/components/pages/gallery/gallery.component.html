@@ -1,160 +1,66 @@
-<div class="wrapper">
-	<div class="page-header page-header-small" filter-color="orange">
-		<div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/bg5.jpg')"></div>
-		<div class="container">
-			<div class="content-center">
-				<!-- <div class="photo-container">
-					<img src="assets/img/ryan.jpg" alt="" />
-				</div> -->
-				<h3 class="title">{{ 'gallery.title' | translate }}</h3>
-				<p class="category"> {{ 'gallery.subtitle' | translate }}  </p>
-				<div class="content">
-					<div class="social-description">
-						<h2>26</h2>
-						<p>Comments</p>
-					</div>
-					<div class="social-description">
-						<h2>26</h2>
-						<p>Comments</p>
-					</div>
-					<div class="social-description">
-						<h2>48</h2>
-						<p>Bookmarks</p>
-					</div>
+<div class="carousel" id="carousel">
+	<div class="center">
+		<img [src]="banner" alt="" />
+		<ngb-carousel>
+			<ng-template ngbSlide *ngFor="let project of carouselProject">
+				<img class="d-block" [src]="project.src" alt="First slide" (click)="seePhoto()" />
+				<div class="carousel-caption d-none d-md-block">
+					<h5 class="Carousel">{{ project.name | translate }}</h5>
 				</div>
-			</div>
-		</div>
-	</div>
-	<div class="section">
-		<div class="container">
-			<div class="button-container">
-				<a href="#button" class="btn btn-info btn-round btn-lg">Link</a>
-				<a href="https://github.com/CamachoMoises" class="btn btn-default btn-round btn-lg btn-icon" rel="tooltip" title="Follow me on Twitter">
-					<i class="fab fa-github"></i>
-				</a>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
-					<ngb-tabset [justify]="'center'" class="nav nav nav-info nav-just-icons justify-content-center tab-space">
-						<ngb-tab>
-							<ng-template ngbTabTitle>
-								<h1> B&L </h1>
-							</ng-template>
-							<ng-template ngbTabContent>
-								<div class="title">
-									<h2> {{ 'gallery.B-L-Project.title' | translate }} </h2>
-									<p> {{ 'gallery.B-L-Project.description' | translate }} </p>
-								</div>
-								<div class="section" id="carousel">
-									<div class="row justify-content-center">
-											<ngb-carousel>
-												<ng-template ngbSlide *ngFor="let project of BYLProjects" >
-													<img class="d-block" [src]="project.src" alt="First slide" />
-													<div class="carousel-caption d-none d-md-block">
-														<h5 class="Carousel"  >{{ project.name | translate }}</h5>
-													</div>
-												</ng-template>
-											</ngb-carousel>
-									</div>
-								</div>
-							</ng-template>
-						</ngb-tab>
-						<ngb-tab>
-							<ng-template ngbTabTitle>
-								<h1> HWP </h1>
-							</ng-template>
-							<ng-template ngbTabContent>
-								<div class="title">
-									<h2> {{ 'gallery.Hogwarts.title' | translate }} </h2>
-									<p> {{ 'gallery.Hogwarts.description' | translate }} </p>
-								</div>
-								<div class="section" id="carouse2">
-									<div class="row justify-content-center">
-											<ngb-carousel>
-												<ng-template ngbSlide *ngFor="let project of Hogwarts" >
-													<img class="d-block" [src]="project.src" alt="First slide" />
-													<div class="carousel-caption d-none d-md-block">
-														<h5 class="Carousel"  >{{ project.name | translate }}</h5>
-													</div>
-												</ng-template>
-											</ngb-carousel>
-									</div>
-								</div>
-							</ng-template>
-						</ngb-tab>
-						<ngb-tab>
-							<ng-template ngbTabTitle>
-								<h1> PRO </h1>
-							</ng-template>
-							<ng-template ngbTabContent>
-								<div class="title">
-									<h2> {{ 'gallery.prolix.title' | translate }} </h2>
-									<p> {{ 'gallery.prolix.description' | translate }} </p>
-								</div>
-								<div class="section" id="carouse2">
-									<div class="row justify-content-center">
-											<ngb-carousel>
-												<ng-template ngbSlide *ngFor="let project of Prolix" >
-													<img class="d-block" [src]="project.src" alt="First slide" />
-													<div class="carousel-caption d-none d-md-block">
-														<h5 class="Carousel"  >{{ project.name | translate }}</h5>
-													</div>
-												</ng-template>
-											</ngb-carousel>
-									</div>
-								</div>
-							</ng-template>
-						</ngb-tab>
-
-						<ngb-tab>
-							<ng-template ngbTabTitle>
-								<h1> TECH </h1>
-							</ng-template>
-							<ng-template ngbTabContent>
-								<div class="title">
-									<h2> {{ 'gallery.technoidentia.title' | translate }} </h2>
-									<p> {{ 'gallery.technoidentia.description' | translate }} </p>
-								</div>
-								<div class="section" id="carouse2">
-									<div class="row justify-content-center">
-											<ngb-carousel>
-												<ng-template ngbSlide *ngFor="let project of TechnoIDentia" >
-													<img class="d-block" [src]="project.src" alt="First slide" />
-													<div class="carousel-caption d-none d-md-block">
-														<h5 class="Carousel"  >{{ project.name | translate }}</h5>
-													</div>
-												</ng-template>
-											</ngb-carousel>
-									</div>
-								</div>
-							</ng-template>
-						</ngb-tab>
-						
-						<ngb-tab>
-							<ng-template ngbTabTitle>
-								<h1> BACK </h1>
-							</ng-template>
-							<ng-template ngbTabContent>
-								<div class="row">
-									<div class="col-md-10 ml-auto mr-auto">
-										<div class="row collections">
-											<div class="col-md-6">
-												<img src="assets/img/bg3.jpg" alt="" class="img-raised" />
-												<img src="assets/img/bg8.jpg" alt="" class="img-raised" />
-											</div>
-											<div class="col-md-6">
-												<img src="assets/img/bg7.jpg" alt="" class="img-raised" />
-												<img src="assets/img/bg6.jpg" class="img-raised" />
-											</div>
-										</div>
-									</div>
-								</div>
-							</ng-template>
-						</ngb-tab>
-
-					</ngb-tabset>
-				</div>
-			</div>
-		</div>
+			</ng-template>
+		</ngb-carousel>
 	</div>
 </div>
+<div class="section">
+	<div class="container">
+		<mat-tab-group mat-align-tabs="center" (selectedIndexChange)="selectedIndexChange($event)">
+			<mat-tab>
+				<ng-template mat-tab-label> Prolix </ng-template>
+				<div class="title">
+					<h2>{{ 'gallery.prolix.title' | translate }}</h2>
+					<p>{{ 'gallery.prolix.description' | translate }}</p>
+				</div>
+			</mat-tab>
+			<mat-tab>
+				<ng-template mat-tab-label> TechnoIDentia </ng-template>
+				<div class="title">
+					<h2>{{ 'gallery.technoidentia.title' | translate }}</h2>
+					<p>{{ 'gallery.technoidentia.description' | translate }}</p>
+				</div>
+			</mat-tab>
+			<mat-tab>
+				<ng-template mat-tab-label> B&L Inventario </ng-template>
+				<div class="title">
+					<h2>{{ 'gallery.B-L-Project.title' | translate }}</h2>
+					<p>{{ 'gallery.B-L-Project.description' | translate }}</p>
+				</div>
+			</mat-tab>
+			<mat-tab>
+				<ng-template mat-tab-label> Hogwarts </ng-template>
+				<div class="title">
+					<h2>{{ 'gallery.Hogwarts.title' | translate }}</h2>
+					<p>{{ 'gallery.Hogwarts.description' | translate }}</p>
+				</div>
+			</mat-tab>
+			<mat-tab>
+				<ng-template mat-tab-label> Back Prollix </ng-template>
+				<div class="row">
+					<div class="col-md-12 ml-auto mr-auto">
+						<div class="row collections">
+							<div class="col-md-6">
+								<img src="assets/img/bg3.jpg" alt="" class="img-raised" />
+								<img src="assets/img/bg8.jpg" alt="" class="img-raised" />
+							</div>
+							<div class="col-md-6">
+								<img src="assets/img/bg7.jpg" alt="" class="img-raised" />
+								<img src="assets/img/bg6.jpg" class="img-raised" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</mat-tab>
+		</mat-tab-group>
+	</div>
+</div>
+
+<!-- </div> -->

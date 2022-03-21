@@ -1,3 +1,41 @@
-.Carousel{
-    text-shadow: -1px 0 rgb(122, 120, 120), 0 1px black, 1px 0 black, 0 -1px rgb(102, 102, 102);
+.Carousel {
+	text-shadow: -1px 0 rgb(122, 120, 120), 0 1px black, 1px 0 black, 0 -1px rgb(102, 102, 102);
+	width: 100%;
+	padding: 0;
+	object-fit: cover;
+}
+
+@media (min-width: 1200px) {
+	.Carousel {
+        max-width: 1200px ;
+	}
+
+}
+
+@media (max-width: 1199px) {
+	.Carousel {
+		max-width: 1140px;
+		text-shadow: -1px 0 rgb(122, 120, 120), 0 1px #2ca8ff, 1px 0 #2ca8ff, 0 -1px rgb(102, 102, 102);
+	}
+}
+
+@media (max-width: 991px) {
+	.Carousel {
+		max-width: 960px;
+		text-shadow: -1px 0 rgb(122, 120, 120), 0 1px #2ca8ff, #2ca8ff, 0 -1px rgb(102, 102, 102);
+	}
+}
+
+@media (max-width: 767px) {
+	.Carousel {
+		max-width: 720px;
+		text-shadow: -1px 0 rgb(122, 120, 120), 0 1px rgb(240, 225, 9), 1px 0 rgb(207, 241, 16), 0 -1px rgb(102, 102, 102);
+	}
+}
+
+@media (max-width: 575px) {
+	.Carousel {
+		max-width: 540px;
+		text-shadow: -1px 0 rgb(122, 120, 120), 0 1px rgb(194, 9, 240), 1px 0 rgb(203, 16, 241), 0 -1px rgb(102, 102, 102);
+	}
 }
