@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject, HostListener } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-gallery',
@@ -33,17 +34,12 @@ export class GalleryComponent implements OnInit {
         { name: 'gallery.prolix.carousel.seventeenth', src: `assets/img/Prolix/Capture${17}.JPG` },
       ]
     },
+
     {
-      banner: 'assets/img/Techno/angryimg.png',
-      image: [
-        { name: 'gallery.technoidentia.carousel.first', src: `assets/img/Techno/Capture${1}.PNG` },
-        { name: 'gallery.technoidentia.carousel.second', src: `assets/img/Techno/Capture${2}.PNG` },
-        { name: 'gallery.technoidentia.carousel.third', src: `assets/img/Techno/Capture${3}.PNG` },
-        { name: 'gallery.technoidentia.carousel.fourth', src: `assets/img/Techno/Capture${4}.PNG` },
-        { name: 'gallery.technoidentia.carousel.fifth', src: `assets/img/Techno/Capture${5}.PNG` },
-        { name: 'gallery.technoidentia.carousel.sixth', src: `assets/img/Techno/Capture${6}.PNG` },
-      ]
     },
+
+  
+
     {
       banner: 'assets/img/B-L-Projects/angryimg.png',
       image: [
@@ -60,6 +56,18 @@ export class GalleryComponent implements OnInit {
     },
 
     {
+      banner: 'assets/img/Techno/angryimg.png',
+      image: [
+        { name: 'gallery.technoidentia.carousel.first', src: `assets/img/Techno/Capture${1}.PNG` },
+        { name: 'gallery.technoidentia.carousel.second', src: `assets/img/Techno/Capture${2}.PNG` },
+        { name: 'gallery.technoidentia.carousel.third', src: `assets/img/Techno/Capture${3}.PNG` },
+        { name: 'gallery.technoidentia.carousel.fourth', src: `assets/img/Techno/Capture${4}.PNG` },
+        { name: 'gallery.technoidentia.carousel.fifth', src: `assets/img/Techno/Capture${5}.PNG` },
+        { name: 'gallery.technoidentia.carousel.sixth', src: `assets/img/Techno/Capture${6}.PNG` },
+      ]
+    },
+    
+    {
       banner: 'assets/img/HogwartsSchoolWeb/angryimg.png',
       image: [
         { name: 'gallery.Hogwarts.carousel.first', src: `assets/img/HogwartsSchoolWeb/Capture${1}.JPG` },
@@ -75,8 +83,12 @@ export class GalleryComponent implements OnInit {
   data: Date = new Date();
   focus;
   focus1;
-
-  constructor() { }
+  step = 0;
+  showButton;
+  private scrollHeight = 500;
+  constructor(
+    @Inject(DOCUMENT) private document: Document
+  ) { }
 
   ngOnInit() {
     this.carouselProject = this.dataProject[0].image;
@@ -88,8 +100,13 @@ export class GalleryComponent implements OnInit {
   }
 
   selectedIndexChange(event) {
-    this.carouselProject= this.dataProject[+event].image;
-    this.banner = this.dataProject[+event].banner;
+    if(event==1){
+      this.carouselProject= this.dataProject[0].image;
+      this.banner = this.dataProject[0].banner;
+    }else{ 
+      this.carouselProject= this.dataProject[+event].image;
+      this.banner = this.dataProject[+event].banner;
+    }
   }
 
   ngOnDestroy() {
@@ -97,5 +114,26 @@ export class GalleryComponent implements OnInit {
     body.classList.remove('profile-page');
     var navbar = document.getElementsByTagName('nav')[0];
     navbar.classList.remove('navbar-transparent');
+  }
+
+  @HostListener('window:scroll') onWindowScroll(): void {
+    const yOffset = window.pageYOffset;
+    const scrollTop = this.document.documentElement.scrollTop;
+    this.showButton = (yOffset || scrollTop) > this.scrollHeight;
+  }
+
+  onscrollTop(): void {
+    this.document.documentElement.scrollTop = 0;
+  }
+  setStep(index: number) {
+    this.step = index;
+  }
+
+  nextStep() {
+    this.step++;
+  }
+
+  prevStep() {
+    this.step--;
   }
 }

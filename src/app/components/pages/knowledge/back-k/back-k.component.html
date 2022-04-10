@@ -6,9 +6,9 @@
 		<mat-panel-description fxLayoutAlign="start center"> {{ 'knowledge.abilities.backend.title' | translate }} </mat-panel-description>
 	</mat-expansion-panel-header>
 	<div class="content" fxLayout="column" fxFlexFill fxLayoutGap="5px">
-		<div class="section-team text-center">
+		<div class="section-team">
 			<div class="container">
-				<div class="team">
+				<div class="team text-center">
 					<div class="row">
 						<div class="col-md-6">
 							<mat-card>
@@ -19,7 +19,7 @@
 									<p class="description">
 										{{ 'knowledge.abilities.backend.nodejs.description' | translate }}
 									</p>
-									<a class="btn btn-info btn-round">More</a>
+									<a class="btn btn-info btn-round" disabled="true">More</a>
 								</div>
 							</mat-card>
 						</div>
@@ -28,13 +28,37 @@
 								<div class="team-player">
 									<img src="assets/img/Express2.png" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised" />
 									<h4 class="title"> {{ 'knowledge.abilities.backend.express.title' | translate }}</h4>
-									<p class="category text-info">{{ 'knowledge.abilities.backend.nodejs.subtitle' | translate }} </p>
-									<p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio id repudiandae, quidem laboriosam animi minima? Non nostrum magnam, qui soluta voluptates dolorem animi, at corrupti odit molestias dolore. Non, inventore?</p>
+									<p class="category text-info">{{ 'knowledge.abilities.backend.express.subtitle' | translate }} </p>
+									<p class="description"> {{ 'knowledge.abilities.backend.express.description' | translate }} </p>
 									
-									<a class="btn btn-info btn-round">More</a>
+									<a class="btn btn-info btn-round" disabled="true">More</a>
 								</div>
 							</mat-card>
 						</div>
+					</div>
+				</div>
+				<br>
+				<div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutGap="5px">
+					<div fxFill>
+						<mat-card>
+							<mat-card-header>
+								<div mat-card-avatar class="header-image5"></div>
+								<mat-card-title>{{ 'knowledge.abilities.backend.NPM.title' | translate }} </mat-card-title>
+								<mat-card-subtitle> {{ 'knowledge.abilities.backend.NPM.subtitle' | translate }} </mat-card-subtitle>
+							</mat-card-header>
+							<mat-card-content>
+								<ul>
+									<li *ngFor="let package of NPMPackages" class="description">
+										<div *ngIf="package === 'rxjs'; else other">
+											<b>{{ package }}</b>
+										</div>
+										<ng-template #other>
+											{{ package }}
+										</ng-template>
+									</li>
+								</ul>
+							</mat-card-content>
+						</mat-card>
 					</div>
 				</div>
 			</div>

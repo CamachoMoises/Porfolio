@@ -20,47 +20,50 @@
 					<h2>{{ 'gallery.prolix.title' | translate }}</h2>
 					<p>{{ 'gallery.prolix.description' | translate }}</p>
 				</div>
+				<app-prolix></app-prolix>
+
 			</mat-tab>
+
 			<mat-tab>
-				<ng-template mat-tab-label> TechnoIDentia </ng-template>
+				<ng-template mat-tab-label> Back Prollix </ng-template>
 				<div class="title">
-					<h2>{{ 'gallery.technoidentia.title' | translate }}</h2>
-					<p>{{ 'gallery.technoidentia.description' | translate }}</p>
+					<h2>{{ 'gallery.prolix.title' | translate }}</h2>
+					<p>{{ 'gallery.prolix.description' | translate }}</p>
 				</div>
+				<app-prolix-back></app-prolix-back>
 			</mat-tab>
+			
 			<mat-tab>
 				<ng-template mat-tab-label> B&L Inventario </ng-template>
 				<div class="title">
 					<h2>{{ 'gallery.B-L-Project.title' | translate }}</h2>
 					<p>{{ 'gallery.B-L-Project.description' | translate }}</p>
 				</div>
+				<app-B-L-Project></app-B-L-Project>
+
 			</mat-tab>
+
+			<mat-tab>
+				<ng-template mat-tab-label> TechnoIDentia </ng-template>
+				<div class="title">
+					<h2>{{ 'gallery.technoidentia.title' | translate }}</h2>
+					<p>{{ 'gallery.technoidentia.description' | translate }}</p>
+				</div>
+				<app-TechnoIDentia></app-TechnoIDentia>
+			</mat-tab>
+
 			<mat-tab>
 				<ng-template mat-tab-label> Hogwarts </ng-template>
 				<div class="title">
 					<h2>{{ 'gallery.Hogwarts.title' | translate }}</h2>
 					<p>{{ 'gallery.Hogwarts.description' | translate }}</p>
 				</div>
-			</mat-tab>
-			<mat-tab>
-				<ng-template mat-tab-label> Back Prollix </ng-template>
-				<div class="row">
-					<div class="col-md-12 ml-auto mr-auto">
-						<div class="row collections">
-							<div class="col-md-6">
-								<img src="assets/img/bg3.jpg" alt="" class="img-raised" />
-								<img src="assets/img/bg8.jpg" alt="" class="img-raised" />
-							</div>
-							<div class="col-md-6">
-								<img src="assets/img/bg7.jpg" alt="" class="img-raised" />
-								<img src="assets/img/bg6.jpg" class="img-raised" />
-							</div>
-						</div>
-					</div>
-				</div>
+				<app-Hogwarts></app-Hogwarts>
+
 			</mat-tab>
 		</mat-tab-group>
 	</div>
 </div>
+<button class="button" *ngIf="showButton" (click)="onscrollTop()" type="button">⬆️</button>
 
 <!-- </div> -->

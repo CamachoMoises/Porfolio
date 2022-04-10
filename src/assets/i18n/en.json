@@ -258,7 +258,7 @@
 						"fourth": "Use of route modules: creation of route modules by CLI definition of the path, redirect, route parameters, creation of nested routes children , the router-outlet, routerLink the use of relative and absolute routes, use of the directives routerLinkActive and routerlinkActiveOptions to apply the correct style to labels, use of the router to navigate from the methods of injected services, use of query parameters and fragments, control access to routes and nested routes with authGuard, verify if the changes in a component are save before leaving the route, dynamic data binding between routes and components, asynchronous routes",
 						"fifth": "Observable consumption and subscriptions: creation of custom observables with operators, use of Subjects, use of lazy loading to load only the necessary modules ",
 						"sixth": "Creation of forms and reactive forms: recognize the data loaded to the form, use of validators with patterns, modified validators, ng-invalid, ng-touched to disable the loading of erroneous data, add messages to validate the form data, apply values defaults to form inputs, use of two-way data-binding for dynamic data loading, use of validator error codes, use of asynchronous data.",
-						"seventh": "Use of pipes and data transformation: creation of pipes by CLI by parameterizing the pipes, custom pipes, asynchronous pipes, search filters, pipes to reduce data load executions"
+						"seventh": "Use of pipes and data transformation: creation of pipes by CLI by parameterized the pipes, custom pipes, asynchronous pipes, search filters, pipes to reduce data load executions"
 					}
 				},
 				"NPM": {
@@ -276,7 +276,14 @@
 				},
 				"express": {
 					"title": "Express",
-					"subtitle": "version 4+"
+					"subtitle": "version 4+",
+					"description": "The most widely used web application development infrastructure in the Node.js development environment"
+				}
+				,
+				"NPM": {
+					"title": "NPM",
+					"subtitle": "Backend Packages",
+					"list": {}
 				}
 			},
 			"database": {
@@ -333,6 +340,14 @@
 							"realtime-database":{
 								"title": "Real time Database",
 								"description": "Store and sync data with our cloud-hosted NoSQL database. Data is synced with all clients in real time and remains available when the app is offline "
+							},
+							"firestore database":{
+								"title": "",
+								"description": ""
+							},
+							"stotage":{
+								"title": "",
+								"description": ""
 							}
 						}
 					},

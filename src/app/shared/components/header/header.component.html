@@ -8,24 +8,42 @@
 					<span class="button-bar"></span>
 				</a>
 				<div ngbDropdownMenu>
-					<a class="dropdown-item" [routerLink]="['/profile']"> {{ 'navbar.links.about' | translate }}</a>
-					<a class="dropdown-item" [routerLink]="['/knowledge']"> {{ 'navbar.links.knowledge' | translate }}</a>
-					<a class="dropdown-item" [routerLink]="['/gallery']"> {{ 'navbar.links.gallery' | translate }}</a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" [routerLink]="['/calendar']">{{ 'navbar.links.calendar' | translate }}</a>
-					<a class="dropdown-item" [routerLink]="['/rickAndMorty']">{{ 'navbar.links.rickAndMorty' | translate }}</a>
-					<a class="dropdown-item" [routerLink]="['/checkList']">{{ 'navbar.links.checkList' | translate }}</a>
-					<a class="dropdown-item" [routerLink]="['/nbaPlayers']">{{ 'navbar.links.NBAPlayers' | translate }}</a>
-					<a class="dropdown-item" [routerLink]="['/OrgChart']">{{ 'navbar.links.Org-chart' | translate }}</a>
+					<ul>
+						<li routerLinkActive="active">
+							<a class="dropdown-item" routerLink="/profile"> {{ 'navbar.links.about' | translate }}</a>
+						</li>
+						<li routerLinkActive="active">
+							<a class="dropdown-item" routerLink="/knowledge"> {{ 'navbar.links.knowledge' | translate }}</a>
+						</li>
+						<li routerLinkActive="active">
+							<a class="dropdown-item" routerLink="/gallery"> {{ 'navbar.links.gallery' | translate }}</a>
+						</li>
+						<div class="dropdown-divider"></div>
+						<li routerLinkActive="active">
+							<a class="dropdown-item" routerLink="/calendar">{{ 'navbar.links.calendar' | translate }}</a>
+						</li>
+						<li routerLinkActive="active">
+							<a class="dropdown-item" routerLink="/rickAndMorty">{{ 'navbar.links.rickAndMorty' | translate }}</a>
+						</li>
+						<li routerLinkActive="active">
+							<a class="dropdown-item" routerLink="/checkList">{{ 'navbar.links.checkList' | translate }}</a>
+						</li>
+						<li routerLinkActive="active">
+							<a class="dropdown-item" routerLink="/nbaPlayers">{{ 'navbar.links.NBAPlayers' | translate }}</a>
+						</li>
+						<li routerLinkActive="active">
+							<a class="dropdown-item" routerLink="/OrgChart">{{ 'navbar.links.Org-chart' | translate }}</a>
+						</li>
 
-					<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
+						<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
+					</ul>
 				</div>
 			</div>
 		</div>
 		<div class="navbar-translate">
-			<a class="navbar-brand" placement="bottom" ngbTooltip="{{ 'navbar.title.popUp' | translate }}" [routerLink]="['/home']"> Moises Porfolio </a>
+			<a class="navbar-brand" placement="bottom" ngbTooltip="{{ 'navbar.title.popUp' | translate }}" routerLink="/home"> Moises Porfolio </a>
 			<button class="navbar-toggler" type="button" (click)="sidebarToggle()">
 				<span class="navbar-toggler-bar bar1"></span>
 				<span class="navbar-toggler-bar bar2"></span>
@@ -88,19 +106,41 @@
 							<p>{{ 'navbar.page' | translate }}</p>
 						</a>
 						<div ngbDropdownMenu class="dropdown-menu">
-							<a class="dropdown-item" [routerLink]="['/profile']" (click)="sidebarToggle()"> {{ 'navbar.links.about' | translate }}</a>
-							<a class="dropdown-item" [routerLink]="['/knowledge']" (click)="sidebarToggle()"> {{ 'navbar.links.knowledge' | translate }}</a>
-							<a class="dropdown-item" [routerLink]="['/gallery']" (click)="sidebarToggle()"> {{ 'navbar.links.gallery' | translate }}</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" [routerLink]="['/calendar']" (click)="sidebarToggle()">{{ 'navbar.links.calendar' | translate }}</a>
-							<a class="dropdown-item" [routerLink]="['/rickAndMorty']" (click)="sidebarToggle()">{{ 'navbar.links.rickAndMorty' | translate }}</a>
-							<a class="dropdown-item" [routerLink]="['/checkList']" (click)="sidebarToggle()">{{ 'navbar.links.checkList' | translate }}</a>
-							<a class="dropdown-item" [routerLink]="['/nbaPlayers']" (click)="sidebarToggle()">{{ 'navbar.links.NBAPlayers' | translate }}</a>
-							<a class="dropdown-item" [routerLink]="['/OrgChart']" (click)="sidebarToggle()">{{ 'navbar.links.Org-chart' | translate }}</a>
-							<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
-							<a class="dropdown-item" [routerLink]="['/index']">Zona de pruebas</a>
+							<ul>
+								<li routerLinkActive="mobile">
+									<a class="dropdown-item" routerLink="/profile" (click)="sidebarToggle()"> {{ 'navbar.links.about' | translate }}</a>
+								</li>
+								<li routerLinkActive="mobile">
+									<a class="dropdown-item" routerLink="/knowledge" (click)="sidebarToggle()"> {{ 'navbar.links.knowledge' | translate }}</a>
+								</li>
+								<li routerLinkActive="mobile">
+									<a class="dropdown-item" routerLink="/gallery" (click)="sidebarToggle()"> {{ 'navbar.links.gallery' | translate }}</a>
+								</li>
+								<div class="dropdown-divider"></div>
+								<li routerLinkActive="mobile">
+									<a class="dropdown-item" routerLink="/calendar" (click)="sidebarToggle()">{{ 'navbar.links.calendar' | translate }}</a>
+								</li>
+								<li routerLinkActive="mobile">
+									<a class="dropdown-item" routerLink="/rickAndMorty" (click)="sidebarToggle()">{{ 'navbar.links.rickAndMorty' | translate }}</a>
+								</li>
+								<li routerLinkActive="mobile">
+									<a class="dropdown-item" routerLink="/checkList" (click)="sidebarToggle()">{{ 'navbar.links.checkList' | translate }}</a>
+								</li>
+								<li routerLinkActive="mobile">
+									<a class="dropdown-item" routerLink="/nbaPlayers" (click)="sidebarToggle()">{{ 'navbar.links.NBAPlayers' | translate }}</a>
+								</li>
+								<li routerLinkActive="mobile">
+									<a class="dropdown-item" routerLink="/OrgChart" (click)="sidebarToggle()">{{ 'navbar.links.Org-chart' | translate }}</a>
+								</li>
+								<li routerLinkActive="mobile">
+									<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
+								</li>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
+								<li routerLinkActive="mobile">
+									<a class="dropdown-item" routerLink="/index">Zona de pruebas</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</li>

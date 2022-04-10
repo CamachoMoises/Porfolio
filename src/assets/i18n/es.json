@@ -276,7 +276,13 @@
 				},
 				"express": {
 					"title": "Express",
-					"subtitle": "versión 4+"
+					"subtitle": "versión 4+",
+					"description":"La infraestructura de desarrollo de aplicaciones web   más utilizada en el entorno de desarrollo de Node.js"
+				},
+				"NPM": {
+					"title": "NPM",
+					"subtitle": "Paquetes para el Backend",
+					"list": {}
 				}
 			},
 			"database": {
@@ -333,6 +339,14 @@
 							"realtime-database":{
 								"title": "Base de datos en tiempo real",
 								"description": "Almacena y sincroniza datos con nuestra base de datos NoSQL alojada en la nube. Los datos se sincronizan con todos los clientes en tiempo real y se mantienen disponibles cuando la app no tiene conexión"
+							},
+							"firestore database":{
+								"title": "",
+								"description": ""
+							},
+							"stotage":{
+								"title": "",
+								"description": ""
 							}
 						}
 					},

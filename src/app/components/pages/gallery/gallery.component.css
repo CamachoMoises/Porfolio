@@ -5,6 +5,27 @@
 	object-fit: cover;
 }
 
+
+.button {
+	position: fixed;
+	border-radius: 5px;
+	bottom: 20px;
+	right: 30px;
+	z-index: 3;
+	padding: 1rem;
+	background-color: #ffffff;
+	border: 1px solid #ffffff;
+	cursor: pointer;
+	font-size: 1.5rem;
+	width: 45px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 5.6s ease-in-out;
+}
+
+
 @media (min-width: 1200px) {
 	.Carousel {
         max-width: 1200px ;
