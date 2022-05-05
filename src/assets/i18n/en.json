@@ -61,6 +61,10 @@
 			"job5": {
 				"position": "Web Developer (FrontEnd)",
 				"description": "In charge of the design and implementation of the structure, interface of parts of the developed application, registration of the data of the forms, sent to the server, requests and filtering."
+			},
+			"job6": {
+				"position": "Web Developer (Full stack)",
+				"description": "With the responsibility of developing both the user interface and the RESTful API to manage employee information, generate reports and build an organizational chart"
 			}
 		}
 	},
@@ -278,8 +282,7 @@
 					"title": "Express",
 					"subtitle": "version 4+",
 					"description": "The most widely used web application development infrastructure in the Node.js development environment"
-				}
-				,
+				},
 				"NPM": {
 					"title": "NPM",
 					"subtitle": "Backend Packages",
@@ -297,55 +300,55 @@
 				"title": "Software and other facilities",
 				"list": {
 					"git": {
-						"title":"Diagram",
+						"title": "Diagram",
 						"description": "As a fundamental part of software development today is the management of versions and the use of development branches",
-						"sheet":{
+						"sheet": {
 							"remote": {
-								"title":"Remote origin",
-								"command":"git remote"
+								"title": "Remote origin",
+								"command": "git remote"
 							},
 							"clone": {
-								"title":"Clone repositories",
-								"command":"git clone"
+								"title": "Clone repositories",
+								"command": "git clone"
 							},
-							"fetch":{
-								"title":"Check changes with fetch",
-								"command":"git fetch"
+							"fetch": {
+								"title": "Check changes with fetch",
+								"command": "git fetch"
 							},
-							"pull":{
-								"title":"Incorporate changes from a remote repository",
-								"command":"git pull"
+							"pull": {
+								"title": "Incorporate changes from a remote repository",
+								"command": "git pull"
 							},
-							"push":{
-								"title":"Upload content to a remote repository ",
-								"command":"git push"
+							"push": {
+								"title": "Upload content to a remote repository ",
+								"command": "git push"
 							},
-							"merge":{
+							"merge": {
 								"title": "Merge two branches of work",
-								"command":"git merge"
+								"command": "git merge"
 							}
 						}
 					},
 					"firebase": {
 						"description": "A entire backend solution ",
-						"sheet":{
+						"sheet": {
 							"hosting": {
 								"title": "Firebase Hosting",
 								"description": "A content storage service for web applications, whether dynamic or static content, in addition to the micro services that the page may have."
 							},
-							"cloud-storage":{
+							"cloud-storage": {
 								"title": "Cloud Storage",
 								"description": "For the needs of storing and delivering user-generated content, such as photos or videos."
 							},
-							"realtime-database":{
+							"realtime-database": {
 								"title": "Real time Database",
 								"description": "Store and sync data with our cloud-hosted NoSQL database. Data is synced with all clients in real time and remains available when the app is offline "
 							},
-							"firestore database":{
+							"firestore database": {
 								"title": "",
 								"description": ""
 							},
-							"stotage":{
+							"stotage": {
 								"title": "",
 								"description": ""
 							}
@@ -353,19 +356,19 @@
 					},
 					"clever-cloud": {
 						"description": "Web services in the cloud, with a pay-as-you-go pricing model. No infrastructure to manage",
-						"database":{
-							"mysql":"Addons for Mysql",
+						"database": {
+							"mysql": "Addons for Mysql",
 							"description": "An open source relational database management system with a host address that is accessible by username and password"
 						}
 					},
 					"cloudinary": {
 						"tittle": "Optimize media for fast delivery on any device",
-						"description":"Cloudinary is used in cloud-based image and video management for web and mobile applications.",
+						"description": "Cloudinary is used in cloud-based image and video management for web and mobile applications.",
 						"list": {
-							"first":"Media Upload ",
-							"second":"Image transformations",
-							"third":"Video transformations",
-							"fourth":"Add-ons for: Auto-Tagging, Protection, Analysis, Detection"
+							"first": "Media Upload ",
+							"second": "Image transformations",
+							"third": "Video transformations",
+							"fourth": "Add-ons for: Auto-Tagging, Protection, Analysis, Detection"
 						}
 					},
 					"heroku": {
@@ -445,6 +448,19 @@
 				"fifth": ".",
 				"sixth": "."
 			}
+		},
+		"IMVITRACV": {
+			"title": "IMVITRACV",
+			"description": "...",
+			"carousel": {
+				"first": ".",
+				"second": ".",
+				"third": ".",
+				"fourth": ".",
+				"fifth": ".",
+				"sixth": ".",
+				"seventh": "."
+			}
 		}
 	},
 	"home": {
@@ -472,13 +488,13 @@
 			}
 		}
 	},
-	"contact":{
+	"contact": {
 		"title": "Do you want to contact me?",
-		"subtitle": "Your project are important to me",
+		"subtitle": "Your project is important to me",
 		"email": "Email",
 		"phone": "Phone",
 		"comments": "Left me a comment",
-		"comments2":"Write me a message",
-		"button":"Send message"
+		"comments2": "Write me a message",
+		"button": "Send message"
 	}
 }

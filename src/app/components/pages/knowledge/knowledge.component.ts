@@ -14,7 +14,7 @@ export class KnowledgeComponent implements OnInit {
   focus;
   focus1;
   showButton;
-  private scrollHeight = 500;
+  private scrollHeight = 200;
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private translate: TranslateService) {
@@ -24,9 +24,12 @@ export class KnowledgeComponent implements OnInit {
 
   @HostListener('window:scroll') onWindowScroll(): void {
     const yOffset = window.pageYOffset;
+    
     const scrollTop = this.document.documentElement.scrollTop;
-    this.showButton = (yOffset || scrollTop) > this.scrollHeight;
+ 
+    this.showButton = (yOffset || scrollTop) >= this.scrollHeight;
   }
+
 
   ngOnInit(): void {
     var body = document.getElementsByTagName('body')[0];

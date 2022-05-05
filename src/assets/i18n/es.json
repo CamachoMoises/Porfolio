@@ -61,9 +61,12 @@
 			"job5": {
 				"position": "Desarrollador Web (FrontEnd)",
 				"description": "Encargado del diseño e implementación de la estructura, interfaz de partes de la aplicación desarrollada, registro de los datos de los formularios, envió al servidor, peticiones y filtrado."
+			},
+			"job6": {
+				"position": "Desarrollador Web (Full stack)",
+				"description": "Con la responsabilidad de desarrollar tanto la interfaz de ususario y la API de RESTful para gestionar la información de los empleados, generar reportes y armar un grafico organizacional"
 			}
-		},
-		"": ""
+		}
 	},
 	"knowledge": {
 		"title": "Habilidades y conocimientos",
@@ -277,7 +280,7 @@
 				"express": {
 					"title": "Express",
 					"subtitle": "versión 4+",
-					"description":"La infraestructura de desarrollo de aplicaciones web   más utilizada en el entorno de desarrollo de Node.js"
+					"description": "La infraestructura de desarrollo de aplicaciones web   más utilizada en el entorno de desarrollo de Node.js"
 				},
 				"NPM": {
 					"title": "NPM",
@@ -296,55 +299,55 @@
 				"title": "Software and other facilities",
 				"list": {
 					"git": {
-						"title":"Diagrama",
+						"title": "Diagrama",
 						"description": "Como parte fundamental del desarrollo de software en la actualidad está el manejo de versiones y el uso de ramas de desarrollo.",
-						"sheet":{
+						"sheet": {
 							"remote": {
-								"title":"Origen remoto",
-								"command":"git remote"
+								"title": "Origen remoto",
+								"command": "git remote"
 							},
 							"clone": {
-								"title":"Clonar repositorios",
-								"command":"git clone"
+								"title": "Clonar repositorios",
+								"command": "git clone"
 							},
-							"fetch":{
-								"title":"Verificar cambios con fetch",
-								"command":"git fetch"
+							"fetch": {
+								"title": "Verificar cambios con fetch",
+								"command": "git fetch"
 							},
-							"pull":{
-								"title":"Incorporar cambios desde un repositorio remoto ",
-								"command":"git pull"
+							"pull": {
+								"title": "Incorporar cambios desde un repositorio remoto ",
+								"command": "git pull"
 							},
-							"push":{
-								"title":"Cargar contenido a un repositorio remoto",
-								"command":"git push"
+							"push": {
+								"title": "Cargar contenido a un repositorio remoto",
+								"command": "git push"
 							},
-							"merge":{
+							"merge": {
 								"title": "unir dos ramas de trabajo",
-								"command":"git merge"
+								"command": "git merge"
 							}
 						}
 					},
 					"firebase": {
 						"description": "Una solucion completa de backend",
-						"sheet":{
+						"sheet": {
 							"hosting": {
 								"title": "Firebase Hosting",
 								"description": "Un servicio de almacenamiento del contenido para las aplicaciones web  ya sea de contenido dinamico o estatico ademas de los mircro servicios que pueda tener la pagina"
 							},
-							"cloud-storage":{
+							"cloud-storage": {
 								"title": "Cloud Storage",
 								"description": "Para las necesidades de almacenar y entregar contenido generado por usuarios, como fotos o videos."
 							},
-							"realtime-database":{
+							"realtime-database": {
 								"title": "Base de datos en tiempo real",
 								"description": "Almacena y sincroniza datos con nuestra base de datos NoSQL alojada en la nube. Los datos se sincronizan con todos los clientes en tiempo real y se mantienen disponibles cuando la app no tiene conexión"
 							},
-							"firestore database":{
+							"firestore database": {
 								"title": "",
 								"description": ""
 							},
-							"stotage":{
+							"stotage": {
 								"title": "",
 								"description": ""
 							}
@@ -352,11 +355,10 @@
 					},
 					"clever-cloud": {
 						"description": "Un proveedor de soluciones de PaaS",
-						"database":{
-							"mysql":"Addons para Mysql",
+						"database": {
+							"mysql": "Addons para Mysql",
 							"description": "Un sistema de gestión de base de datos relacional de código abierto "
 						}
-						
 					},
 					"cloudinary": {
 						"description": ""
@@ -438,6 +440,19 @@
 				"fifth": ".",
 				"sixth": "."
 			}
+		},
+		"IMVITRACV": {
+			"title": "IMVITRACV",
+			"description": "...",
+			"carousel": {
+				"first": ".",
+				"second": ".",
+				"third": ".",
+				"fourth": ".",
+				"fifth": ".",
+				"sixth": ".",
+				"seventh": "."
+			}
 		}
 	},
 	"home": {
@@ -465,13 +480,13 @@
 			}
 		}
 	},
-	"contact":{
+	"contact": {
 		"title": "¿Quieres contactarme?",
 		"subtitle": "Tu proyecto es importante para mí",
 		"email": "Correo electrónico",
 		"phone": "Telefono",
 		"comments": "Déjame un mensaje",
-		"comments2":"Escríbeme un mensaje ",
-		"button":"Enviar mensaje"
+		"comments2": "Escríbeme un mensaje ",
+		"button": "Enviar mensaje"
 	}
 }

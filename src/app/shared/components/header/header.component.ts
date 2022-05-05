@@ -1,5 +1,5 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
-import { Location } from '@angular/common';
+import { Component, OnInit, ElementRef, Inject } from '@angular/core';
+import { Location, DOCUMENT } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -16,12 +16,12 @@ export class HeaderComponent implements OnInit {
     constructor(
         public location: Location,
         private element: ElementRef,
-        private translate: TranslateService
+        private translate: TranslateService,
+        @Inject(DOCUMENT) private document: Document
     ) {
         const lang = localStorage.getItem('lang')
         this.translate.setDefaultLang(lang);
     }
-
     ngOnInit() {
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];

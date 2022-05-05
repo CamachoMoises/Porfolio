@@ -22,7 +22,7 @@ import { HogwartsComponent } from './tabs/Hogwarts/Hogwarts.component';
 import { ProlixBackComponent } from './tabs/prolix-back/prolix-back.component';
 import { TechnoIDentiaComponent } from './tabs/TechnoIDentia/TechnoIDentia.component'
 import { GalleryViewerComponent } from './GalleryViewer/GalleryViewer.component'
-
+import { InvitracvComponent } from "./tabs/invitracv/invitracv.component";
 
 @NgModule({
   declarations: [
@@ -32,6 +32,7 @@ import { GalleryViewerComponent } from './GalleryViewer/GalleryViewer.component'
     HogwartsComponent,
     ProlixBackComponent,
     TechnoIDentiaComponent,
+    InvitracvComponent,
     GalleryViewerComponent
   ],
   imports: [

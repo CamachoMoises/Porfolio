@@ -38,7 +38,6 @@ export class GalleryComponent implements OnInit {
     {
     },
 
-  
 
     {
       banner: 'assets/img/B-L-Projects/angryimg.png',
@@ -52,6 +51,19 @@ export class GalleryComponent implements OnInit {
         { name: 'gallery.B-L-Project.carousel.seventh', src: `assets/img/B-L-Projects/Capture${7}.JPG` },
         { name: 'gallery.B-L-Project.carousel.eighth', src: `assets/img/B-L-Projects/Capture${8}.JPG` },
         { name: 'gallery.B-L-Project.carousel.ninth', src: `assets/img/B-L-Projects/Capture${9}.JPG` }
+      ]
+    },
+
+    {
+      banner: 'assets/img/IMVITRACV/angryimg.png',
+      image: [
+        { name: 'gallery.IMVITRACV.carousel.first', src: `assets/img/IMVITRACV/Capture${1}.JPG` },
+        { name: 'gallery.IMVITRACV.carousel.second', src: `assets/img/IMVITRACV/Capture${2}.JPG` },
+        { name: 'gallery.IMVITRACV.carousel.third', src: `assets/img/IMVITRACV/Capture${3}.JPG` },
+        { name: 'gallery.IMVITRACV.carousel.fourth', src: `assets/img/IMVITRACV/Capture${4}.JPG` },
+        { name: 'gallery.IMVITRACV.carousel.fifth', src: `assets/img/IMVITRACV/Capture${5}.JPG` },
+        { name: 'gallery.IMVITRACV.carousel.sixth', src: `assets/img/IMVITRACV/Capture${6}.JPG` },
+        { name: 'gallery.IMVITRACV.carousel.seventh', src: `assets/img/IMVITRACV/Capture${7}.JPG` },
       ]
     },
 

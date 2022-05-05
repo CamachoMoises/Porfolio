@@ -1,27 +1,28 @@
 <mat-expansion-panel hideToggle="false">
-  <mat-expansion-panel-header [collapsedHeight]="'150px'">
-    <mat-panel-title>
-      <img src="assets/img/mysql.png" alt="Thumbnail Image" id="thumbnail1" />
-    </mat-panel-title>
-    <mat-panel-description fxLayoutAlign="start center"> {{ 'knowledge.abilities.database.title' | translate }} </mat-panel-description>
-  </mat-expansion-panel-header>
-  <div class="content" fxLayout="column" fxLayout.xs="column" fxFlexFill fxLayoutGap="5px">
-			<div fxFill>
-				<mat-card>
-					<mat-card-header>
-						<mat-card-subtitle>{{ 'knowledge.abilities.backend.nodejs.subtitle' | translate }} </mat-card-subtitle>
-					</mat-card-header>
-					<mat-card-content>
-						<p> {{ 'knowledge.abilities.frontend.javascript.description' | translate }} </p>
-						<ul>
-							<li>...</li>
-						
-						</ul>
-					</mat-card-content>
-					<mat-card-actions align="end">
-						<button mat-button>{{ 'knowledge.abilities.button.More' | translate }}</button>
-					</mat-card-actions>
-				</mat-card>
-			</div>
-    </div>  
-  </mat-expansion-panel>
+	<mat-expansion-panel-header [collapsedHeight]="'150px'">
+		<mat-panel-title>
+			<img src="assets/img/mysql.png" alt="Thumbnail Image" id="thumbnail1" />
+		</mat-panel-title>
+		<mat-panel-description fxLayoutAlign="start center"> {{ 'knowledge.abilities.database.title' | translate }} </mat-panel-description>
+	</mat-expansion-panel-header>
+	<div class="content" fxLayout="column" fxLayout.xs="column" fxFlexFill fxLayoutGap="5px">
+		<div fxFill>
+			<mat-card>
+				<mat-card-header>
+					<mat-card-subtitle>{{ 'knowledge.abilities.backend.nodejs.subtitle' | translate }} </mat-card-subtitle>
+				</mat-card-header>
+				<mat-card-content>
+					<p>{{ 'knowledge.abilities.frontend.javascript.description' | translate }}</p>
+					<ul>
+						<li>...</li>
+					</ul>
+				</mat-card-content>
+				<mat-card-actions align="end">
+					<button class="btn btn-round" mat-button>{{ 'knowledge.abilities.button.More' | translate }}</button>
+					<!-- <button class="btn btn-info btn-round" mat-button>{{ 'knowledge.abilities.button.More' | translate }}</button> -->
+
+				</mat-card-actions>
+			</mat-card>
+		</div>
+	</div>
+</mat-expansion-panel>
