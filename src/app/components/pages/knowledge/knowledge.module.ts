@@ -10,6 +10,7 @@ import { ContactModule } from '../../../shared/components/contact/contact.module
 
 
 import { KnowledgeComponent } from './knowledge.component';
+import { NodeJsSheetOverviewComponent } from './back-k/node-js-sheet-overview/node-js-sheet-overview.component';
 import { FrontKComponent, AngularSheetOverviewSheet, JavascriptSheetOverviewSheet } from './front-k/front-k.component';
 import { SoftwareFacilityComponent, GitSheetOverviewSheet } from './software-facility/software-facility.component';
 import { BackKComponent } from './back-k/back-k.component';
@@ -20,7 +21,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatBottomSheetModule} from '@angular/material/bottom-sheet'; 
 import {MatListModule} from '@angular/material/list'; 
 import {MatExpansionModule} from '@angular/material/expansion';
-import {MatIconModule} from '@angular/material/icon'; 
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import {MatIconModule} from '@angular/material/icon';
     JavascriptSheetOverviewSheet,
     SoftwareFacilityComponent,
     GitSheetOverviewSheet,
+    NodeJsSheetOverviewComponent,
 
   ],
   imports: [

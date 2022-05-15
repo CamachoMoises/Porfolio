@@ -281,7 +281,56 @@
 				"express": {
 					"title": "Express",
 					"subtitle": "version 4+",
-					"description": "The most widely used web application development infrastructure in the Node.js development environment"
+					"description": "The most widely used web application development infrastructure in the Node.js development environment",
+					"details":{
+						"title": "Designed to build scalable network applications",
+						"user":"Users handle",
+						"package": "Packages",
+						"description": "Node.js app runs in a single process, without creating a new thread for every request, That provides a set of asynchronous I/O primitives in its standard library that prevent JavaScript code from blocking. ",
+						"variables": "read environment variables with process core module of Node.js",
+						"argument":"accept arguments from the command line",
+						"File_system":{
+							"title": "File system management",
+							"list":{
+								
+								"first":"Read files",
+								"second":"Create files",
+								"third":"Update files",
+								"fourth":"Delete files",
+								"fifth":"Rename files"
+							}
+						},
+						"modules":{
+							"title": "Modules in Node.js",
+							"description": "Built-in Modules and custom"
+						},
+						"express":{
+							"description":"A framework that works together with Node.Js to create API-Rest in a simple way",
+							"subtitle":"Using express to routing",
+							"Middleware":{
+								"title": "middleware for use in Express",
+								"description": "functions that have access to the request object (req), the response object (res)",
+								"Router":"Router-level middleware",
+								"error": "Error-handling ",
+								"third-party":"Third-party middleware"
+							},
+							"Routing": {
+								"title":"Using express to routing",
+								"Paths":"Route paths",
+								"methods":"Route methods",
+								"parameters":"Route parameters",
+								"handlers":"Route handlers"
+							},
+							"methods":{
+								"title":"HTTP methods of express"
+								
+							}
+						
+						},
+						"Mysql":"Designing to manage connections to the MySQL database with the continuation of the MySQL-Native NPM package."
+						
+				
+					}
 				},
 				"NPM": {
 					"title": "NPM",

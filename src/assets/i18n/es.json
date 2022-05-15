@@ -280,7 +280,51 @@
 				"express": {
 					"title": "Express",
 					"subtitle": "versión 4+",
-					"description": "La infraestructura de desarrollo de aplicaciones web   más utilizada en el entorno de desarrollo de Node.js"
+					"description": "La infraestructura de desarrollo de aplicaciones web   más utilizada en el entorno de desarrollo de Node.js",
+					"details":{
+						"title": "Diseñado para construir aplicaciones web escalables",
+						"package": "Paquetes",
+						"user":"Manejo de usuarios",
+						"description": "Una app en Node.js se ejecuta en un solo proceso, sin crear un nuevo hilo para cada solicitud. Lo proporciona un conjunto de E/S primitivas asíncronas en su biblioteca estándar que evitan que el código JavaScript se bloquee.",
+						"variables": "Leer variables de entorno modulo  de procesos de Node.js",
+						"argument":"Leer argumentos desde la linea de comandos",
+						"File_system":{
+							"title": "Gestión del sistema de archivos",
+							"list":{
+								"first":"Leer archivos",
+								"second":"Crear archivos",
+								"third":"Actualizar archivos",
+								"fourth":"Borrar archivos",
+								"fifth":"Rennombrar archivos"
+							}
+						},
+						"modules":{
+							"title": "Modules in Node.js",
+							"description": "Built-in Modules and custom"
+						},
+						"express":{
+							"description":"Un framework que trabaja en conjunto con Node.Js para crear API-Rest de manera sencilla",
+							"Middleware":{
+								"title": "middleware for use in Express",
+								"description": "functions that have access to the request object (req), the response object (res)",
+								"Router":"Router-level middleware",
+								"error": "Error-handling ",
+								"third-party":"Third-party middleware"
+
+							},
+							"Routing": {
+								"title":"Using express to routing",
+								"Paths":"Route paths",
+								"methods":"Route methods",
+								"parameters":"Route parameters",
+								"handlers":"Route handlers"
+							}
+							
+						},
+						"Mysql":"Para gestionar las conexiones a la base de datos Mysql con la continuacion del paquete NPM MySQL-Native."
+						
+						
+					}
 				},
 				"NPM": {
 					"title": "NPM",

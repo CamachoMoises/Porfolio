@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-sheet';
 
 
@@ -7,14 +7,11 @@ import { MatBottomSheet, MatBottomSheetRef } from '@angular/material/bottom-shee
   templateUrl: './software-facility.component.html',
   styleUrls: ['./software-facility.component.css']
 })
-export class SoftwareFacilityComponent implements OnInit {
+export class SoftwareFacilityComponent {
 
   constructor(
     private _bottomSheet: MatBottomSheet
   ) { }
-
-  ngOnInit(): void {
-  }
 
   moreGit(event: Event): void {
     event.stopPropagation();

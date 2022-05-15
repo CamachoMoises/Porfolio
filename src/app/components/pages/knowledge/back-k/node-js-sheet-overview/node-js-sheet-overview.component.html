@@ -1,0 +1,163 @@
+<div class="navbar-node">
+	<div class="navbar-text">
+		<div>
+			<img src="assets/img/nodejs.png" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised" id="thumbnail1" />
+			<hr />
+			<p>{{ 'knowledge.abilities.backend.nodejs.subtitle' | translate }}</p>
+		</div>
+		<div>
+			<img src="assets/img/Express2.png" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised" id="thumbnail1" />
+			<hr />
+			<p>{{ 'knowledge.abilities.backend.express.subtitle' | translate }}</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<section class="section-1">
+		<mat-list>
+			<div mat-subheader>
+				{{ 'knowledge.abilities.backend.express.details.package' | translate }}
+			</div>
+			<mat-list-item *ngFor="let note of notes">
+				<mat-icon mat-list-icon>note</mat-icon>
+				<div mat-line>{{ note.name }}</div>
+			</mat-list-item>
+			<mat-divider></mat-divider>
+			<div mat-subheader>
+				{{ 'knowledge.abilities.backend.express.details.user' | translate }}
+			</div>
+			<mat-list-item *ngFor="let folder of folders">
+				<mat-icon mat-list-icon>fingerprint</mat-icon>
+				<div mat-line>{{ folder.name }}</div>
+			</mat-list-item>
+			<mat-divider></mat-divider>
+		</mat-list>
+	</section>
+
+	<section class="section-2">
+		<div class="maisn">
+			<h2>Node.js</h2>
+			<p>
+				{{ 'knowledge.abilities.backend.express.details.title' | translate }}
+				{{ 'knowledge.abilities.backend.express.details.description' | translate }}
+			</p>
+			<ul>
+				<li>
+					{{ 'knowledge.abilities.backend.express.details.variables' | translate }}
+				</li>
+				<li>
+					{{ 'knowledge.abilities.backend.express.details.argument' | translate }}
+				</li>
+				<li>
+					{{ 'knowledge.abilities.backend.express.details.File_system.title' | translate }}
+					<ul>
+						<li>
+							{{ 'knowledge.abilities.backend.express.details.File_system.list.first' | translate }}
+						</li>
+						<li>
+							{{ 'knowledge.abilities.backend.express.details.File_system.list.second' | translate }}
+						</li>
+						<li>
+							{{ 'knowledge.abilities.backend.express.details.File_system.list.third' | translate }}
+						</li>
+						<li>
+							{{ 'knowledge.abilities.backend.express.details.File_system.list.fourth' | translate }}
+						</li>
+						<li>
+							{{ 'knowledge.abilities.backend.express.details.File_system.list.fifth' | translate }}
+						</li>
+					</ul>
+				</li>
+				<li>
+					{{ 'knowledge.abilities.backend.express.details.modules.description' | translate }}
+				</li>
+			</ul>
+			<h2>Express</h2>
+			<p>
+				{{ 'knowledge.abilities.backend.express.details.express.description' | translate }}
+			</p>
+			<ul>
+				<li>
+					<b>
+						{{ 'knowledge.abilities.backend.express.details.express.Middleware.title' | translate }}
+					</b>
+					<p>
+						{{ 'knowledge.abilities.backend.express.details.express.Middleware.description' | translate }}
+					</p>
+					<ul>
+						<li>
+							{{ 'knowledge.abilities.backend.express.details.express.Middleware.Router' | translate }}
+						</li>
+						<li>
+							{{ 'knowledge.abilities.backend.express.details.express.Middleware.error' | translate }}
+						</li>
+						<li>
+							{{ 'knowledge.abilities.backend.express.details.express.Middleware.third-party' | translate }}
+						</li>
+					</ul>
+				</li>
+
+				<li>
+					<b>
+						{{ 'knowledge.abilities.backend.express.details.express.Routing.title' | translate }}
+					</b>
+					<ul>
+						<li>
+							{{ 'knowledge.abilities.backend.express.details.express.Routing.Paths' | translate }}
+						</li>
+						<li>
+							{{ 'knowledge.abilities.backend.express.details.express.Routing.methods' | translate }}
+						</li>
+						<li>
+							{{ 'knowledge.abilities.backend.express.details.express.Routing.parameters' | translate }}
+						</li>
+						<li>
+							{{ 'knowledge.abilities.backend.express.details.express.Routing.handlers' | translate }}
+						</li>
+					</ul>
+				</li>
+				<li>
+					<b>
+						{{ 'knowledge.abilities.backend.express.details.express.methods.title' | translate }}
+					</b>
+					<ul>
+						<li *ngFor="let method of nodeMethods">
+							{{ method }}
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<h2>MySQL 2 in Node</h2>
+			<p>
+				{{ 'knowledge.abilities.backend.express.details.Mysql' | translate }}
+
+			</p>
+			<div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutGap="10rem">
+				<div>
+					<h3><b>Queries</b></h3>
+
+					<ul>
+						<li *ngFor="let query of queries">
+							{{ query }}
+						</li>
+					</ul>
+				</div>
+
+				<div>
+					<h3><b>Filters</b></h3>
+
+					<ul>
+						<li *ngFor="let filter of filtersSQL">
+							{{ filter }}
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			
+
+
+		</div>
+	</section>
+</div>

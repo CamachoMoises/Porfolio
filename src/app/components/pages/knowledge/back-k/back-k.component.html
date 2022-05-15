@@ -9,9 +9,9 @@
 		<div class="section-team">
 			<div class="container">
 				<div class="team text-center">
-					<div class="row">
-						<div class="col-md-6">
-							<mat-card>
+					<mat-card>
+						<div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutGap="5px">
+							<div fxFlex="50" fxFlex.xs="70">
 								<div class="team-player">
 									<img src="assets/img/nodejs.png" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised" height="30p" />
 									<h4 class="title">{{ 'knowledge.abilities.backend.nodejs.title' | translate }}</h4>
@@ -19,25 +19,22 @@
 									<p class="description">
 										{{ 'knowledge.abilities.backend.nodejs.description' | translate }}
 									</p>
-									<!-- <button class="btn btn-info btn-round" mat-button>{{ 'knowledge.abilities.button.More' | translate }}</button> -->
-									<button class="btn btn-round" mat-button>{{ 'knowledge.abilities.button.More' | translate }}</button>
+									<!-- <button class="btn btn-round" mat-button>{{ 'knowledge.abilities.button.More' | translate }}</button> -->
 								</div>
-							</mat-card>
-						</div>
-						<div class="col-md-6">
-							<mat-card>
+							</div>
+							<div fxFlex="50" fxFlex.xs="70" fxLayoutAlign=" stretch">
 								<div class="team-player">
 									<img src="assets/img/Express2.png" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised" />
 									<h4 class="title">{{ 'knowledge.abilities.backend.express.title' | translate }}</h4>
 									<p class="category text-info">{{ 'knowledge.abilities.backend.express.subtitle' | translate }}</p>
 									<p class="description">{{ 'knowledge.abilities.backend.express.description' | translate }}</p>
 									<!-- <button class="btn btn-info btn-round" mat-button>{{ 'knowledge.abilities.button.More' | translate }}</button> -->
-									<button class="btn btn-round" mat-button>{{ 'knowledge.abilities.button.More' | translate }}</button>
-
+									<!-- <button class="btn btn-round" mat-button>{{ 'knowledge.abilities.button.More' | translate }}</button> -->
 								</div>
-							</mat-card>
+							</div>
 						</div>
-					</div>
+						<button class="btn btn-info btn-round btn-block" (click)="moreNode($event)" mat-button>{{ 'knowledge.abilities.button.More' | translate }}</button>
+					</mat-card>
 				</div>
 				<br />
 				<div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutGap="5px">

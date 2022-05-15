@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {NodeJsSheetOverviewComponent} from './node-js-sheet-overview/node-js-sheet-overview.component'
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
 @Component({
   selector: 'app-back-k',
   templateUrl: './back-k.component.html',
   styleUrls: ['./back-k.component.css']
 })
-export class BackKComponent implements OnInit {
-  NPMPackages= [
+export class BackKComponent {
+  NPMPackages:string[]= [
   "bcryptjs",
   "body-parser",
   "cloudinary",
@@ -27,9 +29,13 @@ export class BackKComponent implements OnInit {
   "passport-local",
   "rxjs"
 ];
-  constructor() { }
+  constructor(
+    private _bottomSheet: MatBottomSheet
+  ) { }
 
-  ngOnInit(): void {
+  moreNode(event: Event): void {
+    event.stopPropagation();
+    console.log('More node');
+    this._bottomSheet.open(NodeJsSheetOverviewComponent)
   }
-
 }
