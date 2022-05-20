@@ -9,16 +9,29 @@
 		<div fxFill>
 			<mat-card>
 				<mat-card-header>
-					<mat-card-subtitle>{{ 'knowledge.abilities.backend.nodejs.subtitle' | translate }} </mat-card-subtitle>
+					<mat-card-subtitle>{{ 'knowledge.abilities.database.description' | translate }} </mat-card-subtitle>
 				</mat-card-header>
 				<mat-card-content>
 					<p>{{ 'knowledge.abilities.frontend.javascript.description' | translate }}</p>
-					<ul>
-						<li>...</li>
-					</ul>
+					<div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill fxLayoutGap="10rem">
+						<div>
+							<ul>
+								<li *ngFor="let query of queries" >
+									{{ query }}
+								</li>
+							</ul>
+						</div>
+						<div>
+							<ul>
+								<li *ngFor="let filter of filtersSQL" >
+									{{ filter }}
+								</li>
+							</ul>
+						</div>
+					</div>
 				</mat-card-content>
 				<mat-card-actions align="end">
-					<button class="btn btn-round" mat-button>{{ 'knowledge.abilities.button.More' | translate }}</button>
+					<!-- <button class="btn btn-round" mat-button>{{ 'knowledge.abilities.button.More' | translate }}</button> -->
 					<!-- <button class="btn btn-info btn-round" mat-button>{{ 'knowledge.abilities.button.More' | translate }}</button> -->
 
 				</mat-card-actions>

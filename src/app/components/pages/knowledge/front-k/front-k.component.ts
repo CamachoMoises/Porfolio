@@ -19,7 +19,8 @@ export class FrontKComponent implements OnInit {
     "apexcharts",
     "d3-org-chart",
     "jspdf",
-    "pdfmake"
+    "pdfmake",
+    "Material"
   ];
   panelOpenState = false;
   constructor(

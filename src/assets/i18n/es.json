@@ -334,6 +334,7 @@
 			},
 			"database": {
 				"title": "Gestor de base de datos",
+				"description":"Versión 5+",
 				"mysql": {
 					"title": "",
 					"subtitle": ""
@@ -385,7 +386,7 @@
 							},
 							"realtime-database": {
 								"title": "Base de datos en tiempo real",
-								"description": "Almacena y sincroniza datos con nuestra base de datos NoSQL alojada en la nube. Los datos se sincronizan con todos los clientes en tiempo real y se mantienen disponibles cuando la app no tiene conexión"
+								"description": "Almacena y sincroniza datos con una base de datos NoSQL alojada en la nube. Los datos se sincronizan con todos los clientes en tiempo real y se mantienen disponibles cuando la app no tiene conexión"
 							},
 							"firestore database": {
 								"title": "",
@@ -405,13 +406,20 @@
 						}
 					},
 					"cloudinary": {
-						"description": ""
+						"tittle": "optimiza los archivos multimedia para enviarlos a cualquier dispositivo",
+						"description": "Cloudinary se utiliza en la gestión de imágenes y videos en la nube para aplicaciones web",
+						"list": {
+							"first": "Carga de archivos",
+							"second": "Transformación de imagenes",
+							"third": "Transformación de video",
+							"fourth": "Add-ons para: Auto-Tagging, Protección, analisis, detección"
+						}
 					},
 					"heroku": {
-						"description": ""
+						"description": "Para desplegar las aplicaciones de Node.js desde su CLI o directamente de GitHub"
 					},
 					"postman": {
-						"description": ""
+						"description": "Para las pruebas de las API sin necesidad de tener una aplicacion que haga las perticiones y con mas recursos que el navegador "
 					},
 					"visual-studio": {
 						"description": ""

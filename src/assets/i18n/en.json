@@ -340,6 +340,7 @@
 			},
 			"database": {
 				"title": "Database manager",
+				"description":"Version 5+",
 				"mysql": {
 					"title": "",
 					"subtitle": ""
@@ -391,7 +392,7 @@
 							},
 							"realtime-database": {
 								"title": "Real time Database",
-								"description": "Store and sync data with our cloud-hosted NoSQL database. Data is synced with all clients in real time and remains available when the app is offline "
+								"description": "Store and sync data with a cloud-hosted NoSQL database. Data is synced with all clients in real time and remains available when the app is offline "
 							},
 							"firestore database": {
 								"title": "",
@@ -411,7 +412,7 @@
 						}
 					},
 					"cloudinary": {
-						"tittle": "Optimize media for fast delivery on any device",
+						"tittle": "It optimizes media for delivery on any device",
 						"description": "Cloudinary is used in cloud-based image and video management for web and mobile applications.",
 						"list": {
 							"first": "Media Upload ",
@@ -421,10 +422,10 @@
 						}
 					},
 					"heroku": {
-						"description": ""
+						"description": "To deploy Node.js applications from your CLI or directly from GitHub"
 					},
 					"postman": {
-						"description": ""
+						"description": "For API tests without the need to have an application that makes the requests and with more resources than the browser"
 					},
 					"visual-studio": {
 						"description": ""
