@@ -13,7 +13,7 @@ import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
 })
 export class AppComponent implements OnInit {
     private _router: Subscription;
-
+    userLanguage
 
     constructor(
         private renderer: Renderer2,
@@ -23,9 +23,19 @@ export class AppComponent implements OnInit {
         private element: ElementRef,
         public location: Location
     ) {
+        this.userLanguage =  window.navigator.language;
+        let lang:string = this.userLanguage.substring(0,2);
+        // console.log(this.userLanguage.substring(0,2));
+        // console.log(lang);
+
+        if(lang!= 'en' && 'es'){
+            lang='en'
+        }
+        // console.log(lang);
+        
         if (!localStorage.getItem('lang')) {
             console.log('first', localStorage.getItem('lang'));
-            localStorage.setItem('lang', 'en');
+            localStorage.setItem('lang', lang);
         }
     }
     ngOnInit() {
