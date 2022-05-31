@@ -34,6 +34,9 @@
 						<li routerLinkActive="active">
 							<a class="dropdown-item" routerLink="/OrgChart">{{ 'navbar.links.Org-chart' | translate }}</a>
 						</li>
+						<li routerLinkActive="active">
+							<a class="dropdown-item" routerLink="/react">{{ 'navbar.links.React' | translate }}</a>
+						</li>
 
 						<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
 						<div class="dropdown-divider"></div>
@@ -134,6 +137,10 @@
 								<li routerLinkActive="mobile">
 									<a class="dropdown-item" routerLink="/OrgChart" (click)="sidebarToggle()">{{ 'navbar.links.Org-chart' | translate }}</a>
 								</li>
+								<li routerLinkActive="mobile">
+									<a class="dropdown-item" routerLink="/react" (click)="sidebarToggle()">{{ 'navbar.links.React' | translate }}</a>
+								</li>
+								
 								<li routerLinkActive="mobile">
 									<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
 								</li>

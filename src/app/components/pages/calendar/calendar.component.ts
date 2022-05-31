@@ -18,7 +18,7 @@ export class CalendarComponent implements OnInit {
   date: Date = new Date();
   VIEW_MODE = VIEW_MODE;
   viewMode = 'MONTH'
-  viewSelected=`calendar.banner.view.${this.viewMode}`
+  viewSelected = `calendar.banner.view.${this.viewMode}`
   viewMode$ = new BehaviorSubject(VIEW_MODE.MONTH);
   navigation$ = new BehaviorSubject<number>(0);
   searchTerm$ = new BehaviorSubject('');
@@ -134,7 +134,7 @@ export class CalendarComponent implements OnInit {
 
   onSetViewMode(viewMode: string, date?: Date): void {
     this.viewMode = viewMode;
-    this.viewSelected=`calendar.banner.view.${this.viewMode}`
+    this.viewSelected = `calendar.banner.view.${this.viewMode}`
     if (date) {
       const newDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
       const oldDate = new Date(this.date.getFullYear(), this.date.getMonth(), this.date.getDate());

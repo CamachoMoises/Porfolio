@@ -1,0 +1,93 @@
+<div class="wrapper">
+	<div class="page-header page-header-small">
+		<div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('https://blog.wildix.com/wp-content/uploads/2020/06/react-logo.jpg')"></div>
+
+	</div>
+	<div class="section">
+		<div class="container">
+			<div class="react_main">
+				<div class="card_form">
+					<div [@popUp]="stateNote">
+						<mat-card class="card_input">
+							<form [formGroup]="noteFormControl" class="form_card" (ngSubmit)="addNote()">
+								<mat-card-header>
+									<div mat-card-avatar class="header_image"></div>
+									<mat-card-title>{{ 'notes.title' | translate }}</mat-card-title>
+									<mat-card-subtitle>React</mat-card-subtitle>
+								</mat-card-header>
+								<mat-card-content>
+									<mat-form-field class="full-width">
+										<mat-label>{{ 'notes.inputs.topic.name' | translate }}</mat-label>
+										<input
+											matInput
+											type="text"
+											autoComplete="off"
+											formControlName="topic"
+											[errorStateMatcher]="matcher"
+											placeholder="{{ 'notes.inputs.Note.placeholder' | translate }}"
+										/>
+										<mat-hint>{{ 'notes.inputs.topic.Hit' | translate }}</mat-hint>
+										<mat-error *ngIf="noteFormControl['controls'].topic.hasError('maxLength')">
+											{{ 'notes.inputs.topic.error_maxLength' | translate }}</mat-error
+										>
+										<mat-error *ngIf="noteFormControl['controls'].topic.hasError('required')">
+											{{ 'notes.inputs.topic.error_required' | translate }} <strong>null</strong></mat-error
+										>
+									</mat-form-field>
+
+									<mat-form-field class="full_width">
+										<mat-label>{{ 'notes.inputs.Note.name' | translate }} </mat-label>
+										<textarea
+											matInput
+											formControlName="note"
+											rows="5"
+											class="notes_textarea"
+											[errorStateMatcher]="matcher"
+											placeholder="{{ 'notes.inputs.Note.placeholder' | translate }}"
+										></textarea>
+										<mat-hint>{{ 'notes.inputs.Note.Hit' | translate }} </mat-hint>
+										<mat-error *ngIf="noteFormControl['controls'].note.hasError('required')">
+											{{ 'notes.inputs.Note.error' | translate }} <strong>null</strong>
+										</mat-error>
+									</mat-form-field>
+								</mat-card-content>
+								<mat-card-actions>
+									<a
+										placement="bottom"
+										mat-button
+										class="btn btn-primary btn-block"
+										type="submit"
+										ngbTooltip="{{ 'notes.popUp_save' | translate }}"
+										[disabled]="true"
+										>{{ 'notes.save_button' | translate }}</a
+									>
+								</mat-card-actions>
+							</form>
+						</mat-card>
+					</div>
+
+					<mat-card class="notes_list_card">
+						<mat-card-header>
+							<mat-card-title>{{ 'notes.notes_tittle' | translate }}</mat-card-title>
+							<mat-card-subtitle> {{ 'notes.description' | translate }} </mat-card-subtitle>
+						</mat-card-header>
+						<div class="notes_list">
+							<ng-container *ngIf="Notes && !deleting; else notNotes">
+								<ng-container *ngFor="let note of Notes; let i = index">
+									<app-react-note [note]="note" (removeNote)="removeNote($event)"></app-react-note>
+								</ng-container>
+							</ng-container>
+
+							<ng-template #notNotes>
+								<div class="note_spinner">
+									<mat-spinner></mat-spinner>
+								</div>
+							</ng-template>
+						</div>
+					</mat-card>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<button class="button" *ngIf="showButton" (click)="onscrollTop()" type="button">⬆️</button>

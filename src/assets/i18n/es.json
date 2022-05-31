@@ -14,6 +14,7 @@
 			"checkList": "Lista de actividades",
 			"NBAPlayers": "Jugadores de la NBA ",
 			"Org-chart": "Grafica Organizacional",
+			"React": "Notas de React",
 			"unfinished": "En proceso"
 		},
 		"twitter": "Contactame en Twitter",
@@ -540,5 +541,30 @@
 		"comments": "Déjame un mensaje",
 		"comments2": "Escríbeme un mensaje ",
 		"button": "Enviar mensaje"
+	},
+	"notes": {
+		"title": "Nuevos apuntes",
+		"inputs": {
+			"topic":{
+				"name":"Tema",
+				"Hit":"Contexto de la nota",
+				"placeholder":"Por favor introduce un tema",
+				"error_required":"Este campo no puede ser:",
+				"error_maxLength":"¡Oh no! Demasiados caracteres "
+			},
+			"Note":{
+				"name": "Nota",
+				"Hit":"Para nuevos registros",
+				"placeholder":"Ej. Algo que descubriste mientras aprendías",
+				"error":"Este campo no puede ser:"
+			}
+			
+		},
+		"notes_tittle":"Anotaciones",
+		"description": "Espero que sea de tu agrado y encuentres algo interesante ",
+		"save_button":"Guardar",
+		"popUp_save":"Lo siento no tienes permiso para agregar apuntes",
+		"popUp_delete":"Lo siento no tienes permiso para borrar apuntes"
+
 	}
 }

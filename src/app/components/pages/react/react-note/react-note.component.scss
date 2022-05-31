@@ -1,0 +1,15 @@
+.note_title{
+    font-size: 15px;
+    font-weight: bold;
+}
+.note_date{
+    text-align: end;
+}
+
+.note_icon{
+    cursor: pointer;
+    transition: color 0.3s ease;
+    &:hover{
+        color: darken($color: red, $amount: 15);
+    }
+}

@@ -14,6 +14,7 @@
 			"checkList": "Check List",
 			"NBAPlayers": "NBA Players",
 			"Org-chart": "Organizational chart",
+			"React": "React notes",
 			"unfinished": "unfinished"
 		},
 		"twitter": "Contact me on Twitter ",
@@ -546,5 +547,31 @@
 		"comments": "Left me a comment",
 		"comments2": "Write me a message",
 		"button": "Send message"
+	},
+	"notes": {
+		"title": "New Notes",
+		"inputs": {
+			"topic":{
+				"name":"Topic",
+				"Hit":"Context of the note",
+				"placeholder":"Please enter a topic",
+				"error_required":"This field can't be ",
+				"error_maxLength":"This field couldn't be "
+			},
+			"Note":{
+				"name": "Note",
+				"Hit":"For new registers!",
+				"placeholder":"Ex. Things you discovered while you were learning ",
+				"error":"The field can't be"
+			}
+			
+		},
+		"notes_tittle":"Notes",
+		"description": "I hope you like it and find some interesting tips ",
+		"save_button":"Save",
+		"popUp_save":"Sorry, only the owner can add new notes",
+		"popUp_delete":"Sorry, only the owner can delete notes"
+
 	}
+
 }

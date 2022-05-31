@@ -1,0 +1,17 @@
+
+    <mat-card>
+        <mat-card-title-group>
+            <mat-card-subtitle class="note_title">{{note.topic}}</mat-card-subtitle>
+        </mat-card-title-group>
+        <mat-card-content>
+            <p>{{note.note}}</p>
+            <div class="note_date" >
+                <small>
+                    {{note.date| date: 'dd MMMM, yyyy; hh:mm'}}
+                </small>
+                <a ngbTooltip="{{ 'notes.popUp_delete' | translate }}" [disabled]="true" mat-button class="btn btn-danger"(click)="removeNote.emit(note.$key)">
+                <mat-icon aria-hidden="false" class="note_icon"  id="" >delete</mat-icon>
+                </a>
+            </div>
+        </mat-card-content>
+    </mat-card>
