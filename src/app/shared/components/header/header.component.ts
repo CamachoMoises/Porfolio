@@ -1,6 +1,8 @@
 import { Component, OnInit, ElementRef, Inject } from '@angular/core';
 import { Location, DOCUMENT } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
+import { MaintenanceService } from '../../services/maintenance.service';
+
 
 @Component({
     selector: 'app-header',
@@ -12,20 +14,26 @@ export class HeaderComponent implements OnInit {
     panelOpenState = false;
     public sidebarVisible: boolean = false;
     private lang;
-
     constructor(
         public location: Location,
         private element: ElementRef,
         private translate: TranslateService,
+        private maintenanceService: MaintenanceService,
         @Inject(DOCUMENT) private document: Document
+
     ) {
         const lang = localStorage.getItem('lang')
         this.translate.setDefaultLang(lang);
+        this.maintenanceService.getRoute();
     }
     ngOnInit() {
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
         this.lang = localStorage.getItem('lang') || 'es';
+        this.maintenanceService.ActiveRoute$.subscribe(route=>{
+            console.log(route);
+            
+        })
     }
     sidebarOpen() {
         const toggleButton = this.toggleButton;
