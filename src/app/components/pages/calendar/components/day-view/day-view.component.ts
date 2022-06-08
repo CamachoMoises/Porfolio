@@ -1,13 +1,13 @@
 import {
   Component,
   Input,
-  OnInit,
   Output,
   EventEmitter,
   OnChanges,
 } from '@angular/core';
 import { Appointment } from '../../types/appointment.type';
 import { TranslateService } from '@ngx-translate/core';
+import { userGoogle } from '../../../../../shared/interfaces/userGoogle';
 
 @Component({
   selector: 'app-day-view',
@@ -17,6 +17,8 @@ import { TranslateService } from '@ngx-translate/core';
 export class DayViewComponent implements OnChanges {
   @Input() date: Date;
   @Input() appointments: Array<Appointment>;
+  @Input() userActive:userGoogle;
+  @Input() signIn;
 
   @Output() public addAppointment = new EventEmitter<Date>();
   @Output() public updateAppointment = new EventEmitter<Appointment>();

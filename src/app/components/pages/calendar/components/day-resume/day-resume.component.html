@@ -1,6 +1,7 @@
 <mat-card *ngIf="appointments" (click)="selectDay()" >
   <h2>{{ date | date: "dd" }}&nbsp;</h2>
-  <mat-card-content >
+  <mat-card-content  >
+    <p>Notes</p>
     <mat-list role="list">
       <mat-list-item role="listitem" *ngFor="let appointment of appointments" >
           {{appointment.description}}

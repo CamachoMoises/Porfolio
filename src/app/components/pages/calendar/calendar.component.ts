@@ -8,6 +8,9 @@ import * as moment from 'moment';
 import Moment = moment.Moment;
 import { Appointment } from './types/appointment.type';
 import { TranslateService } from '@ngx-translate/core';
+import { MaintenanceService } from '../../../shared/services/maintenance.service';
+import { userGoogle } from 'app/shared/interfaces/userGoogle';
+import { Observable } from '@apollo/client/utilities';
 
 @Component({
   selector: 'app-calendar',
@@ -15,6 +18,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./calendar.component.scss']
 })
 export class CalendarComponent implements OnInit {
+  userGoogle$:Observable<userGoogle>=null;
   date: Date = new Date();
   VIEW_MODE = VIEW_MODE;
   viewMode = 'MONTH'
@@ -63,7 +67,6 @@ export class CalendarComponent implements OnInit {
           return data
         })));
 
-
   appointmentChange$ = this.db.list('/appointments');
   filteredAppointments$ = combineLatest([
     this.viewMode$,
@@ -104,7 +107,7 @@ export class CalendarComponent implements OnInit {
     )
     .subscribe((val) => {
       this.filter = val;
-      console.log(this.filter.length);
+      // console.log(this.filter.length);
 
       this.appointments$.subscribe((val) => {
       });
@@ -112,7 +115,8 @@ export class CalendarComponent implements OnInit {
 
   constructor(
     private db: AngularFireDatabase,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private maintenanceService: MaintenanceService
   ) {
     const lang = localStorage.getItem('lang')
     this.translate.setDefaultLang(lang);
@@ -139,7 +143,7 @@ export class CalendarComponent implements OnInit {
       const newDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
       const oldDate = new Date(this.date.getFullYear(), this.date.getMonth(), this.date.getDate());
       let steps = moment(newDate).diff(moment(oldDate), 'days');
-      console.log('mayor', steps);
+      // console.log('mayor', steps);
       this.navigation$.next(steps);
     }
     else {

@@ -12,6 +12,7 @@ import { userGoogle } from '../../interfaces/userGoogle';
 })
 export class HeaderComponent implements OnInit {
     private toggleButton: any;
+    singIn$
     panelOpenState = false;
     public sidebarVisible: boolean = false;
     userGoogle: userGoogle
@@ -28,16 +29,17 @@ export class HeaderComponent implements OnInit {
         this.translate.setDefaultLang(lang);
         this.maintenanceService.getRoute();
         this.maintenanceService.authStatus();
+        this.singIn$= this.maintenanceService.SignIn$
     }
     ngOnInit() {
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
         this.lang = localStorage.getItem('lang') || 'es';
-        this.maintenanceService.ActiveRoute$.subscribe(route=>{
-            console.log(route);
+        this.maintenanceService.ActiveRoute$.subscribe(route => {
+            // console.log(route);
         });
         this.maintenanceService.ActiveUser$.subscribe(user => {
-            this.userGoogle=user;
+            this.userGoogle = user;
         })
     }
     sidebarOpen() {
@@ -71,11 +73,11 @@ export class HeaderComponent implements OnInit {
         window.location.reload();
 
     }
-    login():void {
+    login(): void {
         console.log('login');
         this.maintenanceService.loginUser();
     }
-    logout():void {
+    logout(): void {
         console.log('logout');
         this.maintenanceService.logoutUser();
 

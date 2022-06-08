@@ -21,10 +21,13 @@ export class MaintenanceService {
 
   }
 
-  private ActiveRoute = new BehaviorSubject<String>('/home')
+  private ActiveRoute = new BehaviorSubject<String>('/home');
   ActiveRoute$ = this.ActiveRoute.asObservable();
-  private ActiveUser = new BehaviorSubject<userGoogle>(null)
+  private ActiveUser = new BehaviorSubject<userGoogle>(null);
   ActiveUser$ = this.ActiveUser.asObservable();
+
+  private signIn = new BehaviorSubject<boolean>(false);
+  SignIn$ = this.signIn.asObservable();
 
   getRoute(): void {
     this.router.events.subscribe((event: Event) => {
@@ -42,16 +45,15 @@ export class MaintenanceService {
 
   }
 
-
   loginUser(): void {
     this.spinnerService.show();
     this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
       .then((resp) => {
         this.spinnerService.hide();
         // console.log('sign In', resp);
-        const {user}=resp
+        const { user } = resp
         this.ActiveUser.next(user)
-        
+        this.signIn.next(true);
       })
   }
 
@@ -59,16 +61,20 @@ export class MaintenanceService {
     this.spinnerService.show();
     this.auth.signOut().then((resp) => {
       this.spinnerService.hide();
+      this.signIn.next(false);
       // console.log('sign Out', resp);
       this.ActiveUser.next(null);
-
     });
   }
 
   authStatus(): void {
-  this.auth.onAuthStateChanged((user) => {
-    this.ActiveUser.next(user)
-  })
+    this.auth.onAuthStateChanged((user) => {
+      // console.log(user);
+      if (user) {
+        this.ActiveUser.next(user)
+        this.signIn.next(true)
+      }
+    })
   }
 
 
