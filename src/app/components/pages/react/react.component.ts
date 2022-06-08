@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener, Inject, OnDestroy } from '@angular/cor
 import { FormControl, FormGroupDirective, NgForm, Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { AngularFireDatabase } from '@angular/fire/database';
+
 import { map } from 'rxjs/operators';
 import { reactNotes } from 'app/shared/interfaces/react-note';
 import { DOCUMENT } from '@angular/common';
@@ -14,9 +15,6 @@ import {
   transition
 } from '@angular/animations'
 
-
-
-
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
@@ -28,7 +26,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   selector: 'app-react',
   templateUrl: './react.component.html',
   styleUrls: ['./react.component.scss'],
-  animations:[
+  animations: [
     trigger('popUp', [
       // ...
       state('show', style({
@@ -61,7 +59,7 @@ export class ReactComponent implements OnInit, OnDestroy {
     const scrollTop = this.document.documentElement.scrollTop;
 
     this.showButton = (yOffset || scrollTop) >= this.scrollHeight;
-    this.showForm = (yOffset || scrollTop)>= this.scrollHeight;
+    this.showForm = (yOffset || scrollTop) >= this.scrollHeight;
   }
 
   notesChange$ = this.db.list('/notes_react');
@@ -75,7 +73,7 @@ export class ReactComponent implements OnInit, OnDestroy {
       )
     )
   );
-  notesSubscription:Subscription
+  notesSubscription: Subscription
   deleting: boolean = false;
   Notes: Array<reactNotes>
   noteFormControl: FormGroup
@@ -86,10 +84,8 @@ export class ReactComponent implements OnInit, OnDestroy {
       topic: ['', [Validators.required, Validators.maxLength(50)]],
       note: ['', [Validators.required]],
     })
-
     this.notesSubscription = this.notes$.subscribe(val => {
       this.Notes = val.reverse();
-
     });
   }
 
@@ -110,17 +106,17 @@ export class ReactComponent implements OnInit, OnDestroy {
       this.deleting = false;
     })
   }
-  get stateNote(){
-    return this.showForm? 'hide': 'show'
+  get stateNote() {
+    return this.showForm ? 'hide' : 'show'
   }
 
-    
+
 
   onscrollTop(): void {
     this.document.documentElement.scrollTop = 0;
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.notesSubscription.unsubscribe()
   }
 }

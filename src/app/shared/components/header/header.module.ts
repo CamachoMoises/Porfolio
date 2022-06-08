@@ -10,8 +10,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule } from '@ngx-translate/core';
 
-
-
 @NgModule({
   declarations: [HeaderComponent],
   imports: [

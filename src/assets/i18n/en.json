@@ -24,7 +24,8 @@
 		"lang": {
 			"title": "Language",
 			"popUp": "Change the language of the page"
-		}
+		},
+		"google": "Access to be able to interact"
 	},
 	"profile": {
 		"title": "Professional Profile",

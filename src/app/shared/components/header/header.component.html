@@ -1,4 +1,7 @@
-<nav class="navbar navbar-expand-lg bg-info fixed-top navbar-transparent" color-on-scroll="500">
+<nav
+	class="navbar navbar-expand-lg bg-info fixed-top navbar-transparent"
+	color-on-scroll="500"
+>
 	<div class="container">
 		<div class="dropdown button-dropdown">
 			<div ngbDropdown>
@@ -10,101 +13,215 @@
 				<div ngbDropdownMenu>
 					<ul>
 						<li routerLinkActive="active">
-							<a class="dropdown-item" routerLink="/profile"> {{ 'navbar.links.about' | translate }}</a>
+							<a class="dropdown-item" routerLink="/profile">
+								{{ 'navbar.links.about' | translate }}</a
+							>
 						</li>
 						<li routerLinkActive="active">
-							<a class="dropdown-item animate__animated animate__infinite animate__pulse" routerLink="/knowledge"> {{ 'navbar.links.knowledge' | translate }}</a>
+							<a
+								class="
+									dropdown-item
+									animate__animated animate__infinite animate__pulse
+								"
+								routerLink="/knowledge"
+							>
+								{{ 'navbar.links.knowledge' | translate }}</a
+							>
 						</li>
 						<li routerLinkActive="active">
-							<a class="dropdown-item" routerLink="/gallery"> {{ 'navbar.links.gallery' | translate }}</a>
+							<a class="dropdown-item" routerLink="/gallery">
+								{{ 'navbar.links.gallery' | translate }}</a
+							>
 						</li>
 						<div class="dropdown-divider"></div>
 						<li routerLinkActive="active">
-							<a class="dropdown-item" routerLink="/calendar">{{ 'navbar.links.calendar' | translate }}</a>
+							<a class="dropdown-item" routerLink="/calendar">{{
+								'navbar.links.calendar' | translate
+							}}</a>
 						</li>
 						<li routerLinkActive="active">
-							<a class="dropdown-item" routerLink="/rickAndMorty">{{ 'navbar.links.rickAndMorty' | translate }}</a>
+							<a class="dropdown-item" routerLink="/rickAndMorty">{{
+								'navbar.links.rickAndMorty' | translate
+							}}</a>
 						</li>
 						<li routerLinkActive="active">
-							<a class="dropdown-item" routerLink="/checkList">{{ 'navbar.links.checkList' | translate }}</a>
+							<a class="dropdown-item" routerLink="/checkList">{{
+								'navbar.links.checkList' | translate
+							}}</a>
 						</li>
 						<li routerLinkActive="active">
-							<a class="dropdown-item" routerLink="/nbaPlayers">{{ 'navbar.links.NBAPlayers' | translate }}</a>
+							<a class="dropdown-item" routerLink="/nbaPlayers">{{
+								'navbar.links.NBAPlayers' | translate
+							}}</a>
 						</li>
 						<li routerLinkActive="active">
-							<a class="dropdown-item" routerLink="/OrgChart">{{ 'navbar.links.Org-chart' | translate }}</a>
+							<a class="dropdown-item" routerLink="/OrgChart">{{
+								'navbar.links.Org-chart' | translate
+							}}</a>
 						</li>
 						<li routerLinkActive="active">
-							<a class="dropdown-item" routerLink="/react">{{ 'navbar.links.React' | translate }}</a>
+							<a class="dropdown-item" routerLink="/react">{{
+								'navbar.links.React' | translate
+							}}</a>
 						</li>
 
-						<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
+						<a class="dropdown-item"
+							>{{ 'navbar.links.unfinished' | translate }}
+						</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
+						<a class="dropdown-item"
+							>{{ 'navbar.links.unfinished' | translate }}
+						</a>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<div class="navbar-translate">
-			<a class="navbar-brand" placement="bottom" ngbTooltip="{{ 'navbar.title.popUp' | translate }}" routerLink="/home"> 
-			<img src="assets/img/moses_light.png" alt="" class='logo'  >
+			<a
+				class="navbar-brand"
+				placement="bottom"
+				ngbTooltip="{{ 'navbar.title.popUp' | translate }}"
+				routerLink="/home"
+			>
+				<img src="assets/img/moses_light.png" alt="" class="logo" />
 			</a>
-			<button class="navbar-toggler" type="button" (click)="sidebarToggle()">
+			<button
+				class="navbar-toggler"
+				type="button"
+				(click)="sidebarToggle()"
+			>
 				<span class="navbar-toggler-bar bar1"></span>
 				<span class="navbar-toggler-bar bar2"></span>
 				<span class="navbar-toggler-bar bar3"></span>
 			</button>
 		</div>
-		<div class="collapse navbar-collapse" data-nav-image="assets/img/blurred-image-1.jpg" data-color="blue">
+		<div
+			class="collapse navbar-collapse"
+			data-nav-image="assets/img/blurred-image-1.jpg"
+			data-color="blue"
+		>
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a class="nav-link" rel="tooltip" title="{{ 'navbar.twitter' | translate }}" data-placement="bottom" href="https://twitter.com/moises_2702" target="_blank">
+					<a
+						class="nav-link"
+						rel="tooltip"
+						title="{{ 'navbar.twitter' | translate }}"
+						data-placement="bottom"
+						href="https://twitter.com/moises_2702"
+						target="_blank"
+					>
 						<i class="fab fa-twitter"></i>
 						<p class="d-lg-none d-xl-none">Twitter</p>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" rel="tooltip" title="{{ 'navbar.facebook' | translate }}" data-placement="bottom" href="https://www.facebook.com/moises.camacho2/" target="_blank">
+					<a
+						class="nav-link"
+						rel="tooltip"
+						title="{{ 'navbar.facebook' | translate }}"
+						data-placement="bottom"
+						href="https://www.facebook.com/moises.camacho2/"
+						target="_blank"
+					>
 						<i class="fab fa-facebook-square"></i>
 						<p class="d-lg-none d-xl-none">Facebook</p>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" rel="tooltip" title="{{ 'navbar.linkedIn' | translate }}" data-placement="bottom" href="https://www.linkedin.com/in/moises-camacho-5a900194/" target="_blank">
+					<a
+						class="nav-link"
+						rel="tooltip"
+						title="{{ 'navbar.linkedIn' | translate }}"
+						data-placement="bottom"
+						href="https://www.linkedin.com/in/moises-camacho-5a900194/"
+						target="_blank"
+					>
 						<i class="fab fa-linkedin"></i>
 						<p class="d-lg-none d-xl-none">LinkedIn</p>
 					</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" rel="tooltip" title="{{ 'navbar.github' | translate }}" data-placement="bottom" href="https://github.com/CamachoMoises" target="_blank">
+					<a
+						class="nav-link"
+						rel="tooltip"
+						title="{{ 'navbar.github' | translate }}"
+						data-placement="bottom"
+						href="https://github.com/CamachoMoises"
+						target="_blank"
+					>
 						<i class="fab fa-github"></i>
 						<p class="d-lg-none d-xl-none">github</p>
 					</a>
 				</li>
-				<li class="nav-item">
-					<div ngbDropdown>
-						<a class="nav-link animate__animated animate__infinite animate__headShake" ngbDropdownToggle title="{{ 'navbar.lang.popUp' | translate }}" data-placement="bottom">
-							<mat-icon>language</mat-icon>
-							<p class="d-lg-none d-xl-none">{{ 'navbar.lang.title' | translate }}</p>
-						</a>
-						<div ngbDropdownMenu>
-							<a class="dropdown-item" (click)="changeLang('es')"> Español </a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" (click)="changeLang('en')"> English </a>
-						</div>
-					</div>
 
-					<!-- <a class="nav-link" rel="tooltip" title="{{ 'navbar.lang.popUp' | translate }}" data-placement="bottom">
-            <a [matMenuTriggerFor]="menu">
-              <mat-icon>language</mat-icon>
-              <p class="d-lg-none d-xl-none">{{ 'navbar.lang.title' | translate }}</p>
-            </a>
-            <mat-menu #menu="matMenu">
-              <button mat-menu-item (click)="changeLang('es')" >Español</button>
-              <button mat-menu-item (click)="changeLang('en')" >English</button>
-            </mat-menu>
-          </a> -->
+				<li class="nav-item">
+		
+						<a
+							class="nav-link"
+							[matMenuTriggerFor]="lang"
+							title="{{ 'navbar.lang.popUp' | translate }}"
+							data-placement="bottom"
+						>
+							<mat-icon>language</mat-icon>
+							<p class="d-lg-none d-xl-none">
+								{{ 'navbar.lang.title' | translate }}
+							</p>
+						</a>
+						<mat-menu #lang="matMenu" xPosition="before">
+							<a
+								mat-menu-item
+								class="dropdown-item"
+								(click)="changeLang('es')"
+							>
+								Español
+							</a>
+							<a class="dropdown-item" (click)="changeLang('en')">
+								English
+							</a>
+						</mat-menu>
+				
 				</li>
+
+				<li class="nav-item">
+					<ng-container *ngIf="userGoogle; else notAuth">
+						<a
+							[matMenuTriggerFor]="auth"
+							data-placement="bottom"
+							class="nav-link"
+							[matMenuTriggerFor]="auth"
+						>
+							<img class="profile-pic" [src]="userGoogle.photoURL" alt="als">
+							<p class="d-lg-none d-xl-none">
+								{{ 'navbar.google' | translate }}
+							</p>
+						</a>
+						<mat-menu #auth="matMenu" xPosition="before">
+							<a
+								mat-menu-item
+								class="dropdown-item"
+								(click)="logout()"
+								>Logout</a
+							>
+						</mat-menu>
+					</ng-container>
+
+					<ng-template #notAuth>
+						<a
+							class="
+								nav-link
+								animate__animated animate__infinite animate__headShake
+							"
+							title="Sing in with Google"
+							(click)="login()"
+						>
+							<i class="fab fa-google"></i>
+							<p class="d-lg-none d-xl-none">
+								Sign in with Google
+							</p>
+						</a>
+					</ng-template>
+				</li>
+
 				<li class="nav-item" *ngIf="sidebarVisible">
 					<div ngbDropdown class="dropdown">
 						<a class="nav-link dropdown-toggle" ngbDropdownToggle>
@@ -113,41 +230,95 @@
 						<div ngbDropdownMenu class="dropdown-menu">
 							<ul>
 								<li routerLinkActive="mobile">
-									<a class="dropdown-item" routerLink="/profile" (click)="sidebarToggle()"> {{ 'navbar.links.about' | translate }}</a>
+									<a
+										class="dropdown-item"
+										routerLink="/profile"
+										(click)="sidebarToggle()"
+									>
+										{{ 'navbar.links.about' | translate }}</a
+									>
 								</li>
 								<li routerLinkActive="mobile">
-									<a class="dropdown-item" routerLink="/knowledge" (click)="sidebarToggle()"> {{ 'navbar.links.knowledge' | translate }}</a>
+									<a
+										class="dropdown-item"
+										routerLink="/knowledge"
+										(click)="sidebarToggle()"
+									>
+										{{ 'navbar.links.knowledge' | translate }}</a
+									>
 								</li>
 								<li routerLinkActive="mobile">
-									<a class="dropdown-item" routerLink="/gallery" (click)="sidebarToggle()"> {{ 'navbar.links.gallery' | translate }}</a>
-								</li>
-								<div class="dropdown-divider"></div>
-								<li routerLinkActive="mobile">
-									<a class="dropdown-item" routerLink="/calendar" (click)="sidebarToggle()">{{ 'navbar.links.calendar' | translate }}</a>
-								</li>
-								<li routerLinkActive="mobile">
-									<a class="dropdown-item" routerLink="/rickAndMorty" (click)="sidebarToggle()">{{ 'navbar.links.rickAndMorty' | translate }}</a>
-								</li>
-								<li routerLinkActive="mobile">
-									<a class="dropdown-item" routerLink="/checkList" (click)="sidebarToggle()">{{ 'navbar.links.checkList' | translate }}</a>
-								</li>
-								<li routerLinkActive="mobile">
-									<a class="dropdown-item" routerLink="/nbaPlayers" (click)="sidebarToggle()">{{ 'navbar.links.NBAPlayers' | translate }}</a>
-								</li>
-								<li routerLinkActive="mobile">
-									<a class="dropdown-item" routerLink="/OrgChart" (click)="sidebarToggle()">{{ 'navbar.links.Org-chart' | translate }}</a>
-								</li>
-								<li routerLinkActive="mobile">
-									<a class="dropdown-item" routerLink="/react" (click)="sidebarToggle()">{{ 'navbar.links.React' | translate }}</a>
-								</li>
-								
-								<li routerLinkActive="mobile">
-									<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
+									<a
+										class="dropdown-item"
+										routerLink="/gallery"
+										(click)="sidebarToggle()"
+									>
+										{{ 'navbar.links.gallery' | translate }}</a
+									>
 								</li>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item">{{ 'navbar.links.unfinished' | translate }} </a>
 								<li routerLinkActive="mobile">
-									<a class="dropdown-item" routerLink="/index">Zona de pruebas</a>
+									<a
+										class="dropdown-item"
+										routerLink="/calendar"
+										(click)="sidebarToggle()"
+										>{{ 'navbar.links.calendar' | translate }}</a
+									>
+								</li>
+								<li routerLinkActive="mobile">
+									<a
+										class="dropdown-item"
+										routerLink="/rickAndMorty"
+										(click)="sidebarToggle()"
+										>{{ 'navbar.links.rickAndMorty' | translate }}</a
+									>
+								</li>
+								<li routerLinkActive="mobile">
+									<a
+										class="dropdown-item"
+										routerLink="/checkList"
+										(click)="sidebarToggle()"
+										>{{ 'navbar.links.checkList' | translate }}</a
+									>
+								</li>
+								<li routerLinkActive="mobile">
+									<a
+										class="dropdown-item"
+										routerLink="/nbaPlayers"
+										(click)="sidebarToggle()"
+										>{{ 'navbar.links.NBAPlayers' | translate }}</a
+									>
+								</li>
+								<li routerLinkActive="mobile">
+									<a
+										class="dropdown-item"
+										routerLink="/OrgChart"
+										(click)="sidebarToggle()"
+										>{{ 'navbar.links.Org-chart' | translate }}</a
+									>
+								</li>
+								<li routerLinkActive="mobile">
+									<a
+										class="dropdown-item"
+										routerLink="/react"
+										(click)="sidebarToggle()"
+										>{{ 'navbar.links.React' | translate }}</a
+									>
+								</li>
+
+								<li routerLinkActive="mobile">
+									<a class="dropdown-item"
+										>{{ 'navbar.links.unfinished' | translate }}
+									</a>
+								</li>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item"
+									>{{ 'navbar.links.unfinished' | translate }}
+								</a>
+								<li routerLinkActive="mobile">
+									<a class="dropdown-item" routerLink="/index"
+										>Zona de pruebas</a
+									>
 								</li>
 							</ul>
 						</div>

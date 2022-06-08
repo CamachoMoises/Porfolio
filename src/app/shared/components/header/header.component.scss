@@ -16,3 +16,14 @@ ul {
 .logo{
 	height:40px;
 }
+
+.profile-pic{
+	height:35px;
+	width: 35px;
+	border-radius:  50% 50% 50% 50%;
+	
+}
+
+.fixed-top{
+	z-index: 10 !important;
+}

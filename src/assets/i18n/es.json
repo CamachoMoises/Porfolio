@@ -24,7 +24,9 @@
 		"lang": {
 			"title": "Idioma",
 			"popUp": "Cambia el lenguaje de la página"
-		}
+		},
+		"google":"Accede para poder interactuar"
+
 	},
 	"profile": {
 		"title": "Perfil Profesional",
