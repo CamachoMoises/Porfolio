@@ -1,14 +1,17 @@
-<h2>{{ 'calendar.banner.view.WEEK' | translate }}: {{week}}</h2>
-<table>
-  <tr>
-      <td *ngFor="let day of days">
-          <app-day-resume
-                  (selectedDay)="selectedDay.emit($event)"
-                  [date]="day?.date"
-                  [appointments]="day?.appointments">
-          </app-day-resume>
+<h2>{{ 'calendar.banner.view.WEEK' | translate }}: {{ week }}</h2>
 
-      </td>
-  </tr>
-</table>
+		<div 
+      fxLayout="row wrap" 
+      fxLayoutAlign="space-evenly stretch"
+      fxLayoutGap="2rem">
+      <div fxFlex *ngFor="let day of days">
+        <app-day-resume
+				(selectedDay)="selectedDay.emit($event)"
+				[date]="day?.date"
+				[appointments]="day?.appointments"
+			>
+			</app-day-resume>
+      </div>
+
+		</div>
 

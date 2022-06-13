@@ -128,6 +128,9 @@ export class CalendarComponent implements OnInit {
     body.classList.add('profile-page');
     var navbar = document.getElementsByTagName('nav')[0];
     navbar.classList.add('navbar-transparent');
+    this.maintenanceService.ActiveUser$.subscribe((user) => {
+
+    })
   }
 
   private filterByTerm(appointment, term: string): boolean {
@@ -169,13 +172,14 @@ export class CalendarComponent implements OnInit {
   }
 
   onAddAppointment(date: Date): void {
-    this.appointmentChange$.push(new Appointment(date.toDateString(), ''));
+    this.appointmentChange$.push(new Appointment(date.toDateString(), '',{uid:'',displayName:''}));
   }
 
   onUpdateAppointment(appointment: Appointment): void {
     this.db.object('appointments/' + appointment.$key).set({
       description: appointment.description,
       date: appointment.date,
+      user: appointment.user
     });
   }
 }

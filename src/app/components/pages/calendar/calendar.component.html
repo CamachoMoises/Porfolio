@@ -46,8 +46,8 @@
             *ngSwitchCase="VIEW_MODE.DAY" 
             [date]="currentDate$ | async" 
             [appointments]="filter" 
-            [userActive]="maintenanceService.ActiveUser$ | async"
             [signIn]="maintenanceService.SignIn$ | async"
+            [activeUser]="maintenanceService.ActiveUser$ | async"
             (removeAppointment)="onRemoveAppointment($event)" 
             (addAppointment)="onAddAppointment($event)" 
             (updateAppointment)="onUpdateAppointment($event)"></app-day-view>

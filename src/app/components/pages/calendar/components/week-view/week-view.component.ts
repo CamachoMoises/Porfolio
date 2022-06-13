@@ -55,7 +55,7 @@ export class WeekViewComponent implements OnChanges {
             moment(sundayM.toDate()).weekday(i).date() ===
             moment(appointment.date).date()
           );
-        }),
+        }).slice(0,3),
       };
     });
   }

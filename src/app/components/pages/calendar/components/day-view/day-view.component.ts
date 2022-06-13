@@ -18,7 +18,8 @@ export class DayViewComponent implements OnChanges {
   @Input() date: Date;
   @Input() appointments: Array<Appointment>;
   @Input() userActive:userGoogle;
-  @Input() signIn;
+  @Input() signIn:boolean;
+  @Input() activeUser:userGoogle;
 
   @Output() public addAppointment = new EventEmitter<Date>();
   @Output() public updateAppointment = new EventEmitter<Appointment>();

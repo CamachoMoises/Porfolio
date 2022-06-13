@@ -2,10 +2,16 @@
   <h2>{{ date | date: "dd" }}&nbsp;</h2>
   <mat-card-content  >
     <p>Notes</p>
-    <mat-list role="list">
+    <!-- <mat-list role="list">
       <mat-list-item role="listitem" *ngFor="let appointment of appointments" >
           {{appointment.description}}
       </mat-list-item>
-    </mat-list>
+    </mat-list> -->
+    <ul>
+      <li *ngFor="let appointment of appointments" >
+        {{appointment.description}}
+      </li>
+    </ul>
+
   </mat-card-content>
 </mat-card>
