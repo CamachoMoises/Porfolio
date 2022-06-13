@@ -1,5 +1,8 @@
 <mat-card class="item" (dblclick)="edit.emit(task)">
-  <h2>{{ task.title }}</h2>
+  <h2>
+    {{ task.title }} 
+    <small class="text-muted"> by {{task.displayName}} </small> 
+  </h2>
   <p>
     {{ task.description }}
   </p>

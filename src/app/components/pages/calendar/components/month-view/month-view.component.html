@@ -3,12 +3,10 @@
 
 <ng-container *ngFor="let week of weeks; let i = index">
   <ng-container *ngFor="let day of week; let i = index">
-
       <app-day-resume 
       (selectedDay)="selectedDay.emit($event)" 
       [date]="day?.date" 
       [appointments]="day?.appointments"></app-day-resume>
-      
     </ng-container>
   </ng-container>
 </div>

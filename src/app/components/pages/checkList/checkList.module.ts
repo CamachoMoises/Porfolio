@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { TaskComponent } from './task/task.component';
 import { TaskDialogComponent } from './task-dialog/task-dialog.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -36,6 +37,7 @@ import { TaskDialogComponent } from './task-dialog/task-dialog.component';
     MatInputModule,
     FormsModule,
     MatFormFieldModule,
+    FlexLayoutModule
   ],
   declarations: [CheckListComponent,TaskComponent, TaskDialogComponent]
 })

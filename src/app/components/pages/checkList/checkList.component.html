@@ -23,7 +23,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" >
     <div class="container">
       <div class="button-container">
         <a class="btn btn-default btn-round btn-lg btn-icon" target="_blank" rel="tooltip" title="Aun no disponible">
@@ -40,22 +40,25 @@
           <div class="collapse navbar-collapse" id="example-navbar-success">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <button (click)="newTask()" mat-button><mat-icon>add</mat-icon> Añadir Tarea</button>
+                <button (click)="newTask()" [disabled]="!$signIn | async" mat-button><mat-icon>add</mat-icon> Añadir Tarea</button>
               </li>
             </ul>
           </div>
         </div>
       </nav>
       <p class="title" >Arrastra las tareas entre listas</p>
-      <div class="row">
+      <div class="row" *ngIf="$signIn | async; else notSign">
         <div class="content-wrapper">
           <div class="container-wrapper">
             <div class="container">
               <h2>Actividades</h2>
 
               <mat-card cdkDropList id="todo" #todoList="cdkDropList" [cdkDropListData]="toDo$ | async" [cdkDropListConnectedTo]="[doneList, inProgressList]" (cdkDropListDropped)="drop($event)" class="list">
-                <p class="empty-label" *ngIf="(toDo$ | async)?.length === 0">Lista vacia</p>
-                <app-task (edit)="editTask('todo', $event)" *ngFor="let task of toDo$ | async" cdkDrag [task]="task"></app-task>
+                <p class="empty-label" (click)="newTask()" *ngIf="(toDo$ | async)?.length === 0">Lista vacia</p>
+                <div fxLayoutGap="2rem">
+
+                  <app-task (edit)="editTask('todo', $event)" *ngFor="let task of toDo$ | async" cdkDrag [task]="task"></app-task>
+                </div>
               </mat-card>
             </div>
 
@@ -64,7 +67,11 @@
 
               <mat-card cdkDropList id="inProgress" #inProgressList="cdkDropList" [cdkDropListData]="inProgress$ | async" [cdkDropListConnectedTo]="[todoList, doneList]" (cdkDropListDropped)="drop($event)" class="list">
                 <p class="empty-label" *ngIf="(inProgress$ | async)?.length === 0">Lista vacia</p>
+                <div fxLayoutGap="2rem">
+
                 <app-task (edit)="editTask('inProgress', $event)" *ngFor="let task of inProgress$ | async" cdkDrag [task]="task"></app-task>
+                </div>
+
               </mat-card>
             </div>
 
@@ -73,12 +80,20 @@
 
               <mat-card cdkDropList id="done" #doneList="cdkDropList" [cdkDropListData]="done$ | async" [cdkDropListConnectedTo]="[todoList, inProgressList]" (cdkDropListDropped)="drop($event)" class="list">
                 <p class="empty-label" *ngIf="(done$ | async)?.length === 0">Lista vacia</p>
+                <div fxLayoutGap="2rem">
+
                 <app-task (edit)="editTask('done', $event)" *ngFor="let task of done$ | async" cdkDrag [task]="task"></app-task>
+                </div>
               </mat-card>
             </div>
           </div>
         </div>
       </div>
+
+      <ng-template #notSign>
+        <h1 class="text-center">No sign in you cant add or edit notes</h1>
+      </ng-template>
+
     </div>
   </div>
 </div>

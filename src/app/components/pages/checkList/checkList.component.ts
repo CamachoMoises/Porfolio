@@ -6,6 +6,8 @@ import { Task } from "app/shared/interfaces/task";
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { MaintenanceService } from '../../../shared/services/maintenance.service';
+import { userGoogle } from '../../../shared/interfaces/userGoogle';
 
 const getObservable = (collection: AngularFirestoreCollection<Task>) => {
   const subject = new BehaviorSubject<Task[]>([]);
@@ -22,13 +24,17 @@ const getObservable = (collection: AngularFirestoreCollection<Task>) => {
   styleUrls: ['./checkList.component.scss']
 })
 export class CheckListComponent implements OnInit, OnDestroy {
+  activeUser:userGoogle
+  signIn:boolean = false
+  $activeUser:Observable<userGoogle>
+  $signIn
   toDo$ = getObservable(this.store.collection('todo')) as Observable<Task[]>;
   inProgress$ = getObservable(this.store.collection('inProgress')) as Observable<Task[]>;
   done$ = getObservable(this.store.collection('done')) as Observable<Task[]>;
+
   zoom: number = 14;
   lat: number = 44.445248;
   lng: number = 26.099672;
-  styles: any[] = [{ "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#e9e9e9" }, { "lightness": 17 }] }, { "featureType": "landscape", "elementType": "geometry", "stylers": [{ "color": "#f5f5f5" }, { "lightness": 20 }] }, { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{ "color": "#ffffff" }, { "lightness": 17 }] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{ "color": "#ffffff" }, { "lightness": 29 }, { "weight": 0.2 }] }, { "featureType": "road.arterial", "elementType": "geometry", "stylers": [{ "color": "#ffffff" }, { "lightness": 18 }] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [{ "color": "#ffffff" }, { "lightness": 16 }] }, { "featureType": "poi", "elementType": "geometry", "stylers": [{ "color": "#f5f5f5" }, { "lightness": 21 }] }, { "featureType": "poi.park", "elementType": "geometry", "stylers": [{ "color": "#dedede" }, { "lightness": 21 }] }, { "elementType": "labels.text.stroke", "stylers": [{ "visibility": "on" }, { "color": "#ffffff" }, { "lightness": 16 }] }, { "elementType": "labels.text.fill", "stylers": [{ "saturation": 36 }, { "color": "#333333" }, { "lightness": 40 }] }, { "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit", "elementType": "geometry", "stylers": [{ "color": "#f2f2f2" }, { "lightness": 19 }] }, { "featureType": "administrative", "elementType": "geometry.fill", "stylers": [{ "color": "#fefefe" }, { "lightness": 20 }] }, { "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [{ "color": "#fefefe" }, { "lightness": 17 }, { "weight": 1.2 }] }];
   destroy$ = new Subject<unknown>();
   list = {
     toDo: 0,
@@ -38,7 +44,8 @@ export class CheckListComponent implements OnInit, OnDestroy {
 
   constructor(
     private dialog: MatDialog,
-    private store: AngularFirestore
+    private store: AngularFirestore,
+    private maintenanceService:MaintenanceService
   ) { }
 
   ngOnInit(): void {
@@ -63,7 +70,13 @@ export class CheckListComponent implements OnInit, OnDestroy {
     ).subscribe(val => {
       this.list.done = val.length
     });
-
+    this.$signIn= this.maintenanceService.SignIn$
+    this.$activeUser = this.maintenanceService.ActiveUser$
+    this.$activeUser.pipe(
+      takeUntil(this.destroy$)
+    ).subscribe(user=>{
+      this.activeUser = user
+    })
   }
   editTask(list: 'done' | 'todo' | 'inProgress', task: Task): void {
     const dialogRef = this.dialog.open(TaskDialogComponent, {
@@ -77,13 +90,11 @@ export class CheckListComponent implements OnInit, OnDestroy {
       if (result.delete) {
         this.store.collection(list).doc(task.id).delete();
       } else {
-        this.store.collection(list).doc(task.id).update(task);
-
+        const data= {...task, uid:this.activeUser.uid, displayName:this.activeUser.displayName}
+        this.store.collection(list).doc(task.id).update(data);
       }
     });
-
   }
-
 
   drop(event: CdkDragDrop<Task[]>): void {
     if (event.previousContainer === event.container) {
@@ -117,13 +128,18 @@ export class CheckListComponent implements OnInit, OnDestroy {
         if (!result) {
           return
         }
-        this.store.collection('todo').add(result.task)
+        const data= {...result.task,uid: this.activeUser.uid, displayName: this.activeUser.displayName}
+        this.store.collection('todo').add(data).then(result=>{
+        }).catch(error=>{
+          console.error(error);
+        })
       });
   }
 
   ngOnDestroy(): void {
     this.destroy$.next({})
     this.destroy$.complete()
+
   }
 
 }
