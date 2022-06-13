@@ -1,19 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { take, map } from 'rxjs/operators';
+import { take, map, takeUntil } from 'rxjs/operators';
 import { Comment } from "../../interfaces/comments";
 import { ToastrService } from 'ngx-toastr';
+import { MaintenanceService } from '../../services/maintenance.service';
+import { Subject } from 'rxjs';
+import { userGoogle } from '../../interfaces/userGoogle';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit, OnDestroy{
   date: string = new Date().toString();
   commentForm: FormGroup
+  activeUser: userGoogle
   focus;
   focus1;
+  destroy$ = new Subject<unknown>();
   input$ = this.db
     .list('/comments')
     .snapshotChanges()
@@ -30,6 +35,7 @@ export class ContactComponent implements OnInit {
     private db: AngularFireDatabase,
     private fb: FormBuilder,
     private toastr: ToastrService,
+    private maintenanceService: MaintenanceService
   ) { }
 
   ngOnInit(): void {
@@ -37,6 +43,9 @@ export class ContactComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       phone: [null, [Validators.required]],
       comment: [null, [Validators.required]]
+    })
+    this.maintenanceService.ActiveUser$.pipe(takeUntil(this.destroy$)).subscribe(user => {
+      this.activeUser= user
     })
 
   }
@@ -57,5 +66,8 @@ export class ContactComponent implements OnInit {
       this.commentForm['controls'].comment.disable();
     }
   }
-
+  ngOnDestroy():void{
+    this.destroy$.next({});
+    this.destroy$.complete();
+  }
 }
