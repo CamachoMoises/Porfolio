@@ -26,6 +26,7 @@ const routes: Routes = [
     { path: 'knowledge', loadChildren: () => import('./components/pages/knowledge/knowledge.module').then(m => m.KnowledgeModule) },
     { path: 'gallery', loadChildren: () => import('./components/pages/gallery/gallery.module').then(m => m.GalleryModule) },
     { path: 'react', loadChildren: () => import('./components/pages/react/react.module').then(m => m.ReactModule) },
+    { path: 'test-laravel', loadChildren: () => import('./components/pages/test-laravel/test-laravel.module').then(m => m.TestLaravelModule) },
     { path: '**', loadChildren: () => import('./components/pages/notFound/not-found.module').then(m => m.NotFoundModule) }
 ];
 
